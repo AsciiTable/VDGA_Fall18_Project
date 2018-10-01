@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player2point0 : MonoBehaviour {
+public class Player_2point0 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
