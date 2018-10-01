@@ -474,7 +474,8 @@ Transform:
   m_LocalRotation: {x: -0.0035547197, y: 0, z: -0, w: 0.9999937}
   m_LocalPosition: {x: -7.08, y: -3.29, z: 0.04}
   m_LocalScale: {x: 0.35, y: 0.35, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1254388964}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -0.407, y: 0, z: 0}
@@ -492,6 +493,7 @@ MonoBehaviour:
   MAXHP: 10
   CURRENTHP: 0
   moveSpeed: 5
+  jumpForce: 5
 --- !u!1 &1254388963
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,12 +517,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1254388963}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: -0, z: -10}
-  m_LocalScale: {x: 1, y: 1.0000609, z: 1.0000609}
+  m_LocalRotation: {x: 0.0035547197, y: -0, z: -0, w: 0.9999937}
+  m_LocalPosition: {x: 20.22857, y: 9.6037, z: -10.016356}
+  m_LocalScale: {x: 2.8571427, y: 2.8572228, z: 1.0001547}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 767167155}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!81 &1254388965
 AudioListener:
