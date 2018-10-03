@@ -1254,9 +1254,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ceaa9fb3d83c1041a3835677a3c28d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player_moveForce: 0.5
-  Player_jumpForce: 500
-  Player_jumpForceMax: 20
+  Player_moveForce: 0.4
+  Player_jumpForce: 40
+  Player_doubleJumpForce: 30
+  Player_gravity: 10
+  Player_jumpsMax: 2
+  Player_jumps: 0
+  Player_flipped: 0
+  Player_groundCheck: 0
 --- !u!61 &1577729306
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1296,7 +1301,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
