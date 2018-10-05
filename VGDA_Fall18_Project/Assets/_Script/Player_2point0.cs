@@ -76,7 +76,7 @@ public class Player_2point0 : MonoBehaviour {
         {
             Debug.Log("Double Lifted");
             Player_jumps++;
-            if (Player_rb2d.velocity.x < Player_doubleJumpForce)
+            if (Player_rb2d.velocity.y < Player_doubleJumpForce)
             {
                 Player_rb2d.velocity = new Vector3(0f, Player_doubleJumpForce, 0f);
             }
