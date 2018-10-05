@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c87c7ab5-6013-40cc-9001-6b9e98e781aa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.VGDA_Fall18_Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VGDA_Fall18_Project/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.VGDA_Fall18_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VGDA_Fall18_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/_TestingScenes/PlayTesting_Dakota.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/_TestingScenes/PlayTesting_Dakota.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/_TestingScenes/ScriptTesting_Jessica.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/_TestingScenes/ScriptTesting_Jessica.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/_TestingScenes/ScriptTesting_Justin.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/_TestingScenes/ScriptTesting_Justin.unity" afterDir="false" />
-    </list>
+    <list default="true" id="c87c7ab5-6013-40cc-9001-6b9e98e781aa" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,11 +42,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/_Script/Player_Jessica.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+            <state relative-caret-position="335">
+              <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
               <folding>
                 <marker date="1538770160000" expanded="true" signature="6:78" ph="..." />
                 <marker date="1538770160000" expanded="true" signature="142:2050" ph="{...}" />
@@ -70,7 +64,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/_Script/Temp_Respawn.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
@@ -192,12 +186,12 @@
       <option name="presentableId" value="Default" />
       <updated>1538415036094</updated>
       <workItem from="1538415041222" duration="779000" />
-      <workItem from="1538772853238" duration="933000" />
+      <workItem from="1538772853238" duration="1833000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1712000" />
+    <option name="totallyTimeSpent" value="2612000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -262,26 +256,6 @@
     <entry file="file://$PROJECT_DIR$/Assets/_Script/Enemy.cs">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_Script/Player_Jessica.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-          <folding>
-            <marker date="1538770160000" expanded="true" signature="6:78" ph="..." />
-            <marker date="1538770160000" expanded="true" signature="142:2050" ph="{...}" />
-            <marker date="1538770160000" expanded="true" signature="720:847" ph="{...}" />
-            <marker date="1538770160000" expanded="true" signature="901:909" ph="{...}" />
-            <marker date="1538770160000" expanded="true" signature="915:1043" ph="/* Update for physics stuff: will run 0, once, or multiple times depending on what is needed ... */" />
-            <marker date="1538770160000" expanded="true" signature="1074:1296" ph="{...}" />
-            <marker date="1538770160000" expanded="true" signature="1141:1290" ph="{...}" />
-            <marker date="1538770160000" expanded="true" signature="1341:1472" ph="/* Includes: ... */" />
-            <marker date="1538770160000" expanded="true" signature="1492:2048" ph="{...}" />
-            <marker date="1538770160000" expanded="true" signature="1796:1865" ph="{...}" />
-            <marker date="1538770160000" expanded="true" signature="1944:2012" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_Script/Temp_Respawn.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -294,6 +268,26 @@
             <marker date="1538773511000" expanded="true" signature="632:714" ph="{...}" />
             <marker date="1538773511000" expanded="true" signature="778:839" ph="{...}" />
             <marker date="1538773511000" expanded="true" signature="909:990" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Script/Player_Jessica.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
+          <folding>
+            <marker date="1538770160000" expanded="true" signature="6:78" ph="..." />
+            <marker date="1538770160000" expanded="true" signature="142:2050" ph="{...}" />
+            <marker date="1538770160000" expanded="true" signature="720:847" ph="{...}" />
+            <marker date="1538770160000" expanded="true" signature="901:909" ph="{...}" />
+            <marker date="1538770160000" expanded="true" signature="915:1043" ph="/* Update for physics stuff: will run 0, once, or multiple times depending on what is needed ... */" />
+            <marker date="1538770160000" expanded="true" signature="1074:1296" ph="{...}" />
+            <marker date="1538770160000" expanded="true" signature="1141:1290" ph="{...}" />
+            <marker date="1538770160000" expanded="true" signature="1341:1472" ph="/* Includes: ... */" />
+            <marker date="1538770160000" expanded="true" signature="1492:2048" ph="{...}" />
+            <marker date="1538770160000" expanded="true" signature="1796:1865" ph="{...}" />
+            <marker date="1538770160000" expanded="true" signature="1944:2012" ph="{...}" />
           </folding>
         </state>
       </provider>
