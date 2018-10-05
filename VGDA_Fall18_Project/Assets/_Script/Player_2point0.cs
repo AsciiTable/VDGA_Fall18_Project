@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+NOTE: Make very complex jumping system, and then enemies
+*/
 public class Player_2point0 : MonoBehaviour {
 
     public float Player_moveForce = 0.4f;
@@ -17,12 +20,16 @@ public class Player_2point0 : MonoBehaviour {
 
 
     private Rigidbody2D Player_rb2d;
+    private Transform Player_xyz;
+    private SpriteRenderer Player_sprite;
     private Transform groundCheck1_transform;
     private Transform groundCheck2_transform;
 
     void Awake()
     {
         Player_rb2d = GetComponent<Rigidbody2D>();
+        Player_xyz = GetComponent<Transform>();
+        Player_sprite = GetComponent<SpriteRenderer>();
 
         groundCheck1_transform = transform.Find("groundCheck_1");
         groundCheck2_transform = transform.Find("groundCheck_2");
@@ -33,12 +40,22 @@ public class Player_2point0 : MonoBehaviour {
     {
         Player_rb2d.gravityScale = Player_gravity;
         float Player_horizontal = Input.GetAxis("Horizontal");
+        
 
         //move player left and right
         Player_rb2d.transform.Translate((Player_horizontal * Player_moveForce), 0f, 0f);
 
-        //--------------------------------------------------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+        //flip player
+        if(Player_horizontal > 0 && Player_sprite.flipX)
+        {
+            Player_sprite.flipX = false;
+        }
+        else if(Player_horizontal < 0 && !(Player_sprite.flipX))
+        {
+            Player_sprite.flipX = true;
+        }
     }
 
     void Update () {
