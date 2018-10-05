@@ -13,14 +13,15 @@ public class Player_Jessica : MonoBehaviour {
     bool onGround = true;
     [SerializeField] private bool m_AirControl = false;// Whether or not a player can steer while jumping;
     [SerializeField] private LayerMask m_WhatIsGround;// A mask determining what is ground to the character
-
+    
+    const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
     private Rigidbody2D player;
     private Animator playerAnim;//reference to player's animator component
 
     //These are all initialized during the loading screen
     private void Awake(){
         player = GetComponent<Rigidbody2D>();//applies physics to player
-        playerAnim = GetComponent<Animator>();
+
     }
 
     // Use this for initialization
@@ -33,11 +34,12 @@ public class Player_Jessica : MonoBehaviour {
      * Jump
      */
     private void FixedUpdate(){
-        if(onGround && canJump && playerAnim.GetBool("onGround")){
+        
+        /*if(onGround && canJump && playerAnim.GetBool("onGround")){
             onGround = false;
             playerAnim.SetBool("onGround", false);
             player.AddForce(new Vector2(0f, jumpForce));
-        }
+        }*/
     }
 
     // Update is called once per frame
