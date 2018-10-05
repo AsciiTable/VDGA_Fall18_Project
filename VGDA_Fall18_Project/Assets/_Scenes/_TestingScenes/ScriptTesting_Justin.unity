@@ -1236,6 +1236,7 @@ GameObject:
   - component: {fileID: 1577729307}
   - component: {fileID: 1577729306}
   - component: {fileID: 1577729305}
+  - component: {fileID: 1577729311}
   m_Layer: 0
   m_Name: steve2point0
   m_TagString: Untagged
@@ -1378,7 +1379,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1577729304}
   m_LocalRotation: {x: -0.0035547197, y: 0, z: -0, w: 0.9999937}
-  m_LocalPosition: {x: -5.2, y: -3, z: 0.04}
+  m_LocalPosition: {x: -5.07, y: -3.27, z: 0.04}
   m_LocalScale: {x: 0.35, y: 0.35, z: 1}
   m_Children:
   - {fileID: 1868670150}
@@ -1387,6 +1388,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -0.407, y: 0, z: 0}
+--- !u!114 &1577729311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1577729304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae199522617f34a56b6e38daa6bc1a0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPosition: {fileID: 953678747}
+  verticalPos: -7.35
+  horizontalPos: -2.93
+  SuicidePoint: -15
+  playerTrans: {fileID: 953678750}
+  deathSpace: {fileID: 0}
 --- !u!1 &1594817562
 GameObject:
   m_ObjectHideFlags: 0
@@ -1775,6 +1793,7 @@ GameObject:
   - component: {fileID: 1868670150}
   - component: {fileID: 1868670152}
   - component: {fileID: 1868670151}
+  - component: {fileID: 1868670153}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1842,6 +1861,23 @@ Camera:
   m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1868670153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1868670149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae199522617f34a56b6e38daa6bc1a0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPosition: {fileID: 953678747}
+  verticalPos: -7.35
+  horizontalPos: -2.93
+  SuicidePoint: -15
+  playerTrans: {fileID: 953678750}
+  deathSpace: {fileID: 0}
 --- !u!1 &1966546191
 GameObject:
   m_ObjectHideFlags: 0

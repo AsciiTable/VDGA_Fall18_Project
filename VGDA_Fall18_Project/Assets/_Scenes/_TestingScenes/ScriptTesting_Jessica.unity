@@ -201,6 +201,7 @@ GameObject:
   - component: {fileID: 533451428}
   - component: {fileID: 533451427}
   - component: {fileID: 533451432}
+  - component: {fileID: 533451433}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -351,6 +352,23 @@ MonoBehaviour:
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 0
+--- !u!114 &533451433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 533451426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae199522617f34a56b6e38daa6bc1a0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPosition: {fileID: 533451426}
+  verticalPos: -7.35
+  horizontalPos: -2.93
+  SuicidePoint: -15
+  playerTrans: {fileID: 533451431}
+  deathSpace: {fileID: 0}
 --- !u!1 &536434553
 GameObject:
   m_ObjectHideFlags: 0
