@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /*
 NOTE: Make very complex jumping system, and then enemies
@@ -11,7 +12,9 @@ public class Player_2point0 : MonoBehaviour {
     public float Player_jumpForce = 40f;
     public float Player_doubleJumpForce = 30f;
     public float Player_gravity = 10f;
+    public float SuicidePoint = -15f;
     public int Player_jumpsMax = 2;
+
 
     [SerializeField] private int Player_jumps = 0;
     [SerializeField] private bool Player_flipped = false;
@@ -91,5 +94,18 @@ public class Player_2point0 : MonoBehaviour {
             Debug.Log("Unlifted");
             Player_jumps++;
         }
+
+        if (Player_xyz.position.y < SuicidePoint)
+        {
+            Debug.Log("some death is true");
+            ResetScene();
+        }
+
+    }
+
+    //Resets the scene to the beginning
+    public void ResetScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
