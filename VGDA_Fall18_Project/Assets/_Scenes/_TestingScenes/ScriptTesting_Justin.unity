@@ -744,7 +744,6 @@ GameObject:
   - component: {fileID: 953678748}
   - component: {fileID: 953678752}
   - component: {fileID: 953678751}
-  - component: {fileID: 953678753}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -874,19 +873,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &953678753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 953678747}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f54ce4d32b62d41d1bc3f57c70c30c80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MAXHP: 10
-  CURRENTHP: 0
 --- !u!1 &1009812222
 GameObject:
   m_ObjectHideFlags: 0
@@ -1103,7 +1089,7 @@ GameObject:
   - component: {fileID: 1311403249}
   m_Layer: 0
   m_Name: enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1161,7 +1147,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1311403244}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.62, y: 4.83, z: 0}
+  m_LocalPosition: {x: 3.41, y: 1.12, z: 0}
   m_LocalScale: {x: 3.1139, y: 3.1139, z: 3.1139}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1260,6 +1246,7 @@ MonoBehaviour:
   Player_gravity: 10
   SuicidePoint: -15
   Player_jumpsMax: 2
+  Player_invisible: 0
   Player_jumps: 0
   Player_flipped: 0
   Player_groundCheck: 0
