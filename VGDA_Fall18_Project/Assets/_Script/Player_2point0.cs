@@ -14,7 +14,7 @@ public class Player_2point0 : MonoBehaviour {
     public float Player_gravity = 10f;
     public float SuicidePoint = -15f;
     public int Player_jumpsMax = 2;
-    public bool Player_invisible = false;
+    public bool Player_invulnerable = false;
 
     [SerializeField] private int Player_jumps = 0;
     [SerializeField] private bool Player_flipped = false;
@@ -108,9 +108,10 @@ public class Player_2point0 : MonoBehaviour {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    //Kills enemy if not invulnerable
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag == "Enemy" && !(Player_invisible))
+        if (col.gameObject.tag == "Enemy" && !(Player_invulnerable))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }

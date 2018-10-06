@@ -1087,6 +1087,7 @@ GameObject:
   - component: {fileID: 1311403248}
   - component: {fileID: 1311403247}
   - component: {fileID: 1311403249}
+  - component: {fileID: 1311403250}
   m_Layer: 0
   m_Name: enemy
   m_TagString: Enemy
@@ -1209,6 +1210,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 480341b87cc0341dfaeac234ece01944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1311403250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1311403244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855f3babcfd649644b254d320913a5a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player_2Point0_get: {fileID: 1577729305}
 --- !u!1 &1577729304
 GameObject:
   m_ObjectHideFlags: 0
@@ -1246,7 +1259,7 @@ MonoBehaviour:
   Player_gravity: 10
   SuicidePoint: -15
   Player_jumpsMax: 2
-  Player_invisible: 0
+  Player_invulnerable: 0
   Player_jumps: 0
   Player_flipped: 0
   Player_groundCheck: 0
