@@ -44,7 +44,7 @@ public class Player_Jessica : MonoBehaviour {
 
     // Update is called once per frame
     /*Includes:
-     * Special Ghose Power CD
+     * Special Ghost Power CD
      * Recieving input to: jump, move left, move right, swing bat, apologize, run
      */
     void Update () {

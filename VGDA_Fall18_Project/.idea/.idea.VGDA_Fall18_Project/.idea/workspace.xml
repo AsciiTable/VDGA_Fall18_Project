@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c87c7ab5-6013-40cc-9001-6b9e98e781aa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/_TestingScenes/PlayTesting_Dakota.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/_TestingScenes/PlayTesting_Dakota.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.VGDA_Fall18_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VGDA_Fall18_Project/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Script/Player_Jessica.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Script/Player_Jessica.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,7 +15,7 @@
     <session id="-1533108185">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.opened" value="2" />
@@ -23,22 +23,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cs" value="5" />
+          <entry key="cs" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="C#" value="5" />
+          <entry key="C#" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="148" />
+          <entry key="cs" value="149" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="148" />
+          <entry key="C#" value="149" />
         </counts>
       </usages-collector>
     </session>
@@ -48,20 +48,35 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/_Script/Player_Jessica.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="59" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
+            <state relative-caret-position="150">
+              <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
               <folding>
-                <marker date="1538776601000" expanded="true" signature="6:78" ph="..." />
-                <marker date="1538776601000" expanded="true" signature="142:2118" ph="{...}" />
-                <marker date="1538776601000" expanded="true" signature="821:902" ph="{...}" />
-                <marker date="1538776601000" expanded="true" signature="956:964" ph="{...}" />
-                <marker date="1538776601000" expanded="true" signature="970:1098" ph="/* Update for physics stuff: will run 0, once, or multiple times depending on what is needed ... */" />
-                <marker date="1538776601000" expanded="true" signature="1129:1364" ph="{...}" />
-                <marker date="1538776601000" expanded="true" signature="1148:1358" ph="/* if(onGround &amp;&amp; canJump &amp;&amp; playerAnim.GetBool(&quot;onGround&quot;)){ ... */" />
-                <marker date="1538776601000" expanded="true" signature="1409:1540" ph="/* Includes: ... */" />
-                <marker date="1538776601000" expanded="true" signature="1560:2116" ph="{...}" />
-                <marker date="1538776601000" expanded="true" signature="1864:1933" ph="{...}" />
-                <marker date="1538776601000" expanded="true" signature="2012:2080" ph="{...}" />
+                <marker date="1538794022000" expanded="true" signature="6:78" ph="..." />
+                <marker date="1538794022000" expanded="true" signature="142:2118" ph="{...}" />
+                <marker date="1538794022000" expanded="true" signature="821:902" ph="{...}" />
+                <marker date="1538794022000" expanded="true" signature="956:964" ph="{...}" />
+                <marker date="1538794022000" expanded="true" signature="970:1098" ph="/* Update for physics stuff: will run 0, once, or multiple times depending on what is needed ... */" />
+                <marker date="1538794022000" expanded="true" signature="1129:1364" ph="{...}" />
+                <marker date="1538794022000" expanded="true" signature="1148:1358" ph="/* if(onGround &amp;&amp; canJump &amp;&amp; playerAnim.GetBool(&quot;onGround&quot;)){ ... */" />
+                <marker date="1538794022000" expanded="true" signature="1409:1540" ph="/* Includes: ... */" />
+                <marker date="1538794022000" expanded="true" signature="1560:2116" ph="{...}" />
+                <marker date="1538794022000" expanded="true" signature="1864:1933" ph="{...}" />
+                <marker date="1538794022000" expanded="true" signature="2012:2080" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/_Script/Player.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+              <folding>
+                <marker date="1538361225000" expanded="false" signature="6:78" ph="..." />
+                <marker date="1538361225000" expanded="true" signature="116:290" ph="{...}" />
+                <marker date="1538361225000" expanded="true" signature="219:226" ph="{...}" />
+                <marker date="1538361225000" expanded="true" signature="281:288" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -91,6 +106,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/_Script/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Script/Player_2point0.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Script/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Script/Player_Jessica.cs" root0="FORCE_HIGHLIGHTING" />
@@ -188,12 +204,12 @@
       <option name="presentableId" value="Default" />
       <updated>1538415036094</updated>
       <workItem from="1538415041222" duration="779000" />
-      <workItem from="1538772853238" duration="3394000" />
+      <workItem from="1538772853238" duration="4205000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4173000" />
+    <option name="totallyTimeSpent" value="4984000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -206,7 +222,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="153" width="1238" height="732" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21989967" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -225,7 +240,7 @@
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Unit Tests" order="12" />
       <window_info anchor="bottom" id="Terminal" order="13" weight="0.3296875" />
-      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" visible="true" weight="0.3296875" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -275,42 +290,55 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
-            <marker date="1538775125000" expanded="false" signature="6:113" ph="..." />
-            <marker date="1538775125000" expanded="true" signature="115:177" ph="/* NOTE: Make very complex jumping system, and then enemies ... */" />
-            <marker date="1538775125000" expanded="true" signature="222:3382" ph="{...}" />
-            <marker date="1538775125000" expanded="true" signature="866:1167" ph="{...}" />
-            <marker date="1538775125000" expanded="true" signature="1191:1887" ph="{...}" />
-            <marker date="1538775125000" expanded="true" signature="1457:1638" ph="/* -------------------------------------------------------------------------------------------------------------- ... */" />
-            <marker date="1538775125000" expanded="true" signature="1695:1756" ph="{...}" />
-            <marker date="1538775125000" expanded="true" signature="1821:1881" ph="{...}" />
-            <marker date="1538775125000" expanded="true" signature="1908:3224" ph="{...}" />
-            <marker date="1538775125000" expanded="true" signature="2126:2213" ph="{...}" />
-            <marker date="1538775125000" expanded="true" signature="2358:2623" ph="{...}" />
-            <marker date="1538775125000" expanded="true" signature="2501:2613" ph="{...}" />
-            <marker date="1538775125000" expanded="true" signature="2737:2892" ph="{...}" />
-            <marker date="1538775125000" expanded="true" signature="2992:3075" ph="{...}" />
-            <marker date="1538775125000" expanded="true" signature="3126:3217" ph="{...}" />
-            <marker date="1538775125000" expanded="true" signature="3294:3380" ph="{...}" />
+            <marker date="1538782788000" expanded="false" signature="6:113" ph="..." />
+            <marker date="1538782788000" expanded="true" signature="115:177" ph="/* NOTE: Make very complex jumping system, and then enemies ... */" />
+            <marker date="1538782788000" expanded="true" signature="222:3382" ph="{...}" />
+            <marker date="1538782788000" expanded="true" signature="866:1167" ph="{...}" />
+            <marker date="1538782788000" expanded="true" signature="1191:1887" ph="{...}" />
+            <marker date="1538782788000" expanded="true" signature="1457:1638" ph="/* -------------------------------------------------------------------------------------------------------------- ... */" />
+            <marker date="1538782788000" expanded="true" signature="1695:1756" ph="{...}" />
+            <marker date="1538782788000" expanded="true" signature="1821:1881" ph="{...}" />
+            <marker date="1538782788000" expanded="true" signature="1908:3224" ph="{...}" />
+            <marker date="1538782788000" expanded="true" signature="2126:2213" ph="{...}" />
+            <marker date="1538782788000" expanded="true" signature="2358:2623" ph="{...}" />
+            <marker date="1538782788000" expanded="true" signature="2501:2613" ph="{...}" />
+            <marker date="1538782788000" expanded="true" signature="2737:2892" ph="{...}" />
+            <marker date="1538782788000" expanded="true" signature="2992:3075" ph="{...}" />
+            <marker date="1538782788000" expanded="true" signature="3126:3217" ph="{...}" />
+            <marker date="1538782788000" expanded="true" signature="3294:3380" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Script/Player.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+          <folding>
+            <marker date="1538361225000" expanded="false" signature="6:78" ph="..." />
+            <marker date="1538361225000" expanded="true" signature="116:290" ph="{...}" />
+            <marker date="1538361225000" expanded="true" signature="219:226" ph="{...}" />
+            <marker date="1538361225000" expanded="true" signature="281:288" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_Script/Player_Jessica.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="59" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
+        <state relative-caret-position="150">
+          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
           <folding>
-            <marker date="1538776601000" expanded="true" signature="6:78" ph="..." />
-            <marker date="1538776601000" expanded="true" signature="142:2118" ph="{...}" />
-            <marker date="1538776601000" expanded="true" signature="821:902" ph="{...}" />
-            <marker date="1538776601000" expanded="true" signature="956:964" ph="{...}" />
-            <marker date="1538776601000" expanded="true" signature="970:1098" ph="/* Update for physics stuff: will run 0, once, or multiple times depending on what is needed ... */" />
-            <marker date="1538776601000" expanded="true" signature="1129:1364" ph="{...}" />
-            <marker date="1538776601000" expanded="true" signature="1148:1358" ph="/* if(onGround &amp;&amp; canJump &amp;&amp; playerAnim.GetBool(&quot;onGround&quot;)){ ... */" />
-            <marker date="1538776601000" expanded="true" signature="1409:1540" ph="/* Includes: ... */" />
-            <marker date="1538776601000" expanded="true" signature="1560:2116" ph="{...}" />
-            <marker date="1538776601000" expanded="true" signature="1864:1933" ph="{...}" />
-            <marker date="1538776601000" expanded="true" signature="2012:2080" ph="{...}" />
+            <marker date="1538794022000" expanded="true" signature="6:78" ph="..." />
+            <marker date="1538794022000" expanded="true" signature="142:2118" ph="{...}" />
+            <marker date="1538794022000" expanded="true" signature="821:902" ph="{...}" />
+            <marker date="1538794022000" expanded="true" signature="956:964" ph="{...}" />
+            <marker date="1538794022000" expanded="true" signature="970:1098" ph="/* Update for physics stuff: will run 0, once, or multiple times depending on what is needed ... */" />
+            <marker date="1538794022000" expanded="true" signature="1129:1364" ph="{...}" />
+            <marker date="1538794022000" expanded="true" signature="1148:1358" ph="/* if(onGround &amp;&amp; canJump &amp;&amp; playerAnim.GetBool(&quot;onGround&quot;)){ ... */" />
+            <marker date="1538794022000" expanded="true" signature="1409:1540" ph="/* Includes: ... */" />
+            <marker date="1538794022000" expanded="true" signature="1560:2116" ph="{...}" />
+            <marker date="1538794022000" expanded="true" signature="1864:1933" ph="{...}" />
+            <marker date="1538794022000" expanded="true" signature="2012:2080" ph="{...}" />
           </folding>
         </state>
       </provider>
