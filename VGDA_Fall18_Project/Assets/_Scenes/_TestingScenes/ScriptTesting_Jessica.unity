@@ -686,6 +686,7 @@ GameObject:
   - component: {fileID: 1666734319}
   - component: {fileID: 1666734318}
   - component: {fileID: 1666734317}
+  - component: {fileID: 1666734321}
   m_Layer: 0
   m_Name: enemy
   m_TagString: Untagged
@@ -712,7 +713,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!61 &1666734318
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -797,6 +798,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1666734321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1666734316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6ff7041f30894648b53675bf8d15c3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveSpeed: 5
 --- !u!1 &1671423639
 GameObject:
   m_ObjectHideFlags: 0
