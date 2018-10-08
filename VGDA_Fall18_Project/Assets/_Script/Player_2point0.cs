@@ -8,17 +8,25 @@ NOTE: Make very complex jumping system, and then enemies
 */
 public class Player_2point0 : MonoBehaviour {
 
+
+
     public float Player_moveForce = 0.4f;
     public float Player_jumpForce = 40f;
     public float Player_doubleJumpForce = 30f;
     public float Player_gravity = 10f;
     public float SuicidePoint = -15f;
+    public float Player_invulnerableTimer_Max = 3f;
+    public float Player_invulnerableCooldown_Max = 3f;
     public int Player_jumpsMax = 2;
     public bool Player_invulnerable = false;
+    
 
+    private float Player_invulnerableTimer_stamp;
+    private float Player_invulnerableCooldown_stamp;
     [SerializeField] private int Player_jumps = 0;
     [SerializeField] private bool Player_flipped = false;
     [SerializeField] private bool Player_groundCheck = false;
+    private bool Player_invulnerableReady = true;
 
 
     private Rigidbody2D Player_rb2d;
@@ -62,7 +70,14 @@ public class Player_2point0 : MonoBehaviour {
 
     void Update () {
         //Check if on floor
-        Player_groundCheck = Physics2D.Linecast(groundCheck1_transform.position, groundCheck2_transform.position, 1 << LayerMask.NameToLayer("Platforms"));
+        if(Physics2D.Linecast(groundCheck1_transform.position, groundCheck2_transform.position, 1 << LayerMask.NameToLayer("Platforms")) || Physics2D.Linecast(groundCheck1_transform.position, groundCheck2_transform.position, 1 << LayerMask.NameToLayer("Enemy")))
+        {
+            Player_groundCheck = true;
+        }
+        else
+        {
+            Player_groundCheck = false;
+        }
 
         if (Player_groundCheck)
         {
@@ -100,6 +115,26 @@ public class Player_2point0 : MonoBehaviour {
             ResetScene();
         }
 
+        //Invulnerability stuff
+        if(Input.GetButtonDown("Invulnerable") && Player_invulnerableReady)
+        {
+            Debug.Log("Is invulnerable");
+            Player_invulnerable = true;
+            Player_invulnerableReady = false;
+            Player_invulnerableTimer_stamp = Time.time + Player_invulnerableTimer_Max;
+
+        }
+        if(Player_invulnerable && Time.time >= Player_invulnerableTimer_stamp)
+        {
+            Debug.Log("Invulnerable Over");
+            Player_invulnerable = false;
+            Player_invulnerableCooldown_stamp = Time.time + Player_invulnerableCooldown_Max;
+        }
+        if(!(Player_invulnerable) && !(Player_invulnerableReady) && Time.time >= Player_invulnerableCooldown_stamp)
+        {
+            Debug.Log("Invulnerable Ready");
+            Player_invulnerableReady = true;
+        }
     }
 
     //Resets the scene to the beginning

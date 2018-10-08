@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_2point0 : MonoBehaviour {
+public class Environment : MonoBehaviour {
 
     private bool Player_invulnerable_get;
 
@@ -23,8 +23,9 @@ public class Enemy_2point0 : MonoBehaviour {
 
         Player_invulnerable_get = Player_2Point0_get.Player_invulnerable;
 
-        Debug.Log("Invulnerable: " + Player_invulnerable_get);
-        Debug.Log("Collider: " + Environment_collider.enabled);
+        //       Debug.Log("Invulnerable: " + Player_invulnerable_get);
+        //       Debug.Log("Collider: " + Environment_collider.enabled);
+
         if (Player_invulnerable_get == true)
         {
             Environment_collider.enabled = false;
