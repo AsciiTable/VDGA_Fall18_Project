@@ -7,35 +7,28 @@ using UnityEngine;
 public class AIMovement : MonoBehaviour {
 	public float MoveSpeed = 5f;
 	private Rigidbody2D _enemy;
-
+	public float MaxLeftPos;
+	public float MaxRightPos;
 	public bool SpriteFacingRight;//asks for what side the sprite is facing before 
+	
 	// Use this for initialization
 	void Start () {
 		_enemy = GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update(){
+		Move(MovingRight());
+	}
+
+	public int MovingRight(){//returns 1 if AI is moving right
 		if (SpriteFacingRight == true){
-			transform.position = transform.position + new Vector3((MoveSpeed * Time.deltaTime), 0, 0);
-			if(transform.position.x > 0 && GetComponent<SpriteRenderer>().flipX){
-				GetComponent<SpriteRenderer>().flipX = false;
-			}
-			else if (transform.position.x < 0 && !GetComponent<SpriteRenderer>().flipX){
-				GetComponent<SpriteRenderer>().flipX = true;
-			}
+			return 1;
 		}
-		else{
-			transform.position = transform.position + new Vector3((-1*MoveSpeed * Time.deltaTime), 0, 0);
-			if(transform.position.x > 0 && GetComponent<SpriteRenderer>().flipX){
-				GetComponent<SpriteRenderer>().flipX = true;
-			}
-			else if (transform.position.x < 0 && !GetComponent<SpriteRenderer>().flipX){
-				GetComponent<SpriteRenderer>().flipX = false;
-			}
-		}
-
-
-		
+		return -1;
+	}
+	
+	void Move(int right){
+		transform.position = transform.position + new Vector3(right*MoveSpeed*Time.deltaTime,0,0);
 	}
 }
