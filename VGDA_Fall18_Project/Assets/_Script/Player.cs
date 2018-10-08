@@ -1,26 +1,42 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour {
 
+    [Header("Move & Jump")]
     public float Player_moveForce = 0.4f;
     public float Player_jumpForce = 40f;
     public float Player_doubleJumpForce = 30f;
-    public float Player_gravity = 10f;
-    public float SuicidePoint = -15f;
-    public float Player_invulnerableTimer_Max = 3f;
-    public float Player_invulnerableCooldown_Max = 3f;
     public int Player_jumpsMax = 2;
-    public bool Player_invulnerable = false;
+        private bool Player_groundCheck = false;
+        private int Player_jumps = 0;
+    [Space(10)]
 
-    private float Player_invulnerableTimer_stamp;
-    private float Player_invulnerableCooldown_stamp;
-    [SerializeField] private int Player_jumps = 0;
-    [SerializeField] private bool Player_flipped = false;
-    [SerializeField] private bool Player_groundCheck = false;
-    private bool Player_invulnerableReady = true;
+    [Header("Invulnerable")]
+    [Tooltip("How many seconds invulnerability lasts")]
+    public float Player_invulnerableTimer_Max = 3f;
+    [Tooltip("How many seconds before invulnerability can be used again")]
+    public float Player_invulnerableCooldown_Max = 3f;
+    public bool Player_invulnerable = false;
+        private float Player_invulnerableTimer_stamp;
+        private float Player_invulnerableCooldown_stamp;
+        private bool Player_invulnerableReady = true;
+    [Space(10)]
+
+    [Header("Misc.")]
+    [Tooltip("Rigidbody2D Gravity Scale")]
+    public float Player_gravity = 10f;
+    [Tooltip("The Height Player Dies")]
+    public float SuicidePoint = -15f;
+        private bool Player_flipped = false;
+
+
+
+
+
 
 
     private Rigidbody2D Player_rb2d;
