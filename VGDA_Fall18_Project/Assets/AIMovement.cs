@@ -19,9 +19,10 @@ public class AIMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
 	{
-		if (HasTurned()){
+        /* 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        if (HasTurned()){
 		}
-
+        It was giving me errors and I needed to test scene - Justin*/
 		Move(MovingRight());
 	}
 
@@ -37,7 +38,7 @@ public class AIMovement : MonoBehaviour {
 	void Move(int direction){
 		transform.position = transform.position + new Vector3(direction*MoveSpeed*Time.deltaTime,0,0);
 	}
-
+    /*      00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 	bool HasTurned(){
 		if (!SpriteFacingRight){
 			if (_enemy.position.x < MaxLeftPos){
@@ -46,4 +47,5 @@ public class AIMovement : MonoBehaviour {
 			}
 		}
 	}
+    It was giving me errors and I needed to test scene - Justin*/
 }
