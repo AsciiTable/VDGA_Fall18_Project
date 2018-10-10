@@ -125,8 +125,8 @@ GameObject:
   - component: {fileID: 261439631}
   - component: {fileID: 261439630}
   - component: {fileID: 261439629}
-  - component: {fileID: 261439634}
   - component: {fileID: 261439635}
+  - component: {fileID: 261439634}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -265,17 +265,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 261439628}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5ef6486c438c44c1b06e0801f9a4d94, type: 3}
+  m_Script: {fileID: 11500000, guid: f54ce4d32b62d41d1bc3f57c70c30c80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MAXHP: 10
-  CURRENTHP: 0
-  moveSpeed: 5
-  jumpForce: 5
-  m_AirControl: 0
-  m_WhatIsGround:
-    serializedVersion: 2
-    m_Bits: 0
+  Player_moveForce: 0.4
+  Player_jumpForce: 40
+  Player_doubleJumpForce: 30
+  Player_jumpsMax: 2
+  Player_invulnerableTimer_Max: 3
+  Player_invulnerableCooldown_Max: 3
+  Player_invulnerable: 0
+  Player_gravity: 10
+  SuicidePoint: -15
 --- !u!114 &261439635
 MonoBehaviour:
   m_ObjectHideFlags: 0
