@@ -20,9 +20,12 @@ public class Player : MonoBehaviour {
     [Tooltip("How many seconds before invulnerability can be used again")]
     public float Player_invulnerableCooldown_Max = 3f;
     public bool Player_invulnerable = false;
+    public bool Player_inside = false;
         private float Player_invulnerableTimer_stamp;
         private float Player_invulnerableCooldown_stamp;
         private bool Player_invulnerableReady = true;
+        private bool Player_invulerableDurationOver = true;
+        
     [Space(10)]
 
     [Header("Misc.")]
@@ -39,6 +42,8 @@ public class Player : MonoBehaviour {
     private Transform groundCheck1_transform;
     private Transform groundCheck2_transform;
 
+    private Transform Environment_transform;
+
     void Awake()
     {
         Player_rb2d = GetComponent<Rigidbody2D>();
@@ -51,6 +56,7 @@ public class Player : MonoBehaviour {
 
     void FixedUpdate()
     {
+        /*  Moving  */
         Player_rb2d.gravityScale = Player_gravity;
         float Player_horizontal = Input.GetAxis("Horizontal");
 
@@ -58,9 +64,7 @@ public class Player : MonoBehaviour {
         //move player left and right
         Player_rb2d.transform.Translate((Player_horizontal * Player_moveForce), 0f, 0f);
 
-        //------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-        //flip player
+        /*  Flipping  */
         if (Player_horizontal > 0 && Player_sprite.flipX)
         {
             Player_sprite.flipX = false;
@@ -73,89 +77,91 @@ public class Player : MonoBehaviour {
 
     void Update()
     {
-        //Check if on floor
-        if (Physics2D.Linecast(groundCheck1_transform.position, groundCheck2_transform.position, 1 << LayerMask.NameToLayer("Platforms")) || Physics2D.Linecast(groundCheck1_transform.position, groundCheck2_transform.position, 1 << LayerMask.NameToLayer("Enemy")))
+        /*  Jumping  */
+//Check if on floor (enemies, platforms, and enemies)
+        if (Physics2D.Linecast(groundCheck1_transform.position, groundCheck2_transform.position, 1 << LayerMask.NameToLayer("Platforms")) ||
+            Physics2D.Linecast(groundCheck1_transform.position, groundCheck2_transform.position, 1 << LayerMask.NameToLayer("Environment")) ||
+            Physics2D.Linecast(groundCheck1_transform.position, groundCheck2_transform.position, 1 << LayerMask.NameToLayer("Enemy"))  )
         {
             Player_groundCheck = true;
+            Player_jumps = 0;
+            //Debug.Log("Grounded");
         }
         else
         {
             Player_groundCheck = false;
         }
-
-        if (Player_groundCheck)
-        {
-            //Debug.Log("Grounded");
-            Player_jumps = 0;
-        }
-
-        //Jump in air
+//Jump in air
         if (Input.GetButtonDown("Jump") && Player_jumps != Player_jumpsMax && Player_jumps != 0 && !(Player_groundCheck))
         {
-            Debug.Log("Double Lifted");
+            //Debug.Log("Double Lifted");
             Player_jumps++;
             if (Player_rb2d.velocity.y < Player_doubleJumpForce)
             {
                 Player_rb2d.velocity = new Vector3(0f, Player_doubleJumpForce, 0f);
             }
         }
-        //Jump off floor
+//Jump off floor
         else if (Input.GetButtonDown("Jump") && Player_jumps == 0 && Player_groundCheck)
         {
-            Debug.Log("Lifted");
+            //Debug.Log("Lifted");
             Player_rb2d.velocity = new Vector3(0f, Player_jumpForce, 0f);
             Player_jumps++;
         }
-        //Cancels first jump if in air
+//Cancels first jump if in air
         else if (!(Player_groundCheck) && Player_jumps == 0)
         {
-            Debug.Log("Unlifted");
+            //Debug.Log("Unlifted");
             Player_jumps++;
         }
 
+        /*  Death  */
+//Player falling off stage
         if (Player_xyz.position.y < SuicidePoint)
         {
-            Debug.Log("some death is true");
+            //Debug.Log("some death is true");
             ResetScene();
         }
 
-        //Invulnerability stuff
+        /*  Invulnerability  */
+//Go invulnerable if button press and not on cooldown
         if (Input.GetButtonDown("Invulnerable") && Player_invulnerableReady)
         {
-            Debug.Log("Is invulnerable");
+            //Debug.Log("Is invulnerable");
             Player_invulnerable = true;
             Player_invulnerableReady = false;
             Player_invulnerableTimer_stamp = Time.time + Player_invulnerableTimer_Max;
-
         }
-        if (Player_invulnerable && Time.time >= Player_invulnerableTimer_stamp)
+//Un invulnerable after time and not in environment block
+        if (Player_invulnerable && Time.time >= Player_invulnerableTimer_stamp && !(Player_inside) && Player_invulnerable)
         {
-            Debug.Log("Invulnerable Over");
+            //Debug.Log("Invulnerable Over");
             Player_invulnerable = false;
             Player_invulnerableCooldown_stamp = Time.time + Player_invulnerableCooldown_Max;
         }
+//Cooldown
         if (!(Player_invulnerable) && !(Player_invulnerableReady) && Time.time >= Player_invulnerableCooldown_stamp)
         {
-            Debug.Log("Invulnerable Ready");
+            //Debug.Log("Invulnerable Ready");
             Player_invulnerableReady = true;
         }
     }
 
-    //Resets the scene to the beginning DEATH
-    public void ResetScene()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-
     void OnCollisionEnter2D(Collision2D col)
     {
+
+/*  Death  */
+//Death by Enemies
         if (col.gameObject.tag == "Enemy" && !(Player_invulnerable))
         {
             ResetScene();
         }
-        if (col.gameObject.tag == "Death" && !(Player_invulnerable))
-        {
-            ResetScene();
-        }
+    }
+
+/*  Death  */
+//Resets the scene to the beginning
+    public void ResetScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
