@@ -32,15 +32,10 @@ public class Player : MonoBehaviour {
     public float SuicidePoint = -15f;
         private bool Player_flipped = false;
 
-
-
-
-
-
-
     private Rigidbody2D Player_rb2d;
     private Transform Player_xyz;
     private SpriteRenderer Player_sprite;
+
     private Transform groundCheck1_transform;
     private Transform groundCheck2_transform;
 
@@ -52,7 +47,6 @@ public class Player : MonoBehaviour {
 
         groundCheck1_transform = transform.Find("groundCheck_1");
         groundCheck2_transform = transform.Find("groundCheck_2");
-
     }
 
     void FixedUpdate()
@@ -147,7 +141,7 @@ public class Player : MonoBehaviour {
         }
     }
 
-    //Resets the scene to the beginning
+    //Resets the scene to the beginning DEATH
     public void ResetScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -157,7 +151,11 @@ public class Player : MonoBehaviour {
     {
         if (col.gameObject.tag == "Enemy" && !(Player_invulnerable))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            ResetScene();
+        }
+        if (col.gameObject.tag == "Death" && !(Player_invulnerable))
+        {
+            ResetScene();
         }
     }
 }
