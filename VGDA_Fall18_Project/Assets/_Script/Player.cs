@@ -24,7 +24,6 @@ public class Player : MonoBehaviour {
         private float Player_invulnerableTimer_stamp;
         private float Player_invulnerableCooldown_stamp;
         private bool Player_invulnerableReady = true;
-        private bool Player_invulerableDurationOver = true;
         
     [Space(10)]
 
@@ -33,7 +32,6 @@ public class Player : MonoBehaviour {
     public float Player_gravity = 10f;
     [Tooltip("The Height Player Dies")]
     public float SuicidePoint = -15f;
-        private bool Player_flipped = false;
 
     private Rigidbody2D Player_rb2d;
     private Transform Player_xyz;
@@ -152,8 +150,10 @@ public class Player : MonoBehaviour {
 
 /*  Death  */
 //Death by Enemies
-        if (col.gameObject.tag == "Enemy" && !(Player_invulnerable))
+
+        if (col.gameObject.tag == "Enemy" && Player_invulnerable == false)
         {
+            Debug.Log("Enemy Death");
             ResetScene();
         }
     }
@@ -162,6 +162,7 @@ public class Player : MonoBehaviour {
 //Resets the scene to the beginning
     public void ResetScene()
     {
+        Debug.Log("Some Death");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

@@ -43,7 +43,7 @@ public class Environment : MonoBehaviour {
         if (col.gameObject.tag == "Player")
         {
             Player_script.Player_inside = true;
-            Debug.Log("Enter");
+            //Debug.Log("Enter");
         }
     }
     void OnTriggerEnter2D(Collider2D col)
@@ -51,7 +51,7 @@ public class Environment : MonoBehaviour {
         if (col.gameObject.tag == "Player")
         {
             Player_script.Player_inside = true;
-            Debug.Log("Enter");
+            //Debug.Log("Enter");
         }
     }
 
@@ -60,7 +60,7 @@ public class Environment : MonoBehaviour {
         if (col.gameObject.tag == "Player")
         {
             Player_script.Player_inside = false;
-            Debug.Log("Exit");
+            //Debug.Log("Exit");
         }
     }
     void OnTriggerExit2D(Collider2D col)
@@ -68,7 +68,7 @@ public class Environment : MonoBehaviour {
         if (col.gameObject.tag == "Player")
         {
             Player_script.Player_inside = false;
-            Debug.Log("Exit");
+            //Debug.Log("Exit");
         }
     }
 
