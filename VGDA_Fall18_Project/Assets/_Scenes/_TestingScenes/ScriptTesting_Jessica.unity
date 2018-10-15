@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 383646491}
   - component: {fileID: 383646490}
   - component: {fileID: 383646489}
+  - component: {fileID: 383646494}
   m_Layer: 9
   m_Name: enemy
   m_TagString: Enemy
@@ -140,13 +141,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 383646488}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6ff7041f30894648b53675bf8d15c3a, type: 3}
+  m_Script: {fileID: 11500000, guid: 53ff00020dd95e940a3403e5b6fc9423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 5
-  MaxLeftPos: 0
-  MaxRightPos: 0
-  SpriteFacingRight: 0
+  isHit: 0
+  knockBack: 1000
 --- !u!50 &383646490
 Rigidbody2D:
   serializedVersion: 4
@@ -158,8 +157,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: 1.4340935
+  m_LinearDrag: 2
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -178,7 +177,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0.145}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -251,6 +250,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &383646494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 383646488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6ff7041f30894648b53675bf8d15c3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveSpeed: 5
+  MaxLeftPos: 0
+  MaxRightPos: 0
+  SpriteFacingRight: 0
 --- !u!1 &401465435
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,6 +303,7 @@ MonoBehaviour:
   Player_invulnerableTimer_Max: 3
   Player_invulnerableCooldown_Max: 3
   Player_invulnerable: 0
+  Player_inside: 0
   Player_gravity: 10
   SuicidePoint: -15
 --- !u!61 &401465437
@@ -878,7 +893,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 855f3babcfd649644b254d320913a5a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player_2Point0_get: {fileID: 0}
 --- !u!50 &1553445537
 Rigidbody2D:
   serializedVersion: 4
@@ -957,7 +971,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 591898985
-  m_SortingLayer: 0
+  m_SortingLayer: -4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b5776780708df40b8aa92941a87ddf99, type: 3}
   m_Color: {r: 0.21437927, g: 0.745283, b: 0.116011046, a: 1}
