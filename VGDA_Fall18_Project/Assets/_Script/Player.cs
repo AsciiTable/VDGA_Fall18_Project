@@ -36,6 +36,7 @@ public class Player : MonoBehaviour {
     private Rigidbody2D Player_rb2d;
     private Transform Player_xyz;
     private SpriteRenderer Player_sprite;
+    private Animator Player_animation;
 
     private Transform groundCheck1_transform;
     private Transform groundCheck2_transform;
@@ -47,6 +48,7 @@ public class Player : MonoBehaviour {
         Player_rb2d = GetComponent<Rigidbody2D>();
         Player_xyz = GetComponent<Transform>();
         Player_sprite = GetComponent<SpriteRenderer>();
+        Player_animation = GetComponent<Animator>();
 
         groundCheck1_transform = transform.Find("groundCheck_1");
         groundCheck2_transform = transform.Find("groundCheck_2");
@@ -75,6 +77,10 @@ public class Player : MonoBehaviour {
 
     void Update()
     {
+        /*  Animations */
+//Jump animation
+        Player_animation.SetBool("onGround", Player_groundCheck);
+
         /*  Jumping  */
 //Check if on floor (enemies, platforms, and enemies)
         if (Physics2D.Linecast(groundCheck1_transform.position, groundCheck2_transform.position, 1 << LayerMask.NameToLayer("Platforms")) ||
