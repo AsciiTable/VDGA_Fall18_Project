@@ -16,6 +16,7 @@
         </e>
         <e p="AI_Knockback.cs" t="Include" />
         <e p="AIMovement.cs" t="Include" />
+        <e p="Bat_Hitbox.cs" t="Include" />
         <e p="Standard Assets" t="Include">
           <e p="2D" t="Include">
             <e p="Scripts" t="Include">

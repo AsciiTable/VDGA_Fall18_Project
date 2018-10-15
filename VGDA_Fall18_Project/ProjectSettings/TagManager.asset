@@ -8,6 +8,7 @@ TagManager:
   - Environment
   - Platforms
   - Death
+  - Bat
   layers:
   - Default
   - TransparentFX

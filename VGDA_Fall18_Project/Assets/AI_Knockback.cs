@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class AI_Knockback : MonoBehaviour{
 	
-	public bool isHit = false;
+	public bool isHitOnLeft = false;
+	public bool isHitOnRight = false;
 	public float knockBack = 500f;
 	private Rigidbody2D enemy;
 	
@@ -15,9 +16,13 @@ public class AI_Knockback : MonoBehaviour{
 	}
 
 	private void FixedUpdate(){
-		if (isHit){
+		if (isHitOnLeft){
 			enemy.AddForce(transform.right*knockBack);
-			isHit = false;
+			isHitOnLeft = false;
+		}
+		else if (isHitOnRight){
+			enemy.AddForce(-transform.right*knockBack);
+			isHitOnRight = false;
 		}
 	}
 
