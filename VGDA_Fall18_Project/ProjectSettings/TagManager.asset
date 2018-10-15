@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Enemy
   - Environment
+  - Platforms
+  - Death
   layers:
   - Default
   - TransparentFX
@@ -15,11 +17,11 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Player
   - Enemy
   - Platforms
-  - 
-  - 
+  - Environment
+  - Death
   - 
   - 
   - 
@@ -40,9 +42,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
+  - name: Background
+    uniqueID: 51365407
+    locked: 0
+  - name: Environment
+    uniqueID: 591898985
     locked: 0
   - name: Platforms
     uniqueID: 3248350275
+    locked: 0
+  - name: Enemy
+    uniqueID: 2038700907
+    locked: 0
+  - name: Player
+    uniqueID: 339869517
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
