@@ -790,6 +790,7 @@ MonoBehaviour:
   Player_invulnerableTimer_Max: 3
   Player_invulnerableCooldown_Max: 3
   Player_invulnerable: 0
+  Player_inside: 0
   Player_gravity: 10
   SuicidePoint: -15
 --- !u!61 &1004174131
@@ -928,6 +929,8 @@ GameObject:
   - component: {fileID: 1157906148}
   - component: {fileID: 1157906147}
   - component: {fileID: 1157906146}
+  - component: {fileID: 1157906151}
+  - component: {fileID: 1157906150}
   m_Layer: 9
   m_Name: enemy
   m_TagString: Enemy
@@ -1039,6 +1042,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1157906150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1157906145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53ff00020dd95e940a3403e5b6fc9423, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHit: 0
+  knockBack: 1000
+--- !u!114 &1157906151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1157906145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6ff7041f30894648b53675bf8d15c3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveSpeed: 5
+  MaxLeftPos: 0
+  MaxRightPos: 0
+  SpriteFacingRight: 0
 --- !u!1 &1552909040
 GameObject:
   m_ObjectHideFlags: 0
