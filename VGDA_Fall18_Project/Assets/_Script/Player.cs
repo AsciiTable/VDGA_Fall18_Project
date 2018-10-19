@@ -7,9 +7,9 @@ public class Player : MonoBehaviour {
 
     [Header("Move & Jump")]
     public float Player_moveForce = 0.4f;
-    public float Player_jumpForce = 40f;
-    public float Player_doubleJumpForce = 30f;
-    public int Player_jumpsMax = 2;
+    public float Player_jumpForce = 35f;
+    public float Player_doubleJumpForce = 20f;
+    public int Player_jumpsMax = 1;
         private bool Player_groundCheck = false;
         private int Player_jumps = 0;
     [Space(10)]
@@ -148,6 +148,16 @@ public class Player : MonoBehaviour {
         {
             //Debug.Log("Invulnerable Ready");
             Player_invulnerableReady = true;
+        }
+
+//Make transparent
+        if(Player_invulnerable)
+        {
+            Player_sprite.color = new Color(1f, 1f, 1f, 0.5f);
+        }
+        if (!Player_invulnerable)
+        {
+            Player_sprite.color = new Color(1f, 1f, 1f, 1f);
         }
     }
 

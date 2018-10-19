@@ -277,7 +277,7 @@ MonoBehaviour:
   Player_moveForce: 0.4
   Player_jumpForce: 40
   Player_doubleJumpForce: 30
-  Player_jumpsMax: 2
+  Player_jumpsMax: 1
   Player_invulnerableTimer_Max: 3
   Player_invulnerableCooldown_Max: 3
   Player_invulnerable: 0
