@@ -90,13 +90,13 @@ TextureImporter:
       name: Untitled-8_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1021.6667
-        height: 2025
+        x: 308
+        y: 636
+        width: 485
+        height: 730
       alignment: 9
-      pivot: {x: 0.5408397, y: 0.31455764}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 340}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -110,13 +110,13 @@ TextureImporter:
       name: Untitled-8_1
       rect:
         serializedVersion: 2
-        x: 1021
-        y: 0
-        width: 1021.6667
-        height: 2025
+        x: 1320
+        y: 628
+        width: 439
+        height: 724
       alignment: 9
-      pivot: {x: 0.52333707, y: 0.3096518}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 270}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -130,13 +130,13 @@ TextureImporter:
       name: Untitled-8_2
       rect:
         serializedVersion: 2
-        x: 2043
-        y: 0
-        width: 1022
-        height: 2025
+        x: 2214
+        y: 644
+        width: 585
+        height: 681
       alignment: 9
-      pivot: {x: 0.46500596, y: 0.31848237}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 307}
       outline: []
       physicsShape: []
       tessellationDetail: 0
