@@ -9,10 +9,12 @@ public class AI_Knockback : MonoBehaviour{
 	public bool isHitOnRight = false;
 	public float knockBack = 500f;
 	private Rigidbody2D enemy;
+	public BoxCollider2D bat;
 	
 	// Use this for initialization
 	void Start (){
 		enemy = GetComponent<Rigidbody2D>();
+		bat = GetComponent<BoxCollider2D>();
 	}
 
 	private void FixedUpdate(){
@@ -28,6 +30,6 @@ public class AI_Knockback : MonoBehaviour{
 
 	// Update is called once per frame
 	void Update () {
-
+		
 	}
 }

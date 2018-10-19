@@ -147,6 +147,7 @@ MonoBehaviour:
   isHitOnLeft: 0
   isHitOnRight: 0
   knockBack: 1000
+  bat: {fileID: 0}
 --- !u!50 &383646490
 Rigidbody2D:
   serializedVersion: 4
@@ -245,7 +246,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 383646488}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.5, y: 0.84, z: 0}
+  m_LocalPosition: {x: 2.88, y: 0.89, z: 0}
   m_LocalScale: {x: 3.1139, y: 3.1139, z: 3.1139}
   m_Children: []
   m_Father: {fileID: 0}
@@ -321,9 +322,9 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.09127283, y: 1.8344529}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5408397, y: 0.31455764}
-    oldSize: {x: 10.216666, y: 20.249998}
+    border: {x: 0, y: 0, z: 0, w: 3.3999999}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 4.8499994, y: 7.2999997}
     newSize: {x: 10.216666, y: 20.249998}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -721,9 +722,9 @@ GameObject:
   - component: {fileID: 1223173684}
   - component: {fileID: 1223173683}
   - component: {fileID: 1223173685}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: bat
-  m_TagString: Environment
+  m_TagString: Bat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -735,7 +736,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1223173681}
   m_LocalRotation: {x: 0.0035547197, y: -0, z: -0, w: 0.9999937}
-  m_LocalPosition: {x: 4.1428576, y: 2.0021276, z: -0.10225833}
+  m_LocalPosition: {x: 0.6, y: 2.0021276, z: -0.10225833}
   m_LocalScale: {x: 1.2285712, y: 1.1686747, z: 1.0002158}
   m_Children: []
   m_Father: {fileID: 401465441}
@@ -753,10 +754,10 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 4.36, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0.65, y: 0.65, z: 0.65, w: 0.65}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: -0.37962967, y: 0.5289353}
     oldSize: {x: 5.12, y: 2.56}
     newSize: {x: 5.12, y: 2.56}
     adaptiveTilingThreshold: 0.5
@@ -764,7 +765,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.12, y: 2.56}
+  m_Size: {x: 5.09, y: 2.56}
   m_EdgeRadius: 0
 --- !u!212 &1223173684
 SpriteRenderer:
@@ -824,7 +825,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bat: {fileID: 1223173681}
+  enemy: {fileID: 383646491}
   isSwung: 0
+  knockBack: 500
 --- !u!1 &1300733313
 GameObject:
   m_ObjectHideFlags: 0
