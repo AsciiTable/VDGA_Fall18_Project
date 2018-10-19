@@ -47,21 +47,21 @@
     <session id="545689245">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
-          <entry key="project.open.time.5" value="4" />
+          <entry key="project.closed" value="9" />
+          <entry key="project.open.time.5" value="5" />
           <entry key="project.open.time.6" value="3" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="2297" />
+          <entry key="cs" value="2409" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="2297" />
+          <entry key="C#" value="2409" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -144,36 +144,37 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/AI_Knockback.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+            <state relative-caret-position="180">
+              <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="43" />
               <folding>
-                <marker date="1539643467706" expanded="false" signature="6:92" ph="..." />
-                <marker date="1539643467706" expanded="true" signature="135:717" ph="{...}" />
-                <marker date="1539643467706" expanded="true" signature="343:425" ph="{...}" />
-                <marker date="1539643467706" expanded="true" signature="454:654" ph="{...}" />
-                <marker date="1539643467706" expanded="true" signature="474:549" ph="{...}" />
-                <marker date="1539643467706" expanded="true" signature="574:651" ph="{...}" />
-                <marker date="1539643467706" expanded="true" signature="708:715" ph="{...}" />
+                <marker date="1539919656874" expanded="false" signature="6:92" ph="..." />
+                <marker date="1539919656874" expanded="true" signature="135:717" ph="{...}" />
+                <marker date="1539919656874" expanded="true" signature="343:425" ph="{...}" />
+                <marker date="1539919656874" expanded="true" signature="454:654" ph="{...}" />
+                <marker date="1539919656874" expanded="true" signature="474:549" ph="{...}" />
+                <marker date="1539919656874" expanded="true" signature="574:651" ph="{...}" />
+                <marker date="1539919656874" expanded="true" signature="708:715" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Bat_Hitbox.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+            <state relative-caret-position="525">
+              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
               <folding>
-                <marker date="1539573741393" expanded="false" signature="6:78" ph="..." />
-                <marker date="1539573741393" expanded="true" signature="119:657" ph="{...}" />
-                <marker date="1539573741393" expanded="true" signature="225:333" ph="{...}" />
-                <marker date="1539573741393" expanded="true" signature="388:655" ph="{...}" />
-                <marker date="1539573741393" expanded="true" signature="404:533" ph="{...}" />
-                <marker date="1539573741393" expanded="true" signature="533:652" ph="{...}" />
+                <marker date="1539920047817" expanded="false" signature="6:78" ph="..." />
+                <marker date="1539920047817" expanded="true" signature="119:811" ph="{...}" />
+                <marker date="1539920047817" expanded="true" signature="257:365" ph="{...}" />
+                <marker date="1539920047817" expanded="true" signature="407:484" ph="{...}" />
+                <marker date="1539920047817" expanded="true" signature="539:806" ph="{...}" />
+                <marker date="1539920047817" expanded="true" signature="555:684" ph="{...}" />
+                <marker date="1539920047817" expanded="true" signature="684:803" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -201,8 +202,8 @@
         <option value="$PROJECT_DIR$/Assets/_Script/Player_Jessica.cs" />
         <option value="$PROJECT_DIR$/Assets/AIMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/_Script/Player.cs" />
-        <option value="$PROJECT_DIR$/Assets/Bat_Hitbox.cs" />
         <option value="$PROJECT_DIR$/Assets/AI_Knockback.cs" />
+        <option value="$PROJECT_DIR$/Assets/Bat_Hitbox.cs" />
       </list>
     </option>
   </component>
@@ -213,10 +214,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="36" />
-    <option name="y" value="43" />
-    <option name="width" value="1332" />
-    <option name="height" value="840" />
+    <option name="x" value="53" />
+    <option name="y" value="53" />
+    <option name="width" value="1548" />
+    <option name="height" value="959" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -241,10 +242,10 @@
         </subPane>
         <option name="show-hidden-items" value="false" />
       </pane>
-      <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
       </pane>
+      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -304,11 +305,12 @@
       <workItem from="1539572901563" duration="47000" />
       <workItem from="1539572980249" duration="1181000" />
       <workItem from="1539642296588" duration="1162000" />
+      <workItem from="1539918970511" duration="1099000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17790000" />
+    <option name="totallyTimeSpent" value="18889000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -320,9 +322,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="36" y="43" width="1332" height="840" extended-state="0" />
+    <frame x="53" y="53" width="1548" height="959" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17295597" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1498656" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -339,7 +341,7 @@
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Unit Tests" order="12" />
       <window_info anchor="bottom" id="Terminal" order="13" weight="0.3296875" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="14" side_tool="true" visible="true" weight="0.20254958" />
+      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" visible="true" weight="0.17333333" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -432,33 +434,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Bat_Hitbox.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/AI_Knockback.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+        <state relative-caret-position="180">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="43" />
           <folding>
-            <marker date="1539573741393" expanded="false" signature="6:78" ph="..." />
-            <marker date="1539573741393" expanded="true" signature="119:657" ph="{...}" />
-            <marker date="1539573741393" expanded="true" signature="225:333" ph="{...}" />
-            <marker date="1539573741393" expanded="true" signature="388:655" ph="{...}" />
-            <marker date="1539573741393" expanded="true" signature="404:533" ph="{...}" />
-            <marker date="1539573741393" expanded="true" signature="533:652" ph="{...}" />
+            <marker date="1539919656874" expanded="false" signature="6:92" ph="..." />
+            <marker date="1539919656874" expanded="true" signature="135:717" ph="{...}" />
+            <marker date="1539919656874" expanded="true" signature="343:425" ph="{...}" />
+            <marker date="1539919656874" expanded="true" signature="454:654" ph="{...}" />
+            <marker date="1539919656874" expanded="true" signature="474:549" ph="{...}" />
+            <marker date="1539919656874" expanded="true" signature="574:651" ph="{...}" />
+            <marker date="1539919656874" expanded="true" signature="708:715" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/AI_Knockback.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Bat_Hitbox.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        <state relative-caret-position="525">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
           <folding>
-            <marker date="1539643467706" expanded="false" signature="6:92" ph="..." />
-            <marker date="1539643467706" expanded="true" signature="135:717" ph="{...}" />
-            <marker date="1539643467706" expanded="true" signature="343:425" ph="{...}" />
-            <marker date="1539643467706" expanded="true" signature="454:654" ph="{...}" />
-            <marker date="1539643467706" expanded="true" signature="474:549" ph="{...}" />
-            <marker date="1539643467706" expanded="true" signature="574:651" ph="{...}" />
-            <marker date="1539643467706" expanded="true" signature="708:715" ph="{...}" />
+            <marker date="1539920047817" expanded="false" signature="6:78" ph="..." />
+            <marker date="1539920047817" expanded="true" signature="119:811" ph="{...}" />
+            <marker date="1539920047817" expanded="true" signature="257:365" ph="{...}" />
+            <marker date="1539920047817" expanded="true" signature="407:484" ph="{...}" />
+            <marker date="1539920047817" expanded="true" signature="539:806" ph="{...}" />
+            <marker date="1539920047817" expanded="true" signature="555:684" ph="{...}" />
+            <marker date="1539920047817" expanded="true" signature="684:803" ph="{...}" />
           </folding>
         </state>
       </provider>
