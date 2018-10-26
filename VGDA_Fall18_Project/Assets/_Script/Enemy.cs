@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
 
+    private Player Player_script;
 
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void FixedUpdate () {
-
+    private void Awake()
+    {
+        Player_script = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 
-    void OnCollisionEnter2D(Collision2D col)
+    void OnTriggerEnter2D(Collider2D col)
     {
-        
+        if (col.gameObject.tag == "Player")
+        {
+            Debug.Log("Enemy Death");
+            Player_script.ResetScene();
+        }
     }
 
 }
