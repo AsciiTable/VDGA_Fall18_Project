@@ -18,9 +18,11 @@ public class Bat_Hitbox : MonoBehaviour{
 			bat.GetComponent<SpriteRenderer>().flipX = true;
 		}
 	}
-	
+
+
+
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 
 		
 		if (Input.GetButtonDown("Bat")){
@@ -42,7 +44,7 @@ public class Bat_Hitbox : MonoBehaviour{
 
 		}
 		else{
-			bat.GetComponent<Collider2D>().enabled = false;
+			//bat.GetComponent<Collider2D>().enabled = false;
 			bat.GetComponent<SpriteRenderer>().enabled = false;
 			if (player.GetComponent<SpriteRenderer>().flipX == true){
 				bat.GetComponent<SpriteRenderer>().flipX = true;
@@ -54,7 +56,10 @@ public class Bat_Hitbox : MonoBehaviour{
 	}
 	
 	void OnTriggerEnter2D(Collider2D other){
-		if (other.CompareTag("Enemy")){
+		Debug.Log("collider");
+		if (other.CompareTag("Enemy"))
+		{
+			Debug.Log("Is Enemy");
 			if (bat.GetComponent<Collider2D>().IsTouching(other.GetComponent<Collider2D>())){
 				other.GetComponent<Rigidbody2D>().AddForce(transform.right * knockBack);
 			}
