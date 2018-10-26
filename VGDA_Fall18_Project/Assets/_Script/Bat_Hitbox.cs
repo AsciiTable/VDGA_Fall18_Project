@@ -8,18 +8,30 @@ public class Bat_Hitbox : MonoBehaviour{
 	public Collider2D enemy;
 	public bool isSwung = false;
 	public float knockBack = 500f;
+	public GameObject player;
 	
 	// Use this for initialization
 	void Start (){
 		bat.GetComponent<Collider2D>().enabled = false;
 		bat.GetComponent<SpriteRenderer>().enabled = false;
+		if (player.GetComponent<SpriteRenderer>().flipX == true){
+			bat.GetComponent<SpriteRenderer>().flipX = true;
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+		
 		if (Input.GetButtonDown("Bat")){
 			bat.GetComponent<Collider2D>().enabled = true;
 			bat.GetComponent<SpriteRenderer>().enabled = true;
+			if (player.GetComponent<SpriteRenderer>().flipX == true){
+				bat.GetComponent<SpriteRenderer>().flipX = true;
+			}
+			else{
+				bat.GetComponent<SpriteRenderer>().flipX = false;
+			}
 			//OnTriggerEnter2D(enemy);
 		/*	if (bat.GetComponent<Collider2D>().IsTouching(enemy.GetComponent<Collider2D>())){
 				enemy.GetComponent<Rigidbody2D>().AddForce(transform.right * knockBack);
@@ -32,6 +44,12 @@ public class Bat_Hitbox : MonoBehaviour{
 		else{
 			bat.GetComponent<Collider2D>().enabled = false;
 			bat.GetComponent<SpriteRenderer>().enabled = false;
+			if (player.GetComponent<SpriteRenderer>().flipX == true){
+				bat.GetComponent<SpriteRenderer>().flipX = true;
+			}
+			else{
+				bat.GetComponent<SpriteRenderer>().flipX = false;
+			}
 		}
 	}
 	

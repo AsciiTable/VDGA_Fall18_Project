@@ -828,6 +828,7 @@ MonoBehaviour:
   enemy: {fileID: 383646491}
   isSwung: 0
   knockBack: 500
+  player: {fileID: 0}
 --- !u!1 &1300733313
 GameObject:
   m_ObjectHideFlags: 0
