@@ -161,21 +161,17 @@ public class Player : MonoBehaviour {
         }
     }
 
-    void OnCollisionEnter2D(Collision2D col)
+    void OnTriggerEnter2D(Collider2D col)
     {
-
-/*  Death  */
-//Death by Enemies
-
-        if (col.gameObject.tag == "Enemy" && Player_invulnerable == false)
+        if (col.gameObject.tag == "Enemy")
         {
             Debug.Log("Enemy Death");
             ResetScene();
         }
     }
 
-/*  Death  */
-//Resets the scene to the beginning
+    /*  Death  */
+    //Resets the scene to the beginning
     public void ResetScene()
     {
         Debug.Log("Some Death");
