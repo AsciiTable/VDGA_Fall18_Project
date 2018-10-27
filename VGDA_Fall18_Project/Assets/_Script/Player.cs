@@ -161,15 +161,6 @@ public class Player : MonoBehaviour {
         }
     }
 
-    void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.tag == "Enemy")
-        {
-            Debug.Log("Enemy Death");
-            ResetScene();
-        }
-    }
-
     /*  Death  */
     //Resets the scene to the beginning
     public void ResetScene()
