@@ -88,7 +88,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1199322787491064}
   m_LocalRotation: {x: -0.0035547197, y: 0, z: -0, w: 0.9999937}
-  m_LocalPosition: {x: -0.5, y: -0.5, z: 0.1}
+  m_LocalPosition: {x: 46.7, y: 6.4, z: 0.1}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children:
   - {fileID: 4687080941031156}
@@ -275,8 +275,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player_moveForce: 0.4
-  Player_jumpForce: 50
-  Player_doubleJumpForce: 40
+  Player_jumpForce: 40
+  Player_doubleJumpForce: 30
   Player_jumpsMax: 2
   Player_invulnerableTimer_Max: 3
   Player_invulnerableCooldown_Max: 3
