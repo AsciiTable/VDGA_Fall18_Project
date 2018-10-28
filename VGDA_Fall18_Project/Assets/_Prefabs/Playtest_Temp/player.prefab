@@ -188,7 +188,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -275,14 +275,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player_moveForce: 0.4
-  Player_jumpForce: 40
-  Player_doubleJumpForce: 30
-  Player_jumpsMax: 2
+  Player_jumpForce: 18
+  Player_doubleJumpForce: 10
+  Player_jumpsMax: 1
   Player_invulnerableTimer_Max: 3
   Player_invulnerableCooldown_Max: 3
   Player_invulnerable: 0
   Player_inside: 0
-  Player_gravity: 10
+  Player_gravity: 2
   SuicidePoint: -15
 --- !u!212 &212239509845403428
 SpriteRenderer:
