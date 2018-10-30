@@ -1,64 +1,171 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-//Make a comment
+using UnityEngine.SceneManagement;
 
 public class Player_Jessica : MonoBehaviour {
-    public int MAXHP = 10;
-    public int CURRENTHP;
-    public float moveSpeed = 5f;
-    public float jumpForce = 5f;
-    bool canJump = true;
-    bool onGround = true;
-    [SerializeField] private bool m_AirControl = false;// Whether or not a player can steer while jumping;
-    [SerializeField] private LayerMask m_WhatIsGround;// A mask determining what is ground to the character
-    
-    const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
-    private Rigidbody2D player;
-    private Animator playerAnim;//reference to player's animator component
 
-    //These are all initialized during the loading screen
-    private void Awake(){
-        player = GetComponent<Rigidbody2D>();//applies physics to player
+    [Header("Move & Jump")]
+    public float Player_moveForce = 0.4f;
+    public float Player_jumpForce = 35f;
+    public float Player_doubleJumpForce = 20f;
+    public int Player_jumpsMax = 1;
+        private bool Player_groundCheck = false;
+        private int Player_jumps = 0;
+    [Space(10)]
 
-    }
-
-    // Use this for initialization
-    void Start (){
-
-    }
-
-    /*Update for physics stuff: will run 0, once, or multiple times depending on what is needed
-     * Includes:
-     * Jump
-     */
-    private void FixedUpdate(){
+    [Header("Invulnerable")]
+    [Tooltip("How many seconds invulnerability lasts")]
+    public float Player_invulnerableTimer_Max = 3f;
+    [Tooltip("How many seconds before invulnerability can be used again")]
+    public float Player_invulnerableCooldown_Max = 3f;
+    public bool Player_invulnerable = false;
+    public bool Player_inside = false;
+        private float Player_invulnerableTimer_stamp;
+        private float Player_invulnerableCooldown_stamp;
+        private bool Player_invulnerableReady = true;
         
-        /*if(onGround && canJump && playerAnim.GetBool("onGround")){
-            onGround = false;
-            playerAnim.SetBool("onGround", false);
-            player.AddForce(new Vector2(0f, jumpForce));
-        }*/
+    [Space(10)]
+
+    [Header("Misc.")]
+    [Tooltip("Rigidbody2D Gravity Scale")]
+    public float Player_gravity = 10f;
+    [Tooltip("The Height Player Dies")]
+    public float SuicidePoint = -15f;
+
+    private Rigidbody2D Player_rb2d;
+    private Transform Player_xyz;
+    private SpriteRenderer Player_sprite;
+    private Animator Player_animation;
+
+    private Transform groundCheck1_transform;
+    private Transform groundCheck2_transform;
+
+    private Transform Environment_transform;
+
+    void Awake()
+    {
+        Player_rb2d = GetComponent<Rigidbody2D>();
+        Player_xyz = GetComponent<Transform>();
+        Player_sprite = GetComponent<SpriteRenderer>();
+        Player_animation = GetComponent<Animator>();
+
+        groundCheck1_transform = transform.Find("groundCheck_1");
+        groundCheck2_transform = transform.Find("groundCheck_2");
     }
 
-    // Update is called once per frame
-    /*Includes:
-     * Special Ghost Power CD
-     * Recieving input to: jump, move left, move right, swing bat, apologize, run
-     */
-    void Update () {
-        //Horizontal movement w/ flip
-        float inputHorizontal = Input.GetAxis("Horizontal");
-        transform.position = transform.position + new Vector3((inputHorizontal * moveSpeed * Time.deltaTime), 0, 0);
-        //Flip
-        if(inputHorizontal > 0 && GetComponent<SpriteRenderer>().flipX){
-            GetComponent<SpriteRenderer>().flipX = false;
-        }
-        else if (inputHorizontal < 0 && !GetComponent<SpriteRenderer>().flipX){
-            GetComponent<SpriteRenderer>().flipX = true;
-        }
-        //Vertical movement 
+    void FixedUpdate()
+    {
+        /*  Moving  */
+        Player_rb2d.gravityScale = Player_gravity;
+        float Player_horizontal = Input.GetAxis("Horizontal");
 
+
+        //move player left and right
+        Player_rb2d.transform.Translate((Player_horizontal * Player_moveForce), 0f, 0f);
+
+        /*  Flipping  */
+        if (Player_horizontal > 0 && Player_sprite.flipX)
+        {
+            Player_sprite.flipX = false;
+        }
+        else if (Player_horizontal < 0 && !(Player_sprite.flipX))
+        {
+            Player_sprite.flipX = true;
+        }
+    }
+
+    void Update()
+    {
+        /*  Animations */
+//Jump animation
+        Player_animation.SetBool("onGround", Player_groundCheck);
+
+        /*  Jumping  */
+//Check if on floor (enemies, platforms, and enemies)
+        if (Physics2D.Linecast(groundCheck1_transform.position, groundCheck2_transform.position, 1 << LayerMask.NameToLayer("Platforms")) ||
+            Physics2D.Linecast(groundCheck1_transform.position, groundCheck2_transform.position, 1 << LayerMask.NameToLayer("Environment")) ||
+            Physics2D.Linecast(groundCheck1_transform.position, groundCheck2_transform.position, 1 << LayerMask.NameToLayer("Enemy"))  )
+        {
+            Player_groundCheck = true;
+            Player_jumps = 0;
+            //Debug.Log("Grounded");
+        }
+        else
+        {
+            Player_groundCheck = false;
+        }
+//Jump in air
+        if (Input.GetButtonDown("Jump") && Player_jumps != Player_jumpsMax && Player_jumps != 0 && !(Player_groundCheck))
+        {
+            //Debug.Log("Double Lifted");
+            Player_jumps++;
+            if (Player_rb2d.velocity.y < Player_doubleJumpForce)
+            {
+                Player_rb2d.velocity = new Vector3(0f, Player_doubleJumpForce, 0f);
+            }
+        }
+//Jump off floor
+        else if (Input.GetButtonDown("Jump") && Player_jumps == 0 && Player_groundCheck)
+        {
+            //Debug.Log("Lifted");
+            Player_rb2d.velocity = new Vector3(0f, Player_jumpForce, 0f);
+            Player_jumps++;
+        }
+//Cancels first jump if in air
+        else if (!(Player_groundCheck) && Player_jumps == 0)
+        {
+            //Debug.Log("Unlifted");
+            Player_jumps++;
+        }
+
+        /*  Death  */
+//Player falling off stage
+        if (Player_xyz.position.y < SuicidePoint)
+        {
+            //Debug.Log("some death is true");
+            ResetScene();
+        }
+
+        /*  Invulnerability  */
+//Go invulnerable if button press and not on cooldown
+        if (Input.GetButtonDown("Invulnerable") && Player_invulnerableReady)
+        {
+            //Debug.Log("Is invulnerable");
+            Player_invulnerable = true;
+            Player_invulnerableReady = false;
+            Player_invulnerableTimer_stamp = Time.time + Player_invulnerableTimer_Max;
+        }
+//Un invulnerable after time and not in environment block
+        if (Player_invulnerable && Time.time >= Player_invulnerableTimer_stamp && !(Player_inside) && Player_invulnerable)
+        {
+            //Debug.Log("Invulnerable Over");
+            Player_invulnerable = false;
+            Player_invulnerableCooldown_stamp = Time.time + Player_invulnerableCooldown_Max;
+        }
+//Cooldown
+        if (!(Player_invulnerable) && !(Player_invulnerableReady) && Time.time >= Player_invulnerableCooldown_stamp)
+        {
+            //Debug.Log("Invulnerable Ready");
+            Player_invulnerableReady = true;
+        }
+
+//Make transparent
+        if(Player_invulnerable)
+        {
+            Player_sprite.color = new Color(1f, 1f, 1f, 0.5f);
+        }
+        if (!Player_invulnerable)
+        {
+            Player_sprite.color = new Color(1f, 1f, 1f, 1f);
+        }
+    }
+
+    /*  Death  */
+    //Resets the scene to the beginning
+    public void ResetScene()
+    {
+        Debug.Log("Some Death");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
