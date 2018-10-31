@@ -126,7 +126,7 @@ public class Player_Jessica : MonoBehaviour {
             //Debug.Log("some death is true");
             ResetScene();
         }
-
+       
         /*  Invulnerability  */
 //Go invulnerable if button press and not on cooldown
         if (Input.GetButtonDown("Invulnerable") && Player_invulnerableReady)
@@ -158,6 +158,15 @@ public class Player_Jessica : MonoBehaviour {
         if (!Player_invulnerable)
         {
             Player_sprite.color = new Color(1f, 1f, 1f, 1f);
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Enemy")
+        {
+            Debug.Log("Enemy Death");
+            ResetScene();
         }
     }
 
