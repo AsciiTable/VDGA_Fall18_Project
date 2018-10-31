@@ -73,8 +73,13 @@ public class Bat_Hitbox : MonoBehaviour{
 		if (other.CompareTag("Enemy"))
 		{
 			Debug.Log("Is Enemy");
-			if (bat.GetComponent<Collider2D>().IsTouching(other.GetComponent<Collider2D>())){
+			if (bat.GetComponent<Collider2D>().IsTouching(other.GetComponent<Collider2D>()) && player.GetComponent<SpriteRenderer>().flipX == false){
 				other.GetComponent<Rigidbody2D>().AddForce(transform.right * knockBack);
+			}
+			else if (bat.GetComponent<Collider2D>().IsTouching(other.GetComponent<Collider2D>()) &&
+			         player.GetComponent<SpriteRenderer>().flipX == true)
+			{
+				other.GetComponent<Rigidbody2D>().AddForce(transform.right * -knockBack);
 			}
 		}
 	}
