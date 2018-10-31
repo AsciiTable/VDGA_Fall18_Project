@@ -13,6 +13,7 @@
           <e p="Bat_Hitbox.cs" t="Include" />
           <e p="Cutscene_Test_Justin.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
+          <e p="Enemy_Standing.cs" t="Include" />
           <e p="Environment.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="Player_Jessica.cs" t="Include" />

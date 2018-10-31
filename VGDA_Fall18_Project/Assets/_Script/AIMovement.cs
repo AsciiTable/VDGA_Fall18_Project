@@ -19,33 +19,52 @@ public class AIMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
 	{
-        /* 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-        if (HasTurned()){
-		}
-        It was giving me errors and I needed to test scene - Justin*/
 		Move(MovingRight());
 	}
 
 	int MovingRight(){//returns 1 if AI is moving right
-		if (SpriteFacingRight == true && GetComponent<SpriteRenderer>().flipX == false){
-			Debug.Log("Moving right!");
-			return 1;
+		if (SpriteFacingRight == true){
+			if (HasTurned() == false){
+				Debug.Log("Moving right!1");
+				return 1;
+			}
+			else{
+				Debug.Log("Moving left!1");
+				return -1;
+			}
 		}
-		Debug.Log("Moving left!");
-		return -1;
+		else {
+			if (HasTurned() == false){
+				Debug.Log("Moving left!2");
+				return -1;
+			}
+			else{
+				Debug.Log("Moving right!2");
+				return 1;
+			}
+		}
 	}
 	
 	void Move(int direction){
 		transform.position = transform.position + new Vector3(direction*MoveSpeed*Time.deltaTime,0,0);
 	}
-    /*      00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 	bool HasTurned(){
 		if (!SpriteFacingRight){
-			if (_enemy.position.x < MaxLeftPos){
+			if (_enemy.position.x <= MaxLeftPos){
 				GetComponent<SpriteRenderer>().flipX = true;
+				SpriteFacingRight = true;
 				return true;
 			}
+
 		}
+		else{
+			if (_enemy.position.x >= MaxRightPos){
+				GetComponent<SpriteRenderer>().flipX = false;
+				SpriteFacingRight = false;
+				return false;
+			}
+
+		}
+		return false;
 	}
-    It was giving me errors and I needed to test scene - Justin*/
 }
