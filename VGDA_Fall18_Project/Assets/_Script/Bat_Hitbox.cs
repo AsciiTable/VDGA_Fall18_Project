@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class Bat_Hitbox : MonoBehaviour{
@@ -9,6 +10,7 @@ public class Bat_Hitbox : MonoBehaviour{
 	public bool isSwung = false;
 	public float knockBack = 500f;
 	public GameObject player;
+	
 	
 	// Use this for initialization
 	void Start (){
@@ -22,14 +24,19 @@ public class Bat_Hitbox : MonoBehaviour{
 
 
 	// Update is called once per frame
-	void FixedUpdate () {
-
+	void FixedUpdate ()
+	{
+		float oX = bat.GetComponent<BoxCollider2D>().offset.x;
+		float nXLeft = (oX + 1) * -1;
 		
 		if (Input.GetButtonDown("Bat")){
 			bat.GetComponent<Collider2D>().enabled = true;
 			bat.GetComponent<SpriteRenderer>().enabled = true;
 			if (player.GetComponent<SpriteRenderer>().flipX == true){
+				bat.GetComponent<BoxCollider2D>().offset = new Vector2(nXLeft, bat.GetComponent<BoxCollider2D>().offset.y);
 				bat.GetComponent<SpriteRenderer>().flipX = true;
+				nXLeft = (bat.GetComponent<BoxCollider2D>().offset.x-1)*1;
+				bat.GetComponent<BoxCollider2D>().offset = new Vector2(oX, bat.GetComponent<BoxCollider2D>().offset.y);
 			}
 			else{
 				bat.GetComponent<SpriteRenderer>().flipX = false;
@@ -44,13 +51,19 @@ public class Bat_Hitbox : MonoBehaviour{
 
 		}
 		else{
-			//bat.GetComponent<Collider2D>().enabled = false;
+			bat.GetComponent<Collider2D>().enabled = false;
 			bat.GetComponent<SpriteRenderer>().enabled = false;
-			if (player.GetComponent<SpriteRenderer>().flipX == true){
+			if (player.GetComponent<SpriteRenderer>().flipX == true)
+			{
+				bat.GetComponent<BoxCollider2D>().offset = new Vector2((nXLeft-1)*-1, bat.GetComponent<BoxCollider2D>().offset.y);
 				bat.GetComponent<SpriteRenderer>().flipX = true;
+				nXLeft = (bat.GetComponent<BoxCollider2D>().offset.x-1)*1;
 			}
 			else{
+				float nX = (bat.GetComponent<BoxCollider2D>().offset.x+1)*1;
+				bat.GetComponent<BoxCollider2D>().offset = new Vector2(oX, bat.GetComponent<BoxCollider2D>().offset.y);
 				bat.GetComponent<SpriteRenderer>().flipX = false;
+
 			}
 		}
 	}

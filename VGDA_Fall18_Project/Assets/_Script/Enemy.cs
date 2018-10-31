@@ -10,7 +10,6 @@ public class Enemy : MonoBehaviour {
     private void Awake()
     {
         Player_script = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        platform = GameObject.FindGameObjectWithTag("Platforms");
     }
 
     void OnTriggerEnter2D(Collider2D col)
