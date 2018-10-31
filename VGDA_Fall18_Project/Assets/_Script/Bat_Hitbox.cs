@@ -10,6 +10,7 @@ public class Bat_Hitbox : MonoBehaviour{
 	public bool isSwung = false;
 	public float knockBack = 500f;
 	public GameObject player;
+	public float OriginalXOffset = 4.291245f; //GameObject.GetComponent<BoxCollider2D>().offset.x;
 	
 	
 	// Use this for initialization
@@ -19,6 +20,7 @@ public class Bat_Hitbox : MonoBehaviour{
 		if (player.GetComponent<SpriteRenderer>().flipX == true){
 			bat.GetComponent<SpriteRenderer>().flipX = true;
 		}
+		
 	}
 
 
@@ -26,8 +28,7 @@ public class Bat_Hitbox : MonoBehaviour{
 	// Update is called once per frame
 	void FixedUpdate ()
 	{
-		float oX = bat.GetComponent<BoxCollider2D>().offset.x;
-		float nXLeft = (oX + 1) * -1;
+		float nXLeft = (OriginalXOffset + 1) * -1;
 		
 		if (Input.GetButtonDown("Bat")){
 			bat.GetComponent<Collider2D>().enabled = true;
@@ -35,8 +36,8 @@ public class Bat_Hitbox : MonoBehaviour{
 			if (player.GetComponent<SpriteRenderer>().flipX == true){
 				bat.GetComponent<BoxCollider2D>().offset = new Vector2(nXLeft, bat.GetComponent<BoxCollider2D>().offset.y);
 				bat.GetComponent<SpriteRenderer>().flipX = true;
-				nXLeft = (bat.GetComponent<BoxCollider2D>().offset.x-1)*1;
-				bat.GetComponent<BoxCollider2D>().offset = new Vector2(oX, bat.GetComponent<BoxCollider2D>().offset.y);
+				//nXLeft = (bat.GetComponent<BoxCollider2D>().offset.x-1)*1;
+				//bat.GetComponent<BoxCollider2D>().offset = new Vector2(OriginalXOffset, bat.GetComponent<BoxCollider2D>().offset.y);
 			}
 			else{
 				bat.GetComponent<SpriteRenderer>().flipX = false;
@@ -55,13 +56,12 @@ public class Bat_Hitbox : MonoBehaviour{
 			bat.GetComponent<SpriteRenderer>().enabled = false;
 			if (player.GetComponent<SpriteRenderer>().flipX == true)
 			{
-				bat.GetComponent<BoxCollider2D>().offset = new Vector2((nXLeft-1)*-1, bat.GetComponent<BoxCollider2D>().offset.y);
+				//bat.GetComponent<BoxCollider2D>().offset = new Vector2(nXLeft, bat.GetComponent<BoxCollider2D>().offset.y);
 				bat.GetComponent<SpriteRenderer>().flipX = true;
-				nXLeft = (bat.GetComponent<BoxCollider2D>().offset.x-1)*1;
 			}
 			else{
 				float nX = (bat.GetComponent<BoxCollider2D>().offset.x+1)*1;
-				bat.GetComponent<BoxCollider2D>().offset = new Vector2(oX, bat.GetComponent<BoxCollider2D>().offset.y);
+				bat.GetComponent<BoxCollider2D>().offset = new Vector2(OriginalXOffset, bat.GetComponent<BoxCollider2D>().offset.y);
 				bat.GetComponent<SpriteRenderer>().flipX = false;
 
 			}
