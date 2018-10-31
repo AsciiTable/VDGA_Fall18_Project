@@ -25,21 +25,21 @@ public class AIMovement : MonoBehaviour {
 	int MovingRight(){//returns 1 if AI is moving right
 		if (SpriteFacingRight == true){
 			if (HasTurned() == false){
-				Debug.Log("Moving right!1");
+				//Debug.Log("Moving right!1");
 				return 1;
 			}
 			else{
-				Debug.Log("Moving left!1");
+				//Debug.Log("Moving left!1");
 				return -1;
 			}
 		}
 		else {
 			if (HasTurned() == false){
-				Debug.Log("Moving left!2");
+				//Debug.Log("Moving left!2");
 				return -1;
 			}
 			else{
-				Debug.Log("Moving right!2");
+				//Debug.Log("Moving right!2");
 				return 1;
 			}
 		}
