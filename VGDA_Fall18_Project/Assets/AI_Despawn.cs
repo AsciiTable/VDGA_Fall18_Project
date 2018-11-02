@@ -16,16 +16,13 @@ public class AI_Despawn : MonoBehaviour
 	{
 		enemyYPosition = enemyPos.position.y;
 		enemyXPosition = enemyPos.position.x;
-		Debug.Log("X Pos: " + enemyXPosition);
-		Debug.Log("Y Pos: " + enemyYPosition);
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		enemyYPosition = enemyPos.position.y;
 		enemyXPosition = enemyPos.position.x;
-		Debug.Log("X Pos: " + enemyXPosition);
-		Debug.Log("Y Pos: " + enemyYPosition);
 
 		if (enemyYPosition < YDespawnPosition || enemyXPosition < XDespawnPosition)
 		{
