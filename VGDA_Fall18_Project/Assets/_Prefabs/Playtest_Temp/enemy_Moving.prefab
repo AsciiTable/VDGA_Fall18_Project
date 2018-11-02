@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212842105260410156}
   - component: {fileID: 61978570390306584}
   - component: {fileID: 50586846902745798}
-  - component: {fileID: 114631459470225740}
+  - component: {fileID: 114881333972933752}
   - component: {fileID: 114318809807124466}
   m_Layer: 9
   m_Name: enemy_Moving
@@ -103,9 +103,8 @@ MonoBehaviour:
   MoveSpeed: 3
   MaxLeftPos: 0
   MaxRightPos: 0
-  isStraight: 1
-  isStraight_right: 1
---- !u!114 &114631459470225740
+  SpriteFacingRight: 0
+--- !u!114 &114881333972933752
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
