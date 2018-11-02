@@ -39,7 +39,7 @@ Transform:
   m_GameObject: {fileID: 1392379619507556}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 12.9, y: -13.5, z: 0}
-  m_LocalScale: {x: 2, y: 1.5, z: 10.721469}
+  m_LocalScale: {x: 2, y: 1.5, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -103,7 +103,8 @@ MonoBehaviour:
   MoveSpeed: 3
   MaxLeftPos: 0
   MaxRightPos: 0
-  SpriteFacingRight: 0
+  isStraight: 1
+  isStraight_right: 1
 --- !u!114 &114631459470225740
 MonoBehaviour:
   m_ObjectHideFlags: 1

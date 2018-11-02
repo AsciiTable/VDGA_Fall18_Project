@@ -136,7 +136,12 @@ public class Player : MonoBehaviour {
             Player_invulnerableReady = false;
             Player_invulnerableTimer_stamp = Time.time + Player_invulnerableTimer_Max;
         }
-//Un invulnerable after time and not in environment block
+//Turn off Invulerable Sooner
+        else if (Input.GetButtonDown("Invulnerable") && Player_invulnerable)
+        {
+            Player_invulnerableTimer_stamp = Time.time;
+        }
+        //Un invulnerable after time and not in environment block
         if (Player_invulnerable && Time.time >= Player_invulnerableTimer_stamp && !(Player_inside) && Player_invulnerable)
         {
             //Debug.Log("Invulnerable Over");
@@ -148,8 +153,8 @@ public class Player : MonoBehaviour {
         {
             //Debug.Log("Invulnerable Ready");
             Player_invulnerableReady = true;
-        }
-
+        }        
+        
 //Make transparent
         if(Player_invulnerable)
         {
