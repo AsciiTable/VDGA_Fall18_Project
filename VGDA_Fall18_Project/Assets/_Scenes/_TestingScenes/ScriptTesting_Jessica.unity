@@ -291,6 +291,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0db89a5e07390b448a202a46e9ea8f8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 383646488}
+  enemyPos: {fileID: 383646493}
   YDespawnPosition: -15
   XDespawnPosition: -15
 --- !u!1 &401465435

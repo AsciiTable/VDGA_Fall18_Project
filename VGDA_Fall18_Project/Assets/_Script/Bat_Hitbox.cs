@@ -60,7 +60,7 @@ public class Bat_Hitbox : MonoBehaviour{
 				bat.GetComponent<SpriteRenderer>().flipX = true;
 			}
 			else{
-				float nX = (bat.GetComponent<BoxCollider2D>().offset.x+1)*1;
+				//float nX = (bat.GetComponent<BoxCollider2D>().offset.x+1)*1;
 				bat.GetComponent<BoxCollider2D>().offset = new Vector2(OriginalXOffset, bat.GetComponent<BoxCollider2D>().offset.y);
 				bat.GetComponent<SpriteRenderer>().flipX = false;
 

@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AI_Despawn : MonoBehaviour{
-
-	private GameObject enemy;
+public class AI_Despawn : MonoBehaviour
+{
+	public GameObject enemy;
+	public Transform enemyPos;
 	public float YDespawnPosition = -15f;
 	public float XDespawnPosition = -1500f;
 
@@ -13,19 +14,23 @@ public class AI_Despawn : MonoBehaviour{
 	// Use this for initialization
 	void Start ()
 	{
-		enemyYPosition = enemy.GetComponent<SpriteRenderer>().transform.position.y;
-		enemyXPosition = enemy.GetComponent<SpriteRenderer>().transform.position.x;
-
+		enemyYPosition = enemyPos.position.y;
+		enemyXPosition = enemyPos.position.x;
+		Debug.Log("X Pos: " + enemyXPosition);
+		Debug.Log("Y Pos: " + enemyYPosition);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		enemyYPosition = enemy.GetComponent<SpriteRenderer>().transform.position.y;
-		enemyXPosition = enemy.GetComponent<SpriteRenderer>().transform.position.x;
+		enemyYPosition = enemyPos.position.y;
+		enemyXPosition = enemyPos.position.x;
+		Debug.Log("X Pos: " + enemyXPosition);
+		Debug.Log("Y Pos: " + enemyYPosition);
 
-		if (enemyYPosition < YDespawnPosition || enemyYPosition < XDespawnPosition)
+		if (enemyYPosition < YDespawnPosition || enemyXPosition < XDespawnPosition)
 		{
 			Destroy(enemy);
+			Debug.Log("Destroyed");
 		}
 
 	}
