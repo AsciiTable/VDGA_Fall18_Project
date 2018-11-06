@@ -6,6 +6,14 @@ using UnityEngine.UI;
 public class LoadCutscene : MonoBehaviour {
 
     public Image Cutscene_image;
+
+    public Image NextButton_image;
+    public Image PrevButton_image;
+    public Image StartGame_image;
+
+    public Text NextButton_text;
+    public Text PrevButton_text;
+    public Text StartGame_text;
         
     public Sprite[] Cutscene_Sprite;
 
@@ -18,15 +26,18 @@ public class LoadCutscene : MonoBehaviour {
         Cutscene_Num = 0;
         Cutscene_Num_Max = Cutscene_Sprite.Length-1;
 	}
-	
-    public void NextCutscene()
+
+//Go to Next Cutscene
+    public void NextButton()
     {
         if (Cutscene_Num < Cutscene_Num_Max)
         {
             Cutscene_Num++;
         }
     }
-    public void PrevCutscene()
+
+//Go to Previous Cutscene
+    public void PrevButton()
     {
         if (Cutscene_Num > 0)
         {
@@ -39,14 +50,42 @@ public class LoadCutscene : MonoBehaviour {
 
         if (Input.GetButtonDown("NextCutscene"))
         {
-            NextCutscene();
+            NextButton();
         }
         if (Input.GetButtonDown("PrevCutscene"))
         {
-            PrevCutscene();
+            PrevButton();
         }
 
         Cutscene_image.sprite = Cutscene_Sprite[Cutscene_Num];
+
+        //Change button if they reach end of slideshows
+        if (Cutscene_Num == Cutscene_Num_Max)
+        {
+            NextButton_image.enabled = false;
+            NextButton_text.enabled = false;
+
+            StartGame_image.enabled = true;
+            StartGame_text.enabled = true;
+        }
+        else
+        {
+            NextButton_image.enabled = true;
+            NextButton_text.enabled = true;
+
+            StartGame_image.enabled = false;
+            StartGame_text.enabled = false;
+        }
+        if (Cutscene_Num == 0)
+        {
+            PrevButton_image.enabled = false;
+            PrevButton_text.enabled = false;
+        }
+        else
+        {
+            PrevButton_image.enabled = true;
+            PrevButton_text.enabled = true;
+        }
 
     }
 }

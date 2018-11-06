@@ -9,4 +9,8 @@ public class SceneLoader : MonoBehaviour {
     {
         SceneManager.LoadScene(sceneIndex);
     }
+    public void NextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 }
