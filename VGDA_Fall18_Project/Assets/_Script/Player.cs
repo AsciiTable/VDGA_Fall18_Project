@@ -77,10 +77,6 @@ public class Player : MonoBehaviour {
 
     void Update()
     {
-        /*  Animations */
-//Jump animation
-        Player_animation.SetBool("onGround", Player_groundCheck);
-
         /*  Jumping  */
 //Check if on floor (enemies, platforms, and enemies)
         if (Physics2D.Linecast(groundCheck1_transform.position, groundCheck2_transform.position, 1 << LayerMask.NameToLayer("Platforms")) ||
