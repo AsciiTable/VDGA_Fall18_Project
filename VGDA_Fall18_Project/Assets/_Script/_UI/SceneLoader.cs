@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour {
 
 //Load Scene with specific index
-    public void LoadScene(int sceneIndex)
+    public void LoadScene(string sceneName)
     {
-        SceneManager.LoadScene(sceneIndex);
+        SceneManager.LoadScene(sceneName);
     }
 
 //Load Scene next in list (next level)
@@ -21,5 +21,12 @@ public class SceneLoader : MonoBehaviour {
     public void PrevScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+
+//Leave Game Application
+    public void LeaveGame()
+    {
+        Debug.Log("Leave Game");
+        Application.Quit();
     }
 }
