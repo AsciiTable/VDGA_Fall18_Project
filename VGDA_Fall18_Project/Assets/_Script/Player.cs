@@ -16,14 +16,14 @@ public class Player : MonoBehaviour {
 
     [Header("Invulnerable")]
     [Tooltip("How many seconds invulnerability lasts")]
-    public float Player_invulnerableTimer_Max = 3f;
+    public float Player_invTimer_Max = 3f;
     [Tooltip("How many seconds before invulnerability can be used again")]
-    public float Player_invulnerableCooldown_Max = 3f;
+    public float Player_invCooldown_Max = 3f;
     public bool Player_invulnerable = false;
     public bool Player_inside = false;
-        private float Player_invulnerableTimer_stamp;
-        private float Player_invulnerableCooldown_stamp;
-        private bool Player_invulnerableReady = true;
+        private float Player_invTimer_stamp;
+        private float Player_invCooldown_stamp;
+        private bool Player_invReady = true;
         
     [Space(10)]
 
@@ -57,7 +57,6 @@ public class Player : MonoBehaviour {
     void FixedUpdate()
     {
         /*  Moving  */
-        Player_rb2d.gravityScale = Player_gravity;
         float Player_horizontal = Input.GetAxis("Horizontal");
 
 
@@ -77,10 +76,6 @@ public class Player : MonoBehaviour {
 
     void Update()
     {
-        /*  Animations */
-//Jump animation
-        Player_animation.SetBool("onGround", Player_groundCheck);
-
         /*  Jumping  */
 //Check if on floor (enemies, platforms, and enemies)
         if (Physics2D.Linecast(groundCheck1_transform.position, groundCheck2_transform.position, 1 << LayerMask.NameToLayer("Platforms")) ||
@@ -119,6 +114,16 @@ public class Player : MonoBehaviour {
             Player_jumps++;
         }
 
+        /* Jump Velocity (Gravity) */
+        if(Player_rb2d.velocity.y < 0 && !(Player_groundCheck))
+        {
+            Player_rb2d.gravityScale = Player_gravity * 3;
+        }
+        else
+        {
+            Player_rb2d.gravityScale = Player_gravity;
+        }
+
         /*  Death  */
 //Player falling off stage
         if (Player_xyz.position.y < SuicidePoint)
@@ -129,30 +134,30 @@ public class Player : MonoBehaviour {
 
         /*  Invulnerability  */
 //Go invulnerable if button press and not on cooldown
-        if (Input.GetButtonDown("Invulnerable") && Player_invulnerableReady)
+        if (Input.GetButtonDown("Invulnerable") && Player_invReady)
         {
             //Debug.Log("Is invulnerable");
             Player_invulnerable = true;
-            Player_invulnerableReady = false;
-            Player_invulnerableTimer_stamp = Time.time + Player_invulnerableTimer_Max;
+            Player_invReady = false;
+            Player_invTimer_stamp = Time.time + Player_invTimer_Max;
         }
 //Turn off Invulerable Sooner
         else if (Input.GetButtonDown("Invulnerable") && Player_invulnerable)
         {
-            Player_invulnerableTimer_stamp = Time.time;
+            Player_invTimer_stamp = Time.time;
         }
         //Un invulnerable after time and not in environment block
-        if (Player_invulnerable && Time.time >= Player_invulnerableTimer_stamp && !(Player_inside) && Player_invulnerable)
+        if (Player_invulnerable && Time.time >= Player_invTimer_stamp && !(Player_inside) && Player_invulnerable)
         {
             //Debug.Log("Invulnerable Over");
             Player_invulnerable = false;
-            Player_invulnerableCooldown_stamp = Time.time + Player_invulnerableCooldown_Max;
+            Player_invCooldown_stamp = Time.time + Player_invCooldown_Max;
         }
 //Cooldown
-        if (!(Player_invulnerable) && !(Player_invulnerableReady) && Time.time >= Player_invulnerableCooldown_stamp)
+        if (!(Player_invulnerable) && !(Player_invReady) && Time.time >= Player_invCooldown_stamp)
         {
             //Debug.Log("Invulnerable Ready");
-            Player_invulnerableReady = true;
+            Player_invReady = true;
         }        
         
 //Make transparent
