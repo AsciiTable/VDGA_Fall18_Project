@@ -5,13 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class Temp_Respawn : MonoBehaviour {
 
-    public GameObject spawnPosition;
     public float verticalPos = -7.35f;
     public float horizontalPos = -2.93f;
     private bool isDead = false;
     public float SuicidePoint = -15f;
     public Transform playerTrans;
-    public GameObject deathSpace;
 
     // Use this for initialization
     void Start () {
