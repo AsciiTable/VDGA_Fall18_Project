@@ -2094,7 +2094,7 @@ MonoBehaviour:
   verticalPos: -7.35
   horizontalPos: -2.93
   SuicidePoint: -15
-  playerTrans: {fileID: 0}
+  playerTrans: {fileID: 659857480}
 --- !u!1001 &1305360888
 Prefab:
   m_ObjectHideFlags: 0
