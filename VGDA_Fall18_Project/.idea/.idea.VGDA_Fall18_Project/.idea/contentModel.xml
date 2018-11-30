@@ -14,18 +14,21 @@
             <e p="QuitGame.cs" t="Include" />
             <e p="SceneLoader.cs" t="Include" />
           </e>
+          <e p="AI_Despawn.cs" t="Include" />
           <e p="AI_Knockback.cs" t="Include" />
           <e p="AIMovement.cs" t="Include" />
           <e p="Bat_Hitbox.cs" t="Include" />
+          <e p="Collectable.cs" t="Include" />
           <e p="Cutscene_Test_Justin.cs" t="Include" />
           <e p="Enemy_Moving.cs" t="Include" />
           <e p="Enemy_Standing.cs" t="Include" />
           <e p="Environment.cs" t="Include" />
+          <e p="PauseMenu.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="Player_Jessica.cs" t="Include" />
           <e p="Temp_Respawn.cs" t="Include" />
+          <e p="Timer_Controller.cs" t="Include" />
         </e>
-        <e p="AI_Despawn.cs" t="Include" />
         <e p="Cinemachine" t="Include">
           <e p="Base" t="Include">
             <e p="Editor" t="Include">
@@ -155,7 +158,6 @@
             </e>
           </e>
         </e>
-        <e p="PauseMenu.cs" t="Include" />
         <e p="Standard Assets" t="Include">
           <e p="2D" t="Include">
             <e p="Scripts" t="Include">
