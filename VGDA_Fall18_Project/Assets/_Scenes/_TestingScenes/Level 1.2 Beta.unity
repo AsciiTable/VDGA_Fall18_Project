@@ -2324,7 +2324,7 @@ MonoBehaviour:
   verticalPos: -7.35
   horizontalPos: -2.93
   SuicidePoint: -15
-  playerTrans: {fileID: 0}
+  playerTrans: {fileID: 1860486048}
 --- !u!4 &1071996972
 Transform:
   m_ObjectHideFlags: 0
