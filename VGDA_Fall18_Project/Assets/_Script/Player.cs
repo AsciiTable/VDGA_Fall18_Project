@@ -58,7 +58,13 @@ public class Player : MonoBehaviour {
     {
         /*  Moving  */
         float Player_horizontal = Input.GetAxis("Horizontal");
-
+        if(Player_horizontal != 0)
+        {
+            Player_animation.SetBool("PlayerMove", true);
+        }
+        else {
+            Player_animation.SetBool("PlayerMove", false);
+        }
 
         //move player left and right
         Player_rb2d.transform.Translate((Player_horizontal * Player_moveForce), 0f, 0f);
