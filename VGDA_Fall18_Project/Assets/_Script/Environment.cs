@@ -42,7 +42,7 @@ public class Environment : MonoBehaviour {
     {
         if (col.gameObject.tag == "Player")
         {
-            Player_script.Player_inside = true;
+            Player_script.Player_inside++;
             //Debug.Log("Enter");
         }
     }
@@ -50,7 +50,7 @@ public class Environment : MonoBehaviour {
     {
         if (col.gameObject.tag == "Player")
         {
-            Player_script.Player_inside = true;
+            Player_script.Player_inside++;
             //Debug.Log("Enter");
         }
     }
@@ -59,7 +59,7 @@ public class Environment : MonoBehaviour {
     {
         if (col.gameObject.tag == "Player")
         {
-            Player_script.Player_inside = false;
+            Player_script.Player_inside--;
             //Debug.Log("Exit");
         }
     }
@@ -67,7 +67,7 @@ public class Environment : MonoBehaviour {
     {
         if (col.gameObject.tag == "Player")
         {
-            Player_script.Player_inside = false;
+            Player_script.Player_inside--;
             //Debug.Log("Exit");
         }
     }

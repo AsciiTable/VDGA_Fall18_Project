@@ -942,11 +942,11 @@ Prefab:
       objectReference: {fileID: 1411095418}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 14.33111
+      value: 14.335293
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 14.33111
+      value: 14.335293
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 800b402317da2064caf766557e3860d1, type: 2}

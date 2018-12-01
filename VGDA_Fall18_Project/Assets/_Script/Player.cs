@@ -20,7 +20,7 @@ public class Player : MonoBehaviour {
     [Tooltip("How many seconds before invulnerability can be used again")]
     public float Player_invCooldown_Max = 3f;
     public bool Player_invulnerable = false;
-    public bool Player_inside = false;
+    public int Player_inside;
         private float Player_invTimer_stamp;
         private float Player_invCooldown_stamp;
         private bool Player_invReady = true;
@@ -153,7 +153,7 @@ public class Player : MonoBehaviour {
             Player_invTimer_stamp = Time.time;
         }
         //Un invulnerable after time and not in environment block
-        if (Player_invulnerable && Time.time >= Player_invTimer_stamp && !(Player_inside) && Player_invulnerable)
+        if (Player_invulnerable && Time.time >= Player_invTimer_stamp && Player_inside == 0)
         {
             //Debug.Log("Invulnerable Over");
             Player_invulnerable = false;
