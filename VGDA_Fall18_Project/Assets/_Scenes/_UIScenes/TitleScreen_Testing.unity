@@ -730,7 +730,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: ScriptTesting_Jessica
+          m_StringArgument: Level 1.2 Beta
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1429007094}
@@ -1132,7 +1132,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1d4a8f0674ff5be42b8770cdc3153ff0, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.706
   m_Pitch: 1
   Loop: 1
   Mute: 0
