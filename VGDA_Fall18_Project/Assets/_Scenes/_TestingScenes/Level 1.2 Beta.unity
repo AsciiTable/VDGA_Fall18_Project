@@ -5553,6 +5553,11 @@ Prefab:
       propertyPath: m_Name
       value: platform_passable (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 61405100394394940, guid: 80a6f319c74574648adfde2c9370affd,
+        type: 2}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80a6f319c74574648adfde2c9370affd, type: 2}
   m_IsPrefabAsset: 0
