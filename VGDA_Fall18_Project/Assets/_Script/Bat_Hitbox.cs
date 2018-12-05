@@ -11,11 +11,14 @@ public class Bat_Hitbox : MonoBehaviour{
 	public float knockBack = 500f;
 	public GameObject player;
 	public float OriginalXOffset = 4.291245f; //GameObject.GetComponent<BoxCollider2D>().offset.x;
-	
-	
-	// Use this for initialization
-	void Start (){
-		bat.GetComponent<Collider2D>().enabled = false;
+
+    private Animator Player_animation;
+
+    // Use this for initialization
+    void Start (){
+        Player_animation = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
+
+        bat.GetComponent<Collider2D>().enabled = false;
 		bat.GetComponent<SpriteRenderer>().enabled = false;
 		if (player.GetComponent<SpriteRenderer>().flipX == true){
 			bat.GetComponent<SpriteRenderer>().flipX = true;
@@ -31,8 +34,9 @@ public class Bat_Hitbox : MonoBehaviour{
 		float nXLeft = (OriginalXOffset + 1) * -1;
 		
 		if (Input.GetButtonDown("Bat")){
+            Player_animation.SetTrigger("PlayerBat");
+
 			bat.GetComponent<Collider2D>().enabled = true;
-			bat.GetComponent<SpriteRenderer>().enabled = true;
 			if (player.GetComponent<SpriteRenderer>().flipX == true){
 				bat.GetComponent<BoxCollider2D>().offset = new Vector2(nXLeft, bat.GetComponent<BoxCollider2D>().offset.y);
 				bat.GetComponent<SpriteRenderer>().flipX = true;
