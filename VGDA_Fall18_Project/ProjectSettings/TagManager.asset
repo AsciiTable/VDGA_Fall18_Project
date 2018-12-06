@@ -9,6 +9,8 @@ TagManager:
   - Platforms
   - Death
   - Bat
+  - Win
+  - Timer
   layers:
   - Default
   - TransparentFX
@@ -24,7 +26,7 @@ TagManager:
   - Environment
   - Death
   - Bat
-  - 
+  - CameraCol
   - 
   - 
   - 
@@ -45,6 +47,9 @@ TagManager:
   m_SortingLayers:
   - name: Background
     uniqueID: 51365407
+    locked: 0
+  - name: Graphics
+    uniqueID: 2967941577
     locked: 0
   - name: Environment
     uniqueID: 591898985

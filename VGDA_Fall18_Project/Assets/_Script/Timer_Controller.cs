@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Timer_Controller : MonoBehaviour {
 
@@ -14,24 +16,32 @@ public class Timer_Controller : MonoBehaviour {
     [Tooltip("Starts as timeMax")]
     public int timeLeft;
 
+    private Text Timer_text;
 
     void Start () {
 
+        Timer_text = GameObject.FindGameObjectWithTag("Timer").GetComponent<Text>();
         timeLeft = timeMax;
 
         //Start Every one Second
         InvokeRepeating("TimerPass", 0, 1);
 	}
 
+    private void Update()
+    {
+        Timer_text.text = timeLeft.ToString();
+    }
+
     private void TimerPass()
     {
         timeLeft -= 1;
-        Debug.Log(timeLeft);
+        
 
         if (timeLeft <= 0)
         {
             Debug.Log("TIMESUP");
             CancelInvoke();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
@@ -41,6 +51,7 @@ public class Timer_Controller : MonoBehaviour {
         if (timeLeft > timeMax)
         {
             timeLeft = timeMax;
+            
         }
     }
 

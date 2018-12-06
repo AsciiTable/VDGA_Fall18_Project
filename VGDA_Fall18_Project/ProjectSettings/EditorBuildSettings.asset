@@ -6,21 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Scenes/_UIScenes/TitleScreen_Testing.unity
-    guid: c4cc571ac3b71c74288d5f4fb36ef231
+    path: Assets/_Scenes/_Demo/Level 1.2_Demo.unity
+    guid: 67c2b8a353ab5b54c8436aaee1592215
   - enabled: 1
-    path: Assets/_Scenes/_UIScenes/PreLevel1_Testing.unity
-    guid: 5c64f555b84a87a4781dbb6ff3269379
+    path: Assets/_Scenes/_Demo/PreLevel1_Demo.unity
+    guid: 871d7eb5aad91934c976d8caa29530f4
   - enabled: 1
-    path: Assets/_Scenes/_TestingScenes/ScriptTesting_Jessica.unity
-    guid: 3341d450e82e7498c856108aa7f0e2c6
-  - enabled: 0
-    path: 
-    guid: 4366f83cd8840df4c9895bd777767a56
-  - enabled: 1
-    path: Assets/_Scenes/_TestingScenes/Level 1.1.unity
-    guid: 319b07d66b8a81f468af9461bcaee3b8
-  - enabled: 1
-    path: Assets/_Scenes/_TestingScenes/Level 1.2 Beta.unity
-    guid: 3e9d54dbfe5cd034583d9821b29dbb20
+    path: Assets/_Scenes/_Demo/Title_Demo.unity
+    guid: 4961d686e1f5f5b40814f30c0ca52607
   m_configObjects: {}

@@ -32,7 +32,7 @@ public class Player : MonoBehaviour {
     public float Player_gravity = 10f;
     [Tooltip("The Height Player Dies")]
     public float SuicidePoint = -15f;
-
+    public string Player_winningScene;
     private Rigidbody2D Player_rb2d;
     private Transform Player_xyz;
     private SpriteRenderer Player_sprite;
@@ -88,12 +88,14 @@ public class Player : MonoBehaviour {
             Physics2D.Linecast(groundCheck1_transform.position, groundCheck2_transform.position, 1 << LayerMask.NameToLayer("Environment")) ||
             Physics2D.Linecast(groundCheck1_transform.position, groundCheck2_transform.position, 1 << LayerMask.NameToLayer("Enemy"))  )
         {
+            Player_animation.SetBool("PlayerJump", false);
             Player_groundCheck = true;
             Player_jumps = 0;
             //Debug.Log("Grounded");
         }
         else
         {
+            Player_animation.SetBool("PlayerJump", true);
             Player_groundCheck = false;
         }
 //Jump in air
@@ -183,5 +185,14 @@ public class Player : MonoBehaviour {
     {
         Debug.Log("Some Death");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Win")
+        {
+            SceneManager.LoadScene(Player_winningScene);
+        }
+
     }
 }
