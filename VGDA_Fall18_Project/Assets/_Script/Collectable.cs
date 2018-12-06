@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class Collectable : MonoBehaviour {
 
+    public bool Timer_Activated = true;
+
     private Timer_Controller Timer_Script;
 
 	void Start () {
-        GameObject gameObject_ScriptHolder = GameObject.Find("ScriptHolder");
-        Timer_Script = gameObject_ScriptHolder.GetComponent<Timer_Controller>();
+        if (Timer_Activated)
+        {
+            GameObject gameObject_ScriptHolder = GameObject.Find("ScriptHolder");
+            Timer_Script = gameObject_ScriptHolder.GetComponent<Timer_Controller>();
+        }
 	}
 	
 	void Update () {
@@ -20,7 +25,11 @@ public class Collectable : MonoBehaviour {
         if(col.gameObject.tag == "Player")
         {
             Destroy(gameObject);
-            Timer_Script.CollectTime();
+
+            if (Timer_Activated)
+            {
+                Timer_Script.CollectTime();
+            }
         }
     }
 }
