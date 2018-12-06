@@ -11,6 +11,7 @@ TagManager:
   - Bat
   - Win
   - Timer
+  - Background
   layers:
   - Default
   - TransparentFX
