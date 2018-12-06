@@ -596,13 +596,14 @@ MonoBehaviour:
   PrevButton_text: {fileID: 1656860449}
   StartGame_text: {fileID: 406902326}
   Cutscene_Sprite:
-  - {fileID: 21300000, guid: ca5389f9b7866414babe828e0402f58e, type: 3}
-  - {fileID: 21300000, guid: 7f64eb7da2cc20646b010e2b94695de5, type: 3}
-  - {fileID: 21300000, guid: 7d20fe0ed480cc749b720e1c195b18f7, type: 3}
-  - {fileID: 21300000, guid: e65548f007a6532478a05eb7509781be, type: 3}
-  - {fileID: 21300000, guid: 962e94b40acfbf64387190df88e14d76, type: 3}
+  - {fileID: 21300000, guid: ad4da6979c7a23c48a1f519d21f1bab3, type: 3}
+  - {fileID: 21300000, guid: bba82080e82401b408df61b4568275e4, type: 3}
+  - {fileID: 21300000, guid: 8629f219142604245829e5a32e45c380, type: 3}
+  - {fileID: 21300000, guid: 7fcb0756210952c4f9b225f2e2bdef7e, type: 3}
+  - {fileID: 21300000, guid: 7581871c997361b4496b3524dc7967dd, type: 3}
+  - {fileID: 21300000, guid: cc008d149f8344d4880e09fbf5df11eb, type: 3}
   Cutscene_Num: 0
-  Cutscene_Num_Max: 5
+  Cutscene_Num_Max: 6
 --- !u!1 &1108638706
 GameObject:
   m_ObjectHideFlags: 0
