@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.PlayerLoop;
 using UnityEngine.UI;
 
 public class LoadCutscene : MonoBehaviour {
@@ -19,6 +20,8 @@ public class LoadCutscene : MonoBehaviour {
 
     public int Cutscene_Num = 0;
     public int Cutscene_Num_Max = 5;
+
+    private bool played = false;
 
     // Use this for initialization
     void Awake () {
@@ -64,6 +67,12 @@ public class LoadCutscene : MonoBehaviour {
         {
             NextButton_image.enabled = false;
             NextButton_text.enabled = false;
+
+            if (!played)
+            {
+                Audio.PlaySound("bgm_cutscene_soundtelling");
+                played = true;
+            }
 
             StartGame_image.enabled = true;
             StartGame_text.enabled = true;

@@ -11,6 +11,8 @@ TagManager:
   - Bat
   - Win
   - Timer
+  - Background
+  - InvulnerableSprite
   layers:
   - Default
   - TransparentFX
