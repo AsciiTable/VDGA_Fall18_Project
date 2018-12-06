@@ -120,6 +120,7 @@ public class Player : MonoBehaviour {
         else if (Input.GetButtonDown("Jump") && Player_jumps == 0 && Player_groundCheck)
         {
             //Debug.Log("Lifted");
+            Audio.PlaySound("8BIT_RETRO_Jump_Glide_Up_Muffled_mono");
             Player_rb2d.velocity = new Vector3(0f, Player_jumpForce, 0f);
             Player_jumps++;
         }
