@@ -10,6 +10,7 @@
       <e p="Assets" t="Include">
         <e p="_Script" t="Include">
           <e p="_UI" t="Include">
+            <e p="Audio.cs" t="Include" />
             <e p="LoadCutscene.cs" t="Include" />
             <e p="QuitGame.cs" t="Include" />
             <e p="SceneLoader.cs" t="Include" />
