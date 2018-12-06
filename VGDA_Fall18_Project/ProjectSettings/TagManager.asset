@@ -12,6 +12,7 @@ TagManager:
   - Win
   - Timer
   - Background
+  - InvulnerableSprite
   layers:
   - Default
   - TransparentFX

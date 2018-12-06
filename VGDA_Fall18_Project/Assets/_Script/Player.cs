@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
 
@@ -33,6 +34,7 @@ public class Player : MonoBehaviour {
     [Tooltip("The Height Player Dies")]
     public float SuicidePoint = -15f;
     public string Player_winningScene;
+    public bool Player_invulnerableEnabled = true;
     private Rigidbody2D Player_rb2d;
     private Transform Player_xyz;
     private SpriteRenderer Player_sprite;
@@ -42,6 +44,7 @@ public class Player : MonoBehaviour {
     private Transform groundCheck2_transform;
 
     private Transform Environment_transform;
+    private Image InvulnerableCooldown_Sprite;
 
     void Awake()
     {
@@ -49,6 +52,11 @@ public class Player : MonoBehaviour {
         Player_xyz = GetComponent<Transform>();
         Player_sprite = GetComponent<SpriteRenderer>();
         Player_animation = GetComponent<Animator>();
+
+        if(Player_invulnerableEnabled)
+        {
+            InvulnerableCooldown_Sprite = GameObject.FindGameObjectWithTag("InvulnerableSprite").GetComponent<Image>();
+        }
 
         groundCheck1_transform = transform.Find("groundCheck_1");
         groundCheck2_transform = transform.Find("groundCheck_2");
@@ -141,42 +149,55 @@ public class Player : MonoBehaviour {
         }
 
         /*  Invulnerability  */
-//Go invulnerable if button press and not on cooldown
-        if (Input.GetButtonDown("Invulnerable") && Player_invReady)
+        if(Player_invulnerableEnabled)
         {
-            //Debug.Log("Is invulnerable");
-            Player_invulnerable = true;
-            Player_invReady = false;
-            Player_invTimer_stamp = Time.time + Player_invTimer_Max;
+            //Go invulnerable if button press and not on cooldown
+            if (Input.GetButtonDown("Invulnerable") && Player_invReady)
+            {
+                //Debug.Log("Is invulnerable");
+                Player_invulnerable = true;
+                Player_invReady = false;
+                Player_invTimer_stamp = Time.time + Player_invTimer_Max;
+            }
+            //Turn off Invulerable Sooner
+            else if (Input.GetButtonDown("Invulnerable") && Player_invulnerable)
+            {
+                Player_invTimer_stamp = Time.time;
+            }
+            //Un invulnerable after time and not in environment block
+            if (Player_invulnerable && Time.time >= Player_invTimer_stamp && Player_inside == 0)
+            {
+                //Debug.Log("Invulnerable Over");
+                Player_invulnerable = false;
+                Player_invCooldown_stamp = Time.time + Player_invCooldown_Max;
+            }
+            //Cooldown
+            if (!(Player_invulnerable) && !(Player_invReady) && Time.time >= Player_invCooldown_stamp)
+            {
+                
+                //Debug.Log("Invulnerable Ready");
+                Player_invReady = true;
+            }
+            if(Player_invReady)
+            {
+                InvulnerableCooldown_Sprite.color = new Color(0f, (80f / 255f), 1f, 1f);
+            }
+            else
+            {
+                InvulnerableCooldown_Sprite.color = new Color(0f, (80f / 255f), 1f, 0.3f);
+            }
+
+            //Make transparent
+            if (Player_invulnerable)
+            {
+                Player_sprite.color = new Color(1f, 1f, 1f, 0.5f);
+            }
+            if (!Player_invulnerable)
+            {
+                Player_sprite.color = new Color(1f, 1f, 1f, 1f);
+            }
         }
-//Turn off Invulerable Sooner
-        else if (Input.GetButtonDown("Invulnerable") && Player_invulnerable)
-        {
-            Player_invTimer_stamp = Time.time;
-        }
-        //Un invulnerable after time and not in environment block
-        if (Player_invulnerable && Time.time >= Player_invTimer_stamp && Player_inside == 0)
-        {
-            //Debug.Log("Invulnerable Over");
-            Player_invulnerable = false;
-            Player_invCooldown_stamp = Time.time + Player_invCooldown_Max;
-        }
-//Cooldown
-        if (!(Player_invulnerable) && !(Player_invReady) && Time.time >= Player_invCooldown_stamp)
-        {
-            //Debug.Log("Invulnerable Ready");
-            Player_invReady = true;
-        }        
-        
-//Make transparent
-        if(Player_invulnerable)
-        {
-            Player_sprite.color = new Color(1f, 1f, 1f, 0.5f);
-        }
-        if (!Player_invulnerable)
-        {
-            Player_sprite.color = new Color(1f, 1f, 1f, 1f);
-        }
+
     }
 
     /*  Death  */
