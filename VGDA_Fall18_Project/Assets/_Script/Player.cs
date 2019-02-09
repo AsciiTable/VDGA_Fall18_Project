@@ -25,7 +25,7 @@ public class Player : MonoBehaviour {
         private float Player_invTimer_stamp;
         private float Player_invCooldown_stamp;
         private bool Player_invReady = true;
-        
+
     [Space(10)]
 
     [Header("Misc.")]
@@ -40,11 +40,21 @@ public class Player : MonoBehaviour {
     private SpriteRenderer Player_sprite;
     private Animator Player_animation;
 
+    private IsCheckpoint isCheck;
+
     private Transform groundCheck1_transform;
     private Transform groundCheck2_transform;
 
     private Transform Environment_transform;
     private Image InvulnerableCooldown_Sprite;
+
+    private void Start()
+    {
+        if (isCheck.checkpoint == true)
+        {
+            Player_xyz.position = new Vector3(isCheck.pointX,isCheck.pointY, 0f);
+        }
+    }
 
     void Awake()
     {
@@ -56,6 +66,7 @@ public class Player : MonoBehaviour {
         if(Player_invulnerableEnabled)
         {
             InvulnerableCooldown_Sprite = GameObject.FindGameObjectWithTag("InvulnerableSprite").GetComponent<Image>();
+            isCheck = GameObject.Find("UndyingScriptHolder").GetComponent<IsCheckpoint>();
         }
 
         groundCheck1_transform = transform.Find("groundCheck_1");
@@ -215,6 +226,5 @@ public class Player : MonoBehaviour {
         {
             SceneManager.LoadScene(Player_winningScene);
         }
-
     }
 }

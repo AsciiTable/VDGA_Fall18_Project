@@ -13,6 +13,8 @@ TagManager:
   - Timer
   - Background
   - InvulnerableSprite
+  - checkpoint
+  - Undying
   layers:
   - Default
   - TransparentFX
