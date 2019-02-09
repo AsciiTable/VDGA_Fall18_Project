@@ -43,7 +43,24 @@ public class DialogueManager : MonoBehaviour
             return;
         }
         string sentence = sentences.Dequeue();
-        dialogueText.text = sentence;
+
+        //If you would like the text to appear immediately, use:
+        //dialogueText.text = sentence;
+
+        //If you want to show it letter by letter, use:
+        StopAllCoroutines();
+        StartCoroutine(TypeSentence(sentence));
+
+    }
+
+    //The text appears one letter at a time (Coroutine)
+    IEnumerator TypeSentence(string sentence) {
+        dialogueText.text = "";
+        foreach (char letter in sentence.ToCharArray()) {
+            //Add one letter onto the scrreen at a time
+            dialogueText.text += letter;
+            yield return null;
+        }
     }
 
     public void EndDialogue() {
