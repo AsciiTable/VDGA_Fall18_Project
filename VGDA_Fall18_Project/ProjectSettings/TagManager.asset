@@ -15,6 +15,7 @@ TagManager:
   - InvulnerableSprite
   - checkpoint
   - Undying
+  - NPC
   layers:
   - Default
   - TransparentFX
