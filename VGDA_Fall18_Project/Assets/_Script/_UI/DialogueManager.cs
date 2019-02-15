@@ -16,12 +16,11 @@ public class DialogueManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        animator.SetBool("IsOpen", false);
         sentences = new Queue<string>();
     }
 
     public void StartDialogue(Dialogue dialogue) {
-
+        //showDialogue.SetActive(true);
         animator.SetBool("IsOpen", true);
 
         nameText.text = dialogue.name;
@@ -66,5 +65,4 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue() {
         animator.SetBool("IsOpen", false);
     }
-
 }
