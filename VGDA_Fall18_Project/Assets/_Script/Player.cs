@@ -40,7 +40,7 @@ public class Player : MonoBehaviour {
     private SpriteRenderer Player_sprite;
     private Animator Player_animation;
 
-    private IsCheckpoint isCheck;
+    //private IsCheckpoint isCheck;
 
     private Transform groundCheck1_transform;
     private Transform groundCheck2_transform;
@@ -50,10 +50,10 @@ public class Player : MonoBehaviour {
 
     private void Start()
     {
-        if (isCheck.checkpoint == true)
+        /**if (isCheck.checkpoint == true)
         {
             Player_xyz.position = new Vector3(isCheck.pointX,isCheck.pointY, 0f);
-        }
+        }**/
     }
 
     void Awake()
@@ -66,7 +66,7 @@ public class Player : MonoBehaviour {
         if(Player_invulnerableEnabled)
         {
             InvulnerableCooldown_Sprite = GameObject.FindGameObjectWithTag("InvulnerableSprite").GetComponent<Image>();
-            isCheck = GameObject.Find("UndyingScriptHolder").GetComponent<IsCheckpoint>();
+            //isCheck = GameObject.Find("UndyingScriptHolder").GetComponent<IsCheckpoint>();
         }
 
         groundCheck1_transform = transform.Find("groundCheck_1");
