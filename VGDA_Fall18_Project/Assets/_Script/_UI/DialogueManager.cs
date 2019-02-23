@@ -31,9 +31,7 @@ public class DialogueManager : MonoBehaviour
         {
             sentences.Enqueue(sentence);
         }
-        if (Input.GetButtonDown("InteractNPC")) {
-            DisplayNextSentence();
-        }
+        DisplayNextSentence();
     }
 
     public void DisplayNextSentence() {
@@ -44,13 +42,13 @@ public class DialogueManager : MonoBehaviour
         }
         string sentence = sentences.Dequeue();
 
+
         //If you would like the text to appear immediately, use:
         //dialogueText.text = sentence;
 
         //If you want to show it letter by letter, use:
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
-
     }
 
     //The text appears one letter at a time (Coroutine)
@@ -60,10 +58,9 @@ public class DialogueManager : MonoBehaviour
             //Add one letter onto the scrreen at a time
             dialogueText.text += letter;
             if (Input.GetButtonDown("FasterInteractNPC")){
-                Debug.Log("Entered if statement");
-                //StopAllCoroutines();
-                dialogueText.text = "";
+                StopAllCoroutines();
                 dialogueText.text = sentence;
+                yield return null;
             }
             yield return null;
         }
