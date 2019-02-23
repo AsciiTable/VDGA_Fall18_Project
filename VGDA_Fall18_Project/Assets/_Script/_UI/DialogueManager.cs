@@ -31,8 +31,9 @@ public class DialogueManager : MonoBehaviour
         {
             sentences.Enqueue(sentence);
         }
-
-        DisplayNextSentence();
+        if (Input.GetButtonDown("InteractNPC")) {
+            DisplayNextSentence();
+        }
     }
 
     public void DisplayNextSentence() {
@@ -58,6 +59,12 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray()) {
             //Add one letter onto the scrreen at a time
             dialogueText.text += letter;
+            if (Input.GetButtonDown("FasterInteractNPC")){
+                Debug.Log("Entered if statement");
+                //StopAllCoroutines();
+                dialogueText.text = "";
+                dialogueText.text = sentence;
+            }
             yield return null;
         }
     }

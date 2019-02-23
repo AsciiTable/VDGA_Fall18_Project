@@ -9,6 +9,8 @@ public class DialogueTrigger : MonoBehaviour
     public float InteractDistance = 5f; // The acceptable distance in which the player can start talking to the NPC
     public Dialogue dialogue; // the Dialogue spoken by the NPC
 
+    private bool isTriggered = false;
+
     private void FixedUpdate()
     {
         float npcPosition = NPC.transform.position.x;
@@ -18,7 +20,11 @@ public class DialogueTrigger : MonoBehaviour
         if (Input.GetButtonDown("InteractNPC") && (distanceBetween < InteractDistance))
         {// works if and only if player intends to talk to npc and they're close enough
             //Debug.Log("Button a is pressed");
-            TriggerDialogue(); // Trigger Dialogue spoken
+            if (!isTriggered) {
+                TriggerDialogue(); // Trigger Dialogue spoken
+                isTriggered = true;
+            }
+            //isTriggered = false;
         }
     }
     // Triggers the dialogue through the Dialogue Manager
