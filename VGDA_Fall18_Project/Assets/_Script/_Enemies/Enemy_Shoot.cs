@@ -87,26 +87,23 @@ public class Enemy_Shoot : MonoBehaviour
         StartCoroutine(fireShot());
     }
 
-    //Destroy player if touching
-    void OnCollisionEnter2D(Collision2D col)
-    {
-        //Kill player if not stunned
-        if (col.gameObject.tag == "Player" && !stunned)
-        {
-            Debug.Log("Enemy Death");
-            Player_script.ResetScene();
-        }
-    }
     //Get stunned if player hits back projectile
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Projectile")
+        if (other.gameObject.tag == "Projectile" && !stunned)
         {
             if (other.gameObject.GetComponent<Enemy_Projectile>().playerProjectile)
             {
                 Destroy(other.gameObject);
                 StartCoroutine(enemyStunned());
             }
+        }
+
+        //Kill player if not invulnerable
+        if (other.gameObject.tag == "Player" && !Player_script.Player_invulnerable)
+        {
+            Debug.Log("Enemy Death");
+            Player_script.ResetScene();
         }
     }
 }
