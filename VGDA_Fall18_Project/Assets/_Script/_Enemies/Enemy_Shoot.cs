@@ -6,10 +6,12 @@ public class Enemy_Shoot : MonoBehaviour
 {
     //Variables
     [SerializeField] private int fireDelay;
+    [SerializeField] private int stunTime;
     [SerializeField] private int projectileSpeed;
     [SerializeField] private int projDistanceMAX;
     [SerializeField] private Vector3 projChangePosition;
     private Vector3 projectilePosition;
+    private bool stunned = false;
 
     //Components
     private SpriteRenderer Enemy_sprite;
@@ -66,24 +68,45 @@ public class Enemy_Shoot : MonoBehaviour
     //Spawn projectile every 4 seconds
     IEnumerator fireShot()
     {
-        while (true)
+        while (!stunned)
         {
             yield return new WaitForSeconds(fireDelay);
-            Instantiate(projectile, projectilePosition,Quaternion.identity);
+            if (!stunned)
+            {
+                Instantiate(projectile, projectilePosition, Quaternion.identity);
+            }
         }
-        
-
-
+    }
+    //Stop fireShot and turn on bool for stunTime seconds (stop player collision)
+    IEnumerator enemyStunned()
+    {
+        StopCoroutine(fireShot());
+        stunned = true;
+        yield return new WaitForSeconds(stunTime);
+        stunned = false;
+        StartCoroutine(fireShot());
     }
 
     //Destroy player if touching
-    void OnCollisionStay2D(Collision2D col)
+    void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag == "Player")
+        //Kill player if not stunned
+        if (col.gameObject.tag == "Player" && !stunned)
         {
             Debug.Log("Enemy Death");
             Player_script.ResetScene();
         }
     }
-
+    //Get stunned if player hits back projectile
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Projectile")
+        {
+            if (other.gameObject.GetComponent<Enemy_Projectile>().playerProjectile)
+            {
+                Destroy(other.gameObject);
+                StartCoroutine(enemyStunned());
+            }
+        }
+    }
 }

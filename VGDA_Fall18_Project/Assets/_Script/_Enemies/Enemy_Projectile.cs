@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class Enemy_Projectile : MonoBehaviour
 {
+    //Variables (get changed by Enemy_Shoot script)
     [HideInInspector] public float direction;
     [HideInInspector] public float speed;
     [HideInInspector] public float startX;
     [HideInInspector] public float distanceMax;
+    [HideInInspector] public bool  playerProjectile = false;
 
+    //Components
     private Rigidbody2D Projectile_rb2d;
     private Transform Projectile_xyz;
-
+    //Components from other scripts
     private Player Player_script;
     private SpriteRenderer Player_sprite;
 
@@ -38,13 +41,16 @@ public class Enemy_Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
+        //Kill player on hit
         if(col.gameObject.tag == "Player")
         {
             Debug.Log("Projectile Death");
             Player_script.ResetScene();
         }
+        //Reflect projectile back if bat hits it
         if(col.gameObject.tag == "Bat")
         {
+            playerProjectile = true;
             speed = 30;
             //Facing left
             if (Player_sprite.flipX)

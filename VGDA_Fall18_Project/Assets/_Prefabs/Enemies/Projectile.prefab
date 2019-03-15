@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8269002947285688413}
   m_Layer: 0
   m_Name: Projectile
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,6 +71,7 @@ MonoBehaviour:
   speed: 0
   startX: 0
   distanceMax: 0
+  playerProjectile: 0
 --- !u!212 &5105918801405444870
 SpriteRenderer:
   m_ObjectHideFlags: 0

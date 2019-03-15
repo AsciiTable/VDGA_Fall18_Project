@@ -140,6 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireDelay: 4
+  stunTime: 10
   projectileSpeed: 3
   projDistanceMAX: 20
   projChangePosition: {x: 2, y: 0.7, z: 0}
