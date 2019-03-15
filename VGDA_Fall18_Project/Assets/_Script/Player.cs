@@ -117,6 +117,11 @@ public class Player : MonoBehaviour {
             Player_animation.SetBool("PlayerJump", true);
             Player_groundCheck = false;
         }
+//Drop to floor
+        if (Input.GetButtonDown("Down") && Player_groundCheck == false)
+        {
+            Player_rb2d.velocity = new Vector3(0f, -2f*Player_jumpForce, 0f);
+        }
 //Jump in air
         if (Input.GetButtonDown("Jump") && Player_jumps != Player_jumpsMax && Player_jumps != 0 && !(Player_groundCheck))
         {
