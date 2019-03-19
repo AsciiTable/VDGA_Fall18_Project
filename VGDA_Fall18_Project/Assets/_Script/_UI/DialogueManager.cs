@@ -16,7 +16,7 @@ public class DialogueManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sentences = new Queue<string>();
+        sentences = new Queue<string>();                                
     }
 
     public void StartDialogue(Dialogue dialogue) {
@@ -29,19 +29,21 @@ public class DialogueManager : MonoBehaviour
 
         foreach (string sentence in dialogue.sentences)
         {
-            sentences.Enqueue(sentence);
+            sentences.Enqueue(sentence);                                             // Lines each up to be in a queue
         }
         DisplayNextSentence();
     }
 
+    /**
+     * Displays the next sentence of the dialogue
+     */
     public void DisplayNextSentence() {
         if (sentences.Count == 0)
         {
             EndDialogue();
             return;
         }
-        string sentence = sentences.Dequeue();
-
+        string sentence = sentences.Dequeue();                                      // Starts using up each sentence in the queue
 
         //If you would like the text to appear immediately, use:
         //dialogueText.text = sentence;
@@ -51,12 +53,16 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(TypeSentence(sentence));
     }
 
-    //The text appears one letter at a time (Coroutine)
+    /**
+     * The text appears one letter at a time (Coroutine)
+     * @param sentence to be "typed out"
+     * @return null - getting the display of the sentence is all we need
+     */
     IEnumerator TypeSentence(string sentence) {
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray()) {
-            //Add one letter onto the scrreen at a time
-            dialogueText.text += letter;
+            
+            dialogueText.text += letter;                                            // Add one letter onto the scrreen at a time
             if (Input.GetButtonDown("FasterInteractNPC")){
                 StopAllCoroutines();
                 dialogueText.text = sentence;
@@ -66,8 +72,12 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    /**
+     * Call when there is no dialogue left to be shown. Dialogue triggered
+     * is set to false and the dialogue box is closed.
+     */
     public void EndDialogue() {
-        FindObjectOfType<DialogueTrigger>().isTriggered = false;
+        FindObjectOfType<DialogueTrigger>().isTriggered = false;                    // sets trigger to false so the player can talk to the NPC again
         animator.SetBool("IsOpen", false);
     }
 }
