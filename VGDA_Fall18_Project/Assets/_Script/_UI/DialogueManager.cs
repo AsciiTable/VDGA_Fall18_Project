@@ -67,6 +67,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void EndDialogue() {
+        FindObjectOfType<DialogueTrigger>().isTriggered = false;
         animator.SetBool("IsOpen", false);
     }
 }

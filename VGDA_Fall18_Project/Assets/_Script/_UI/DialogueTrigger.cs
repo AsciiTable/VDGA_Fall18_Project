@@ -9,7 +9,7 @@ public class DialogueTrigger : MonoBehaviour
     public float InteractDistance = 5f; // The acceptable distance in which the player can start talking to the NPC
     public Dialogue dialogue; // the Dialogue spoken by the NPC
 
-    private bool isTriggered = false;
+    public bool isTriggered = false;
 
     private void FixedUpdate()
     {
