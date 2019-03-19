@@ -12,11 +12,13 @@ public class DialogueManager : MonoBehaviour
     private Queue<string> sentences;
 
     public Animator animator;
+    private bool inCoro;
 
     // Start is called before the first frame update
     void Start()
     {
-        sentences = new Queue<string>();                                
+        sentences = new Queue<string>();
+        inCoro = false;
     }
 
     public void StartDialogue(Dialogue dialogue) {
@@ -38,19 +40,20 @@ public class DialogueManager : MonoBehaviour
      * Displays the next sentence of the dialogue
      */
     public void DisplayNextSentence() {
+
         if (sentences.Count == 0)
         {
             EndDialogue();
             return;
         }
-        string sentence = sentences.Dequeue();                                      // Starts using up each sentence in the queue
+        string sentence =  sentences.Dequeue();                                     // Starts using up each sentence in the queue
 
         //If you would like the text to appear immediately, use:
         //dialogueText.text = sentence;
 
         //If you want to show it letter by letter, use:
         StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
+        StartCoroutine(WaitContinue(sentence));
     }
 
     /**
@@ -66,10 +69,17 @@ public class DialogueManager : MonoBehaviour
             if (Input.GetButtonDown("FasterInteractNPC")){
                 StopAllCoroutines();
                 dialogueText.text = sentence;
-                yield return null;
+                inCoro = false;
             }
             yield return null;
         }
+    }
+
+    IEnumerator WaitContinue(string sentence) {
+        while (!Input.GetButtonDown("TempContinueDialogue")) {
+            yield return null;
+        }
+        StartCoroutine(TypeSentence(sentence));
     }
 
     /**

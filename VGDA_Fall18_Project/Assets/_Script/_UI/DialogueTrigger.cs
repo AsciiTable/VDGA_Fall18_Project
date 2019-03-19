@@ -16,15 +16,12 @@ public class DialogueTrigger : MonoBehaviour
         float npcPosition = NPC.transform.position.x;
         float playerPosition = Player.transform.position.x;
         float distanceBetween = Mathf.Abs(npcPosition - playerPosition);
-        //Debug.Log("Distance Between Player and NPC = " + distanceBetween);
         if (Input.GetButtonDown("InteractNPC") && (distanceBetween < InteractDistance))
         {// works if and only if player intends to talk to npc and they're close enough
-            //Debug.Log("Button a is pressed");
             if (!isTriggered) {
                 TriggerDialogue(); // Trigger Dialogue spoken
                 isTriggered = true;
             }
-            //isTriggered = false;
         }
     }
     // Triggers the dialogue through the Dialogue Manager
