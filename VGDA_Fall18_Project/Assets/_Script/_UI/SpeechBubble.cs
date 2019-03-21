@@ -7,10 +7,17 @@ public class SpeechBubble : MonoBehaviour
     public Animator animator;
     public int TimeOff = 7;
     public int TimeOn = 10;
-    // Start is called before the first frame update
-    void Start()
+
+    private void Update()
     {
-        StartCoroutine(SpeechBubbleOffTime());
+        if (FindObjectOfType<DialogueTrigger>().isTriggered == true)
+        {
+            StopAllCoroutines();
+            animator.SetBool("isOpen", false);
+        }
+        else {
+            StartCoroutine(SpeechBubbleOffTime());
+        }
     }
 
     /**
