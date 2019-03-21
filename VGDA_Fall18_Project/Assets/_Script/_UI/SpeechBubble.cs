@@ -17,7 +17,7 @@ public class SpeechBubble : MonoBehaviour
      * Waits for (7) seconds before the speech box appears again
      **/
     IEnumerator SpeechBubbleOffTime() {
-        yield return new WaitForSeconds(7);
+        yield return new WaitForSeconds(TimeOff);
         animator.SetBool("isOpen", true);
         StartCoroutine(SpeechBubbleOnTime());
     }
@@ -25,7 +25,7 @@ public class SpeechBubble : MonoBehaviour
      * Waits for (10) seconds before the speech box disappears
      **/
     IEnumerator SpeechBubbleOnTime() {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(TimeOn);
         animator.SetBool("isOpen", false);
         StartCoroutine(SpeechBubbleOffTime());
     }
