@@ -16,7 +16,6 @@ public class Enemy_Shoot : MonoBehaviour
     //Components
     private SpriteRenderer Enemy_sprite;
     private Transform Enemy_xyz;
-    private Rigidbody2D Enemy_rb2d;
 
     //Components from Other Objects
     [SerializeField] private GameObject projectile;
@@ -31,7 +30,6 @@ public class Enemy_Shoot : MonoBehaviour
         Projectile_script = projectile.GetComponent<Enemy_Projectile>();
         Enemy_sprite = GetComponent<SpriteRenderer>();
         Enemy_xyz = GetComponent<Transform>();
-        Enemy_rb2d = GetComponent<Rigidbody2D>();
 
         //Activate IEnumerator fireShot()
         StartCoroutine(fireShot());

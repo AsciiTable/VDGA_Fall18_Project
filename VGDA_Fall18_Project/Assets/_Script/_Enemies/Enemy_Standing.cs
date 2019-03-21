@@ -4,38 +4,20 @@ using UnityEngine;
 
 public class Enemy_Standing : MonoBehaviour
 {
-
+    //Components from Other Objects
     private Player Player_script;
-
-    private BoxCollider2D Enemy_Standing_collider;
-
-    private bool Player_invulnerable_get;
 
     private void Awake()
     {
-        Enemy_Standing_collider = GetComponent<BoxCollider2D>();
         Player_script = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 
-    private void Update()
+    private void OnTriggerStay2D(Collider2D col)
     {
-        Player_invulnerable_get = Player_script.Player_invulnerable;
-
-        if (Player_invulnerable_get == true)
+        //Kill player on touch and not invulnerable
+        if (col.gameObject.tag == "Player" && !Player_script.Player_invulnerable)
         {
-            Enemy_Standing_collider.isTrigger = true;
-        }
-        if (Player_invulnerable_get == false)
-        {
-            Enemy_Standing_collider.isTrigger = false;
-        }
-    }
-
-    void OnCollisionStay2D(Collision2D col)
-    {
-        if (col.gameObject.tag == "Player")
-        {
-            Debug.Log("Enemy Death");
+            Debug.Log("Stand Death");
             Player_script.ResetScene();
         }
     }
