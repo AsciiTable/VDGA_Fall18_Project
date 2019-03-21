@@ -53,7 +53,7 @@ public class DialogueManager : MonoBehaviour
 
         //If you want to show it letter by letter, use:
         StopAllCoroutines();
-        StartCoroutine(WaitContinue(sentence));
+        StartCoroutine(TypeSentence(sentence));
     }
 
     /**
@@ -75,12 +75,12 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    IEnumerator WaitContinue(string sentence) {
+    /**IEnumerator WaitContinue(string sentence) {
         while (!Input.GetButtonDown("TempContinueDialogue")) {
             yield return null;
         }
         StartCoroutine(TypeSentence(sentence));
-    }
+    }**/
 
     /**
      * Call when there is no dialogue left to be shown. Dialogue triggered
