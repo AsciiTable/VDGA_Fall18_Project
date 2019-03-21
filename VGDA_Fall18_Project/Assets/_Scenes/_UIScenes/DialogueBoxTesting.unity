@@ -1303,6 +1303,7 @@ MonoBehaviour:
     - I actually have no idea what I'm doing, but all of this is really cool.
     - But there's a lot that I understand because I learned about classes, arrays,
       and queues last semester!
+  isTriggered: 0
 --- !u!61 &624408560
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1480,7 +1481,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 38.52044
+      value: 38.45556
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2680,7 +2681,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1528280143
 RectTransform:
   m_ObjectHideFlags: 0
