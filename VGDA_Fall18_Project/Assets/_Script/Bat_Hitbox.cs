@@ -4,7 +4,8 @@ using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class Bat_Hitbox : MonoBehaviour{
-	
+
+    public bool batActivated = false;
 	public GameObject bat;
 	public Collider2D enemy;
 	public bool isSwung = false;
@@ -32,45 +33,53 @@ public class Bat_Hitbox : MonoBehaviour{
 	void FixedUpdate ()
 	{
 		float nXLeft = (OriginalXOffset + 1) * -1;
-		
-		if (Input.GetButtonDown("Bat")){
-            Player_animation.SetTrigger("PlayerBat");
-			Audio.PlaySound("WHOOSH_Short_03_mono");
 
-			bat.GetComponent<Collider2D>().enabled = true;
-			if (player.GetComponent<SpriteRenderer>().flipX == true){
-				bat.GetComponent<BoxCollider2D>().offset = new Vector2(nXLeft, bat.GetComponent<BoxCollider2D>().offset.y);
-				bat.GetComponent<SpriteRenderer>().flipX = true;
-				//nXLeft = (bat.GetComponent<BoxCollider2D>().offset.x-1)*1;
-				//bat.GetComponent<BoxCollider2D>().offset = new Vector2(OriginalXOffset, bat.GetComponent<BoxCollider2D>().offset.y);
-			}
-			else{
-				bat.GetComponent<SpriteRenderer>().flipX = false;
-			}
-			//OnTriggerEnter2D(enemy);
-		/*	if (bat.GetComponent<Collider2D>().IsTouching(enemy.GetComponent<Collider2D>())){
-				enemy.GetComponent<Rigidbody2D>().AddForce(transform.right * knockBack);
-			}*/
-			//bat.GetComponent<Collider2D>().enabled = false;
-			//bat.GetComponent<SpriteRenderer>().enabled = false;
-			//isSwung = false;
+        if (batActivated)
+        {
+            if (Input.GetButtonDown("Bat"))
+            {
+                Player_animation.SetTrigger("PlayerBat");
+                Audio.PlaySound("WHOOSH_Short_03_mono");
 
-		}
-		else{
-			bat.GetComponent<Collider2D>().enabled = false;
-			bat.GetComponent<SpriteRenderer>().enabled = false;
-			if (player.GetComponent<SpriteRenderer>().flipX == true)
-			{
-				//bat.GetComponent<BoxCollider2D>().offset = new Vector2(nXLeft, bat.GetComponent<BoxCollider2D>().offset.y);
-				bat.GetComponent<SpriteRenderer>().flipX = true;
-			}
-			else{
-				//float nX = (bat.GetComponent<BoxCollider2D>().offset.x+1)*1;
-				bat.GetComponent<BoxCollider2D>().offset = new Vector2(OriginalXOffset, bat.GetComponent<BoxCollider2D>().offset.y);
-				bat.GetComponent<SpriteRenderer>().flipX = false;
+                bat.GetComponent<Collider2D>().enabled = true;
+                if (player.GetComponent<SpriteRenderer>().flipX == true)
+                {
+                    bat.GetComponent<BoxCollider2D>().offset = new Vector2(nXLeft, bat.GetComponent<BoxCollider2D>().offset.y);
+                    bat.GetComponent<SpriteRenderer>().flipX = true;
+                    //nXLeft = (bat.GetComponent<BoxCollider2D>().offset.x-1)*1;
+                    //bat.GetComponent<BoxCollider2D>().offset = new Vector2(OriginalXOffset, bat.GetComponent<BoxCollider2D>().offset.y);
+                }
+                else
+                {
+                    bat.GetComponent<SpriteRenderer>().flipX = false;
+                }
+                //OnTriggerEnter2D(enemy);
+                /*	if (bat.GetComponent<Collider2D>().IsTouching(enemy.GetComponent<Collider2D>())){
+                        enemy.GetComponent<Rigidbody2D>().AddForce(transform.right * knockBack);
+                    }*/
+                //bat.GetComponent<Collider2D>().enabled = false;
+                //bat.GetComponent<SpriteRenderer>().enabled = false;
+                //isSwung = false;
 
-			}
-		}
+            }
+            else
+            {
+                bat.GetComponent<Collider2D>().enabled = false;
+                bat.GetComponent<SpriteRenderer>().enabled = false;
+                if (player.GetComponent<SpriteRenderer>().flipX == true)
+                {
+                    //bat.GetComponent<BoxCollider2D>().offset = new Vector2(nXLeft, bat.GetComponent<BoxCollider2D>().offset.y);
+                    bat.GetComponent<SpriteRenderer>().flipX = true;
+                }
+                else
+                {
+                    //float nX = (bat.GetComponent<BoxCollider2D>().offset.x+1)*1;
+                    bat.GetComponent<BoxCollider2D>().offset = new Vector2(OriginalXOffset, bat.GetComponent<BoxCollider2D>().offset.y);
+                    bat.GetComponent<SpriteRenderer>().flipX = false;
+
+                }
+            }
+        }
 	}
 	
 	void OnTriggerEnter2D(Collider2D other){
