@@ -88,6 +88,7 @@ public class DialogueManager : MonoBehaviour
      */
     public void EndDialogue() {
         FindObjectOfType<DialogueTrigger>().isTriggered = false;                    // sets trigger to false so the player can talk to the NPC again
+        FindObjectOfType<DialogueTriggerPlayer>().isTriggered = false;
         animator.SetBool("IsOpen", false);
     }
 }
