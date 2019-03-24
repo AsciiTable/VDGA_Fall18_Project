@@ -1,16 +1,20 @@
 fileFormatVersion: 2
-guid: 1add67fb4ec4bbc48ac27efe89d89fa5
+guid: 6498759d22c7d704db8be89d85fb8b02
 TextureImporter:
   fileIDToRecycleName:
-    21300000: heart sprite sheet_0
-    21300002: heart sprite sheet_1
-    21300004: heart sprite sheet_2
-    21300006: heart sprite sheet_3
-    21300008: heart sprite sheet_4
-    21300010: heart sprite sheet_5
-    21300012: heart sprite sheet_6
-    21300014: heart sprite sheet_7
-    21300016: heart sprite sheet_8
+    21300000: parker run_0
+    21300002: parker run_1
+    21300004: parker run_2
+    21300006: parker run_3
+    21300008: parker run_4
+    21300010: parker run_5
+    21300012: parker run_6
+    21300014: parker run_7
+    21300016: parker run_8
+    21300018: parker run_9
+    21300020: parker run_10
+    21300022: parker run_11
+    21300024: parker run_12
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -93,181 +97,261 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: heart sprite sheet_0
+      name: parker run_0
       rect:
         serializedVersion: 2
-        x: 309
-        y: 153
-        width: 606
-        height: 698
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 330
+        y: 50
+        width: 564
+        height: 622
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 713adc018a2277d48985d47649701430
+      spriteID: c835471f16e79cd49afd4b09b44611e4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heart sprite sheet_1
+      name: parker run_1
       rect:
         serializedVersion: 2
-        x: 1543
-        y: 161
-        width: 520
-        height: 690
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3178
+        y: 55
+        width: 346
+        height: 608
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3616d94afc10a8146a49de9cf37d9ab4
+      spriteID: 6473acdf275649343999ee5a3186e969
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heart sprite sheet_2
+      name: parker run_2
       rect:
         serializedVersion: 2
-        x: 2782
-        y: 129
-        width: 443
-        height: 680
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3444
+        y: 659
+        width: 19
+        height: 18
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 413639ee8bf1ba04799d9c00df8de601
+      spriteID: b56dce96dd88a3d45a1415a886ff73d0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heart sprite sheet_3
+      name: parker run_3
       rect:
         serializedVersion: 2
-        x: 4005
-        y: 173
-        width: 348
-        height: 641
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4056
+        y: 59
+        width: 470
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4f0e2d38754b2646865e36307364f88
+      spriteID: 1e5c2fd71c7663343bad4b4a99b71f4c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heart sprite sheet_4
+      name: parker run_4
       rect:
         serializedVersion: 2
-        x: 5086
-        y: 145
-        width: 604
-        height: 696
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6121
+        y: 55
+        width: 574
+        height: 613
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b85bd602c3a3c4b4799a30e2e3e8d58b
+      spriteID: 3b22d7060f92bf14588fb5ec188af316
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heart sprite sheet_5
+      name: parker run_5
       rect:
         serializedVersion: 2
-        x: 6431
-        y: 153
-        width: 343
-        height: 640
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 7198
+        y: 55
+        width: 347
+        height: 608
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a55c6a61b54f09649ac17241e59f23bf
+      spriteID: 6944f5f275e1b2849b3aa0b92281a653
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heart sprite sheet_6
+      name: parker run_6
       rect:
         serializedVersion: 2
-        x: 7591
-        y: 145
-        width: 443
-        height: 685
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8048
+        y: 55
+        width: 299
+        height: 608
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0a13752d0fbdf94c89a96a5db254dcd
+      spriteID: 828009666e69f274f8fde51ca4a3fe00
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heart sprite sheet_7
+      name: parker run_7
       rect:
         serializedVersion: 2
-        x: 8741
-        y: 140
-        width: 443
-        height: 685
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1370
+        y: 45
+        width: 569
+        height: 608
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7975713f8d1938a4fa5fe2b5853f06eb
+      spriteID: e48b1e8fd12cf6d49bcdc78c0dcdce61
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heart sprite sheet_8
+      name: parker run_8
       rect:
         serializedVersion: 2
-        x: 9906
-        y: 141
-        width: 522
-        height: 694
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2373
+        y: 45
+        width: 297
+        height: 611
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1bd0523dcbd41c45bed6cc6d812e826
+      spriteID: 45430868839aa074d8b2d60fcbf1aa53
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: parker run_9
+      rect:
+        serializedVersion: 2
+        x: 3173
+        y: 122
+        width: 14
+        height: 17
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b653e7679ec279e489c4dbe072a4768d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: parker run_10
+      rect:
+        serializedVersion: 2
+        x: 5053
+        y: 61
+        width: 588
+        height: 554
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6f97a73ffcafd341bb34cbd53a270c7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: parker run_11
+      rect:
+        serializedVersion: 2
+        x: 5644
+        y: 124
+        width: 4
+        height: 4
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27a80181b1b3c6d4689c6929ca9d4cbe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: parker run_12
+      rect:
+        serializedVersion: 2
+        x: 8817
+        y: 50
+        width: 569
+        height: 606
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fc58097a4eac7f40921b23ebe5e8b05
       vertices: []
       indices: 
       edges: []
@@ -275,7 +359,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 8995177d68bc9294cb62daae422062e1
+    spriteID: e41140c277b03744ab5a05623902b442
     vertices: []
     indices: 
     edges: []
