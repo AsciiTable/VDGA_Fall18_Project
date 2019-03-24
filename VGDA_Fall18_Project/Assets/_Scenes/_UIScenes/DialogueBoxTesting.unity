@@ -1140,6 +1140,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 378684086}
+  - component: {fileID: 378684087}
   m_Layer: 8
   m_Name: Parker
   m_TagString: Untagged
@@ -1160,8 +1161,25 @@ Transform:
   m_Children:
   - {fileID: 2056697194}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &378684087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378684085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5612412d643e4546b9a9e11f60f360a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 378684085}
+  sentences:
+  - 
+  - 
+  - 
 --- !u!1 &545020261
 GameObject:
   m_ObjectHideFlags: 0
@@ -1180,7 +1198,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &545020262
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1525,7 +1543,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &624408557
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1791,7 +1809,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &910387538
 GameObject:
@@ -1890,7 +1908,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1052201136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2137,7 +2155,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4571715259199136, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4571715259199136, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
       propertyPath: m_LocalScale.x
@@ -2208,6 +2226,23 @@ MonoBehaviour:
     - Hi does this work?
     - I hope it works.
   isTriggered: 0
+--- !u!114 &1206368922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206368920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da73e0ab38d1f244ea902850a1154083, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1206368920}
+  InteractCheckpoint: 0
+  InteractCheckpointBuffer: 5
+  speech: {fileID: 1236575313}
+  isTriggered: 0
 --- !u!1 &1236575308
 GameObject:
   m_ObjectHideFlags: 0
@@ -2219,10 +2254,10 @@ GameObject:
   - component: {fileID: 1236575309}
   - component: {fileID: 1236575311}
   - component: {fileID: 1236575310}
-  - component: {fileID: 1236575313}
   - component: {fileID: 1236575312}
+  - component: {fileID: 1236575313}
   m_Layer: 5
-  m_Name: Image
+  m_Name: PlayerSpeech
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2245,7 +2280,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.100656606, y: 5.703241}
+  m_AnchoredPosition: {x: 0.10065651, y: 5.703241}
   m_SizeDelta: {x: -9.344638, y: -12.618916}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1236575310
@@ -2313,12 +2348,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1236575308}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c1ec68ba9d984344b9d10d30bf03c08, type: 3}
+  m_Script: {fileID: 11500000, guid: b5612412d643e4546b9a9e11f60f360a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 1236575312}
-  TimeOff: 7
-  TimeOn: 10
+  player: {fileID: 1206368920}
+  sentences:
+  - Line 1
+  - Line 2
+  - Line 3
 --- !u!1 &1240837924
 GameObject:
   m_ObjectHideFlags: 0
@@ -3803,7 +3840,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: This is what Parker says in a bubble
+  m_Text: 
 --- !u!222 &1622058162
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3900,8 +3937,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1681092591}
+  - component: {fileID: 1681092592}
   m_Layer: 8
-  m_Name: Speech Bubble Manager
+  m_Name: SpeechBubbleManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3914,13 +3952,32 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1681092590}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.84, y: 5.83, z: 0}
+  m_LocalScale: {x: 9, y: 9, z: 0.33068}
   m_Children: []
-  m_Father: {fileID: 2056697194}
-  m_RootOrder: 4
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1681092592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681092590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44466ae463e00584281b3b09a5d4105d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1206368920}
+  dialogueText: {fileID: 1622058161}
+  animator: {fileID: 1236575312}
+  checkpoints:
+  - 25
+  - 5.1
+  - 10.4
 --- !u!1 &1754119605
 GameObject:
   m_ObjectHideFlags: 0
@@ -4077,7 +4134,7 @@ Transform:
   m_LocalScale: {x: 15.363, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 29.621002}
 --- !u!1 &1884474603
 GameObject:
@@ -4095,7 +4152,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1884474604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4506,7 +4563,7 @@ Transform:
   m_Children:
   - {fileID: 1240837925}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &1953819625
 CapsuleCollider2D:
