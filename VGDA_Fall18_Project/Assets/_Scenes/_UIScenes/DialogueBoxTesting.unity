@@ -1140,7 +1140,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 378684086}
-  - component: {fileID: 378684087}
   m_Layer: 8
   m_Name: Parker
   m_TagString: Untagged
@@ -1163,23 +1162,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &378684087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 378684085}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5612412d643e4546b9a9e11f60f360a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 378684085}
-  sentences:
-  - 
-  - 
-  - 
 --- !u!1 &545020261
 GameObject:
   m_ObjectHideFlags: 0
@@ -2155,7 +2137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4571715259199136, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4571715259199136, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
       propertyPath: m_LocalScale.x
@@ -2238,11 +2220,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da73e0ab38d1f244ea902850a1154083, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1206368920}
-  InteractCheckpoint: 0
-  InteractCheckpointBuffer: 5
-  speech: {fileID: 1236575313}
-  isTriggered: 0
+  speechBubble:
+    sentences:
+    - Line 1
+    - Line 2
+    - Line 3
 --- !u!1 &1236575308
 GameObject:
   m_ObjectHideFlags: 0
@@ -2255,7 +2237,6 @@ GameObject:
   - component: {fileID: 1236575311}
   - component: {fileID: 1236575310}
   - component: {fileID: 1236575312}
-  - component: {fileID: 1236575313}
   m_Layer: 5
   m_Name: PlayerSpeech
   m_TagString: Untagged
@@ -2339,23 +2320,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1236575313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1236575308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5612412d643e4546b9a9e11f60f360a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1206368920}
-  sentences:
-  - Line 1
-  - Line 2
-  - Line 3
 --- !u!1 &1240837924
 GameObject:
   m_ObjectHideFlags: 0
@@ -2756,7 +2720,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.99821
+      value: 18.970146
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2780,7 +2744,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.99821
+      value: 18.970146
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3937,7 +3901,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1681092591}
-  - component: {fileID: 1681092592}
   m_Layer: 8
   m_Name: SpeechBubbleManager
   m_TagString: Untagged
@@ -3959,25 +3922,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1681092592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1681092590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44466ae463e00584281b3b09a5d4105d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1206368920}
-  dialogueText: {fileID: 1622058161}
-  animator: {fileID: 1236575312}
-  checkpoints:
-  - 25
-  - 5.1
-  - 10.4
 --- !u!1 &1754119605
 GameObject:
   m_ObjectHideFlags: 0
