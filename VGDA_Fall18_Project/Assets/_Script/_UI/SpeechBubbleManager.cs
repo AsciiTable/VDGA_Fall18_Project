@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpeechBubbleManager : MonoBehaviour
 {
+    private SpeechBubblePlayer playerSpeech;
     private string[] sentences;
     public SpeechBubbleTrigger trigger; 
 
@@ -13,7 +14,7 @@ public class SpeechBubbleManager : MonoBehaviour
         sentences = trigger.getSentences();
     }
 
-    public void StartSpeechBubbles(sentences) {
+    public void StartSpeechBubbles(SpeechBubblePlayer playerSpeech) {
         Debug.Log("Speech Bubble Starting");
     }
 
