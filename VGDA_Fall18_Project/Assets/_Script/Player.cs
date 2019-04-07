@@ -48,6 +48,10 @@ public class Player : MonoBehaviour {
     private Transform Environment_transform;
     private Image InvulnerableCooldown_Sprite;
 
+    //Boss Fight
+    [HideInInspector]
+    public bool restrained = false;
+
     private void Start()
     {
         /**if (isCheck.checkpoint == true)
@@ -75,8 +79,13 @@ public class Player : MonoBehaviour {
 
     void FixedUpdate()
     {
+        float Player_horizontal = 0;
         /*  Moving  */
-        float Player_horizontal = Input.GetAxis("Horizontal");
+        if (!restrained)
+        {
+            Player_horizontal = Input.GetAxis("Horizontal");
+        }
+        
         if(Player_horizontal != 0)
         {
             Player_animation.SetBool("PlayerMove", true);
