@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BossManager : MonoBehaviour
 {
-    public int bossPhase = 0;
+    [HideInInspector] public int bossPhase = 0;
     private ShadowParker boss;
     private GameObject player;
     private Transform player_xyz;
@@ -30,19 +30,8 @@ public class BossManager : MonoBehaviour
         player_xyz = player.GetComponent<Transform>();
         player_rb2d = player.GetComponent<Rigidbody2D>();
         player_script = player.GetComponent<Player>();
-        if(bossPhase == 1)
-        {
-            StartCoroutine(OpeningPhase1());
-        }
-        if(bossPhase == 2)
-        {
-            StartCoroutine(OpeningPhase2());
-        }
-        if (bossPhase == 2)
-        {
-            StartCoroutine(OpeningPhase3());
-        }
 
+        StartCoroutine(StageScenes());
     }
 
     private void FixedUpdate()
@@ -53,55 +42,48 @@ public class BossManager : MonoBehaviour
         }
     }
 
-    IEnumerator OpeningPhase1()
+    IEnumerator StageScenes()
     {
-        boss.bossImmunity = player_script.restrained = true;
+        boss.bossImmunity = true;
         Debug.Log("Play Opening Scene");
         yield return new WaitForSeconds(3);
         Debug.Log("Phase 1");
-        boss.bossImmunity = player_script.restrained = false;
+        boss.bossImmunity = false;
         bossPhase = 1;
         StartCoroutine(Phase1());
         StartCoroutine(Spikes());
         yield return new WaitUntil(() => boss.health == 0);
-        Debug.Log("Transistion to Phase 2 Scene");
-    }
-    IEnumerator OpeningPhase2()
-    {
-        boss.bossImmunity = player_script.restrained = true;
-        Debug.Log("Play Opening Scene");
-        yield return new WaitForSeconds(3);
+        yield return new WaitUntil(() => player_xyz.position.x <= border);
+        Debug.Log("Transistion to Phase 2");
+        boss.health = 3;
+        boss.bossImmunity = true;
         Debug.Log("Phase 2");
-        boss.bossImmunity = player_script.restrained = false;
+        boss.bossImmunity = false;
         bossPhase = 2;
-        yield return new WaitUntil(() => boss.health == 0);
-        Debug.Log("Transistion to Phase 3 Scene");
+        yield return new WaitUntil(() => false == true);
+        bossPhase = 3;
+        yield return new WaitUntil(() => false == true);
     }
-    IEnumerator OpeningPhase3()
-    {
-        yield return new WaitUntil(() => boss.health == 0);
-    }
-
-        //When Boss gets hit during Phase 1
+    //When Boss gets hit during Phase 1
     IEnumerator Phase1()
     {
         spikes_1.SetActive(true);
         yield return new WaitUntil(() => boss.health == 2);
         spikes_1.SetActive(false);
         boss.bossImmunity = pushedbacked = player_script.restrained = true;
-        yield return new WaitUntil(() => player_xyz.position.x <= border+3);
+        yield return new WaitUntil(() => player_xyz.position.x <= border);
         boss.bossImmunity = pushedbacked = player_script.restrained = false;
         spikes_2.SetActive(true);
         yield return new WaitUntil(() => boss.health == 1);
         spikes_2.SetActive(false);
         boss.bossImmunity = pushedbacked = player_script.restrained = true;
-        yield return new WaitUntil(() => player_xyz.position.x <= border+3);
+        yield return new WaitUntil(() => player_xyz.position.x <= border);
         boss.bossImmunity = pushedbacked = player_script.restrained = false;
         spikes_3.SetActive(true);
         yield return new WaitUntil(() => boss.health == 0);
         spikes_3.SetActive(false);
         boss.bossImmunity = pushedbacked = player_script.restrained = true;
-        yield return new WaitUntil(() => player_xyz.position.x <= border+3);
+        yield return new WaitUntil(() => player_xyz.position.x <= border);
         boss.bossImmunity = pushedbacked = player_script.restrained = false;
 
 
@@ -109,7 +91,10 @@ public class BossManager : MonoBehaviour
 
     IEnumerator Spikes()
     {
-        spikesUp = !spikesUp;
-        yield return new WaitForSeconds(spikeCooldown);
+        while (bossPhase == 1)
+        {
+            spikesUp = !spikesUp;
+            yield return new WaitForSeconds(spikeCooldown);
+        }
     }
 }
