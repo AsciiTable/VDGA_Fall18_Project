@@ -1208,7 +1208,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thoughts:
-    name: Parker
     sentences:
     - Talking to myself.
     - Yup.
@@ -2353,6 +2352,7 @@ MonoBehaviour:
     - Line 1
     - Line 2
     - Line 3
+  isTriggered: 0
 --- !u!1 &1236575308
 GameObject:
   m_ObjectHideFlags: 0
@@ -2848,7 +2848,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.986736
+      value: 18.983515
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2872,7 +2872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.986736
+      value: 18.983515
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4034,6 +4034,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1681092591}
+  - component: {fileID: 1681092592}
   m_Layer: 8
   m_Name: SpeechBubbleManager
   m_TagString: Untagged
@@ -4055,6 +4056,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1681092592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681092590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44466ae463e00584281b3b09a5d4105d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: {fileID: 0}
 --- !u!1 &1754119605
 GameObject:
   m_ObjectHideFlags: 0
@@ -4637,6 +4651,7 @@ MonoBehaviour:
   SuicidePoint: -15
   Player_winningScene: 
   Player_invulnerableEnabled: 1
+  restrained: 0
 --- !u!50 &1953819623
 Rigidbody2D:
   serializedVersion: 4
