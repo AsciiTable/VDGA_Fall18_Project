@@ -2344,15 +2344,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1206368920}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da73e0ab38d1f244ea902850a1154083, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a17db2eb98fa344f81b58afc442eaef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speechBubble:
+  Player: {fileID: 1206368920}
+  buffer: 5
+  speechDict:
     sentences:
-    - Line 1
-    - Line 2
-    - Line 3
-  isTriggered: 0
+    - line 1
+    - line 2
+    - line 3
+    checkpoints:
+    - 10
+    - 20
+    - 30
 --- !u!1 &1236575308
 GameObject:
   m_ObjectHideFlags: 0
@@ -4068,7 +4073,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44466ae463e00584281b3b09a5d4105d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 0}
+  thoughts:
+    sentences:
+    - 1
+    - 2
+    - 3
+  speech: {fileID: 1622058161}
+  animator: {fileID: 1236575312}
 --- !u!1 &1754119605
 GameObject:
   m_ObjectHideFlags: 0
