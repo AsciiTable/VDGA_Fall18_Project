@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class BossManager : MonoBehaviour
 {
-    [HideInInspector] public int bossPhase = 0;
+    public int bossPhase = 0;
+    public bool bossStarted = false;
+    private SceneLoader sceneLoader;
     private ShadowParker boss;
     private GameObject player;
     private Transform player_xyz;
     private Rigidbody2D player_rb2d;
     private Player player_script;
 
+    [SerializeField] private string[] bossStages = {"BossFight_1", "BossFight_2" , "BossFight_3" };
+    [Space(10)]
     [Header("Phase 1")]
     [SerializeField] private int spikeCooldown;
     [HideInInspector] public bool spikesUp = false;
@@ -25,13 +29,22 @@ public class BossManager : MonoBehaviour
 
     private void Awake()
     {
+        sceneLoader = GetComponent<SceneLoader>();
         boss = (ShadowParker)GameObject.FindObjectOfType(typeof(ShadowParker));
         player = GameObject.FindGameObjectWithTag("Player");
         player_xyz = player.GetComponent<Transform>();
         player_rb2d = player.GetComponent<Rigidbody2D>();
         player_script = player.GetComponent<Player>();
 
-        StartCoroutine(StageScenes());
+        if(bossPhase == 1)
+        {
+            StartCoroutine(StagePhase1());
+        }
+        if(bossPhase == 2)
+        {
+
+        }
+        
     }
 
     private void FixedUpdate()
@@ -42,28 +55,43 @@ public class BossManager : MonoBehaviour
         }
     }
 
-    IEnumerator StageScenes()
+    IEnumerator StagePhase1()
     {
-        boss.bossImmunity = true;
+        boss.bossImmunity = player_script.restrained = true;
         Debug.Log("Play Opening Scene");
         yield return new WaitForSeconds(3);
         Debug.Log("Phase 1");
-        boss.bossImmunity = false;
-        bossPhase = 1;
+        boss.bossImmunity = player_script.restrained = false;
+        bossStarted = true;
         StartCoroutine(Phase1());
         StartCoroutine(Spikes());
         yield return new WaitUntil(() => boss.health == 0);
         yield return new WaitUntil(() => player_xyz.position.x <= border);
         Debug.Log("Transistion to Phase 2");
-        boss.health = 3;
-        boss.bossImmunity = true;
+        boss.bossImmunity = player_script.restrained = true;
+        bossStarted = false;
         Debug.Log("Phase 2");
-        boss.bossImmunity = false;
-        bossPhase = 2;
-        yield return new WaitUntil(() => false == true);
-        bossPhase = 3;
-        yield return new WaitUntil(() => false == true);
+        sceneLoader.LoadScene(bossStages[1].ToString());
     }
+    IEnumerator StagePhase2()
+    {
+        boss.bossImmunity = player_script.restrained = true;
+        Debug.Log("Play Opening Scene");
+        yield return new WaitForSeconds(3);
+
+        Debug.Log("Phase 2");
+        boss.bossImmunity = player_script.restrained = false;
+        bossStarted = true;
+
+
+        yield return new WaitUntil(() => boss.health == 0);
+
+        Debug.Log("Transistion to Phase 3");
+        boss.bossImmunity = player_script.restrained = true;
+        bossStarted = false;
+        Debug.Log("Phase 3");
+    }
+
     //When Boss gets hit during Phase 1
     IEnumerator Phase1()
     {
@@ -91,7 +119,7 @@ public class BossManager : MonoBehaviour
 
     IEnumerator Spikes()
     {
-        while (bossPhase == 1)
+        while (bossPhase == 1 && bossStarted)
         {
             spikesUp = !spikesUp;
             yield return new WaitForSeconds(spikeCooldown);

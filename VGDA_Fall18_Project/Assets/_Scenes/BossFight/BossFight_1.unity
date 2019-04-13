@@ -1803,15 +1803,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 23.050207
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 17.849998
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalRotation.z
@@ -1827,7 +1827,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.056734
+      value: 23.050207
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1865,7 +1865,7 @@ PrefabInstance:
     - target: {fileID: 20453020796198110, guid: 800b402317da2064caf766557e3860d1,
         type: 3}
       propertyPath: orthographic size
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 20453020796198110, guid: 800b402317da2064caf766557e3860d1,
         type: 3}
@@ -1972,6 +1972,7 @@ GameObject:
   - component: {fileID: 897145768}
   - component: {fileID: 897145767}
   - component: {fileID: 897145769}
+  - component: {fileID: 897145770}
   m_Layer: 0
   m_Name: ScriptHolder
   m_TagString: Untagged
@@ -2020,13 +2021,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff0617936b6a1ec44b2c2bf239494383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossPhase: 0
+  bossPhase: 1
+  bossStarted: 0
+  bossStages:
+  - BossFight_1
+  - BossFight_2
+  - BossFight_3
   spikeCooldown: 3
   spikesUp: 0
-  border: 0.5
+  border: 2.5
   spikes_1: {fileID: 1073195554}
   spikes_2: {fileID: 307687298}
   spikes_3: {fileID: 782081895}
+--- !u!114 &897145770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897145766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b3de20f50314cf44aea1e01cba971ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &907888573
 GameObject:
   m_ObjectHideFlags: 0

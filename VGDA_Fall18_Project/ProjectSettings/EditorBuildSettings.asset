@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/_Demo/Level 1.3_Demo.unity
     guid: 69a196ad1f1b0fe4bac5d6ec4bc7b832
+  - enabled: 1
+    path: Assets/_Scenes/BossFight/BossFight_1.unity
+    guid: f9953f5901fc21c43be6fa080cc91329
+  - enabled: 1
+    path: Assets/_Scenes/BossFight/BossFight_2.unity
+    guid: c156953ef83df044dae87ed9144ee271
   m_configObjects: {}
