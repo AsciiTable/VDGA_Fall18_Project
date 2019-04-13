@@ -2347,17 +2347,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a17db2eb98fa344f81b58afc442eaef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1206368920}
+  Player: {fileID: 2056697194}
   buffer: 5
   speechDict:
+    checkpoints:
+    - 20
+    - 50
+    - 100
     sentences:
     - line 1
     - line 2
     - line 3
-    checkpoints:
-    - 10
-    - 20
-    - 30
+  anim: {fileID: 1236575312}
+  speechText: {fileID: 1622058161}
 --- !u!1 &1236575308
 GameObject:
   m_ObjectHideFlags: 0
@@ -2853,15 +2855,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.983515
+      value: -12.199997
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.83
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalRotation.z
@@ -2877,7 +2879,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.983515
+      value: 18.961432
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2905,7 +2907,7 @@ PrefabInstance:
     - target: {fileID: 20453020796198110, guid: 800b402317da2064caf766557e3860d1,
         type: 3}
       propertyPath: orthographic size
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 20453020796198110, guid: 800b402317da2064caf766557e3860d1,
         type: 3}
@@ -4365,7 +4367,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1919491004
 Transform:
   m_ObjectHideFlags: 0
