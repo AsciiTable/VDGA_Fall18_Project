@@ -83,19 +83,24 @@ public class Bat_Hitbox : MonoBehaviour{
 	}
 	
 	void OnTriggerEnter2D(Collider2D other){
-		Debug.Log("collider");
+		//Debug.Log("collider");
 		if (other.CompareTag("Enemy"))
 		{
 			Audio.PlaySound("8BIT_RETRO_Hit_Bump_Distorted_Thud_mono");
-			Debug.Log("Is Enemy");
-			if (bat.GetComponent<Collider2D>().IsTouching(other.GetComponent<Collider2D>()) && player.GetComponent<SpriteRenderer>().flipX == false){
-				other.GetComponent<Rigidbody2D>().AddForce(transform.right * knockBack);
-			}
-			else if (bat.GetComponent<Collider2D>().IsTouching(other.GetComponent<Collider2D>()) &&
-			         player.GetComponent<SpriteRenderer>().flipX == true)
-			{
-				other.GetComponent<Rigidbody2D>().AddForce(transform.right * -knockBack);
-			}
+			//Debug.Log("Is Enemy");
+            if(other.gameObject.GetComponent<Rigidbody2D>() != null)
+            {
+                if (bat.GetComponent<Collider2D>().IsTouching(other.GetComponent<Collider2D>()) && player.GetComponent<SpriteRenderer>().flipX == false)
+                {
+                    other.GetComponent<Rigidbody2D>().AddForce(transform.right * knockBack);
+                }
+                else if (bat.GetComponent<Collider2D>().IsTouching(other.GetComponent<Collider2D>()) &&
+                         player.GetComponent<SpriteRenderer>().flipX == true)
+                {
+                    other.GetComponent<Rigidbody2D>().AddForce(transform.right * -knockBack);
+                }
+            }
+			
 		}
 	}
 

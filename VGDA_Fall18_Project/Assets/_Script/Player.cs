@@ -48,6 +48,10 @@ public class Player : MonoBehaviour {
     private Transform Environment_transform;
     private Image InvulnerableCooldown_Sprite;
 
+    //Boss Fight
+    [HideInInspector]
+    public bool restrained = false;
+
     private void Start()
     {
         /**if (isCheck.checkpoint == true)
@@ -75,8 +79,13 @@ public class Player : MonoBehaviour {
 
     void FixedUpdate()
     {
+        float Player_horizontal = 0;
         /*  Moving  */
-        float Player_horizontal = Input.GetAxis("Horizontal");
+        if (!restrained)
+        {
+            Player_horizontal = Input.GetAxis("Horizontal");
+        }
+        
         if(Player_horizontal != 0)
         {
             Player_animation.SetBool("PlayerMove", true);
@@ -135,10 +144,13 @@ public class Player : MonoBehaviour {
 //Jump off floor
         else if (Input.GetButtonDown("Jump") && Player_jumps == 0 && Player_groundCheck)
         {
-            //Debug.Log("Lifted");
-            Audio.PlaySound("8BIT_RETRO_Jump_Glide_Up_Muffled_mono");
-            Player_rb2d.velocity = new Vector3(0f, Player_jumpForce, 0f);
-            Player_jumps++;
+            if (!restrained)
+            {
+                //Debug.Log("Lifted");
+                Audio.PlaySound("8BIT_RETRO_Jump_Glide_Up_Muffled_mono");
+                Player_rb2d.velocity = new Vector3(0f, Player_jumpForce, 0f);
+                Player_jumps++;
+            }
         }
 //Cancels first jump if in air
         else if (!(Player_groundCheck) && Player_jumps == 0)
