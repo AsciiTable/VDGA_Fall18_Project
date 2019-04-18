@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class BossManager : MonoBehaviour
 {
@@ -21,9 +22,14 @@ public class BossManager : MonoBehaviour
     [SerializeField] [Tooltip("Edge of StageLeft")]
     private float border;
     private bool pushedbacked = false;
+    [SerializeField] private GameObject floor_1;
+    [SerializeField] private GameObject floor_2;
+    [SerializeField] private GameObject floor_3;
     [SerializeField] private GameObject spikes_1;
     [SerializeField] private GameObject spikes_2;
     [SerializeField] private GameObject spikes_3;
+    [SerializeField] private CinemachineVirtualCamera cam_2;
+    [SerializeField] private CinemachineVirtualCamera cam_3;
 
 
 
@@ -102,12 +108,18 @@ public class BossManager : MonoBehaviour
         yield return new WaitUntil(() => player_xyz.position.x <= border);
         boss.bossImmunity = pushedbacked = player_script.restrained = false;
         spikes_2.SetActive(true);
+        floor_2.SetActive(true);
+        floor_1.SetActive(false);
+        cam_2.Priority = 2;
         yield return new WaitUntil(() => boss.health == 1);
         spikes_2.SetActive(false);
         boss.bossImmunity = pushedbacked = player_script.restrained = true;
         yield return new WaitUntil(() => player_xyz.position.x <= border);
         boss.bossImmunity = pushedbacked = player_script.restrained = false;
         spikes_3.SetActive(true);
+        floor_3.SetActive(true);
+        floor_2.SetActive(false);
+        cam_3.Priority = 3;
         yield return new WaitUntil(() => boss.health == 0);
         spikes_3.SetActive(false);
         boss.bossImmunity = pushedbacked = player_script.restrained = true;
