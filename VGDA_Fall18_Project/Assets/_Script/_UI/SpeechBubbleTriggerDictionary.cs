@@ -17,7 +17,6 @@ public class SpeechBubbleTriggerDictionary : MonoBehaviour
 
     void Start()
     {
-        //Debug.Log("Player Position Start: " + Player.position.x);
         len = speechDict.checkpoints.Length;
         for (int i = 0; i < len; i++) {
             diction.Add(speechDict.checkpoints[i], speechDict.sentences[i]);
@@ -27,8 +26,6 @@ public class SpeechBubbleTriggerDictionary : MonoBehaviour
 
     void FixedUpdate()
     {
-        Debug.Log("ANIM ON UPDATE: " + anim.GetBool("isOpen"));
-        //Debug.Log("Player Position: " + Player.position.x);
         if (!alreadyOpen) {
             for (int i = 0; i < len; i++) {
                 if (Mathf.Abs(speechDict.checkpoints[i] - Player.position.x) < buffer)
@@ -53,8 +50,6 @@ public class SpeechBubbleTriggerDictionary : MonoBehaviour
     public void TriggerSpeech(string speech) {
         speechText.text = speech;
         anim.SetBool("isOpen", true);
-        Debug.Log("ANIM: " + anim.GetBool("isOpen"));
         alreadyOpen = true;
-        Debug.Log("Text: " + speech);
     }
 }
