@@ -2353,7 +2353,7 @@ MonoBehaviour:
     checkpoints:
     - 20
     - 50
-    - 100
+    - 70
     sentences:
     - line 1
     - line 2
@@ -2879,7 +2879,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.961432
+      value: 18.993477
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
