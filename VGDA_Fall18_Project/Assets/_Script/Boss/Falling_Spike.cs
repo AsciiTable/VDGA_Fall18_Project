@@ -10,7 +10,7 @@ public class Falling_Spike : MonoBehaviour
     [SerializeField] private int delaySpawn;
 
 
-    private Transform xyz;
+    private Transform xyz;  
     private Rigidbody2D rb2d;
     private Player Player_script;
 
@@ -20,7 +20,7 @@ public class Falling_Spike : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         startingY = xyz.position.y;
 
-        Player_script = GameObject.FindGameObjectsWithTag("Player").Get
+        Player_script = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 
         StartCoroutine(resetSpike());
     }
