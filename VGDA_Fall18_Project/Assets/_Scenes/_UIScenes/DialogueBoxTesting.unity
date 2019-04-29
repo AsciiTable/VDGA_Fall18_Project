@@ -1712,7 +1712,7 @@ MonoBehaviour:
     - I actually have no idea what I'm doing, but all of this is really cool.
     - But there's a lot that I understand because I learned about classes, arrays,
       and queues last semester!
-    expressions: 010000000c00000004000000
+    expressions: 000000000c00000004000000
   isTriggered: 0
 --- !u!61 &624408560
 BoxCollider2D:
@@ -2017,7 +2017,7 @@ MonoBehaviour:
     - I actually have no idea what I'm doing, but all of this is really cool.
     - But there's a lot that I understand because I learned about classes, arrays,
       and queues last semester!
-    expressions: 
+    expressions: 00000000000000000000000000000000
   isTriggered: 0
 --- !u!61 &1052201137
 BoxCollider2D:
@@ -2672,7 +2672,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.00145
+      value: 18.978712
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2696,7 +2696,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.00145
+      value: 18.978712
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4009,6 +4009,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 1754119607}
   dialogueText: {fileID: 1546007297}
+  expression: {fileID: 295245395}
   animator: {fileID: 1127958313}
 --- !u!4 &1884474605
 Transform:

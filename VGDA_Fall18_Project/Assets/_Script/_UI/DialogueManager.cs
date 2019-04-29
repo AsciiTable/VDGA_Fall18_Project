@@ -17,9 +17,12 @@ public class DialogueManager : MonoBehaviour
     public Animator animator;
     private bool inCoro;
 
+    private Sprite expressionSprite;
+
     // Start is called before the first frame update
     void Start()
     {
+        expressionImage = new Queue<Dialogue.Expression>();
         sentences = new Queue<string>();
         inCoro = false;
     }
@@ -44,14 +47,15 @@ public class DialogueManager : MonoBehaviour
             nameText.text = "NPC";
         }
         sentences.Clear();
-
+        foreach (Dialogue.Expression express in dialogue.expressions)
+        {
+            expressionImage.Enqueue(express);
+        }
         foreach (string sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence);                                             // Lines each up to be in a queue
         }
-        foreach (Dialogue.Expression express in dialogue.expressions) {
-            expressionImage.Enqueue(express);
-        }
+
         DisplayNextSentence(dialogue);
     }
 
@@ -67,6 +71,9 @@ public class DialogueManager : MonoBehaviour
         }
 
         string sentence =  sentences.Dequeue();                                     // Starts using up each sentence in the queue
+        Dialogue.Expression express = expressionImage.Dequeue();
+
+        SetExpression(dialogue, express);
 
         //If you would like the text to appear immediately, use:
         //dialogueText.text = sentence;
@@ -105,9 +112,39 @@ public class DialogueManager : MonoBehaviour
         animator.SetBool("IsOpen", false);
     }
 
-    public Image SetExpression(Dialogue dialogue) {
-        Image expression = null;
-        if (dialogue.Speaker == Dialogue.Name.KnightBoy) {
+    public Image SetExpression(Dialogue dialogue, Dialogue.Expression express) {
+        if (dialogue.Speaker == Dialogue.Name.KnightBoy)
+        {
+            switch (express) {
+                case Dialogue.Expression.Annoyed:
+                    //Sprite ANNOYED = 
+                    expressionSprite.name = "annoyed.png";
+                    expression.sprite.name = expressionSprite.name;
+                    break;
+                case Dialogue.Expression.Happy:
+                    break;
+                case Dialogue.Expression.Haughty:
+                    break;
+                case Dialogue.Expression.Moved:
+                    break;
+                case Dialogue.Expression.Pity:
+                    break;
+                case Dialogue.Expression.Sad:
+                    break;
+                case Dialogue.Expression.Smug:
+                    break;
+                case Dialogue.Expression.Standard:
+                    break;
+                case Dialogue.Expression.Tsundere:
+                    break;
+                default:
+                    break;
+            }
+        }
+        else if (dialogue.Speaker == Dialogue.Name.Parker)
+        {
+        }
+        else if (dialogue.Speaker == Dialogue.Name.ShadowParker) {
         }
         return expression;
     }
