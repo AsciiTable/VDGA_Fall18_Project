@@ -9,6 +9,9 @@ public class DialogueManager : MonoBehaviour
     public Text nameText;
     public Text dialogueText;
 
+    public Queue<Dialogue.Expression> expressionImage;
+    public Image expression;
+
     private Queue<string> sentences;
 
     public Animator animator;
@@ -24,28 +27,45 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue dialogue) {
         //showDialogue.SetActive(true);
         animator.SetBool("IsOpen", true);
-
-        nameText.text = dialogue.name;
-
+        string name = "";
+        if (dialogue.Speaker == Dialogue.Name.KnightBoy)
+        {
+            nameText.text = "Knight Boy";
+        }
+        else if (dialogue.Speaker == Dialogue.Name.Parker)
+        {
+            nameText.text = "Parker";
+        }
+        else if (dialogue.Speaker == Dialogue.Name.ShadowParker) {
+            nameText.text = "Shadow Parker";
+        }
+        else
+        {
+            nameText.text = "NPC";
+        }
         sentences.Clear();
 
         foreach (string sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence);                                             // Lines each up to be in a queue
         }
-        DisplayNextSentence();
+        foreach (Dialogue.Expression express in dialogue.expressions) {
+            expressionImage.Enqueue(express);
+        }
+        DisplayNextSentence(dialogue);
     }
 
     /**
      * Displays the next sentence of the dialogue
      */
-    public void DisplayNextSentence() {
+    public void DisplayNextSentence(Dialogue dialogue) {
 
         if (sentences.Count == 0)
         {
             EndDialogue();
             return;
         }
+
         string sentence =  sentences.Dequeue();                                     // Starts using up each sentence in the queue
 
         //If you would like the text to appear immediately, use:
@@ -75,13 +95,6 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    /**IEnumerator WaitContinue(string sentence) {
-        while (!Input.GetButtonDown("TempContinueDialogue")) {
-            yield return null;
-        }
-        StartCoroutine(TypeSentence(sentence));
-    }**/
-
     /**
      * Call when there is no dialogue left to be shown. Dialogue triggered
      * is set to false and the dialogue box is closed.
@@ -90,5 +103,12 @@ public class DialogueManager : MonoBehaviour
         FindObjectOfType<DialogueTrigger>().isTriggered = false;                    // sets trigger to false so the player can talk to the NPC again
         FindObjectOfType<DialogueTriggerPlayer>().isTriggered = false;
         animator.SetBool("IsOpen", false);
+    }
+
+    public Image SetExpression(Dialogue dialogue) {
+        Image expression = null;
+        if (dialogue.Speaker == Dialogue.Name.KnightBoy) {
+        }
+        return expression;
     }
 }
