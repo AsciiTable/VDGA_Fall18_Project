@@ -30,6 +30,10 @@ public class BossManager : MonoBehaviour
     [SerializeField] private GameObject spikes_3;
     [SerializeField] private CinemachineVirtualCamera cam_2;
     [SerializeField] private CinemachineVirtualCamera cam_3;
+    [Space(10)]
+    [Header("Phase 2")]
+    public float fSpikeBottomBorder = -4;
+    public float fSpikeSpeed;
 
 
 
@@ -48,7 +52,11 @@ public class BossManager : MonoBehaviour
         }
         if(bossPhase == 2)
         {
-
+            StartCoroutine(StagePhase2());
+        }
+        if(bossPhase == 3)
+        {
+            StartCoroutine(StagePhase3());
         }
         
     }
@@ -96,8 +104,27 @@ public class BossManager : MonoBehaviour
         boss.bossImmunity = player_script.restrained = true;
         bossStarted = false;
         Debug.Log("Phase 3");
+        sceneLoader.LoadScene(bossStages[2].ToString());
     }
+    IEnumerator StagePhase3()
+    {
+        boss.bossImmunity = player_script.restrained = true;
+        Debug.Log("Play Opening Scene");
+        yield return new WaitForSeconds(3);
 
+        Debug.Log("Phase 3");
+        boss.bossImmunity = player_script.restrained = false;
+        bossStarted = true;
+
+
+        yield return new WaitUntil(() => boss.health == 0);
+
+        Debug.Log("Transistion to Phase 3");
+        boss.bossImmunity = player_script.restrained = true;
+        bossStarted = false;
+        Debug.Log("Phase 3");
+        sceneLoader.LoadScene(bossStages[2].ToString());
+    }
     //When Boss gets hit during Phase 1
     IEnumerator Phase1()
     {
