@@ -21,4 +21,12 @@ public class Enemy_Standing : MonoBehaviour
             Player_script.ResetScene();
         }
     }
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Player" && !Player_script.Player_invulnerable)
+        {
+            Debug.Log("Stand Death");
+            Player_script.ResetScene();
+        }
+    }
 }
