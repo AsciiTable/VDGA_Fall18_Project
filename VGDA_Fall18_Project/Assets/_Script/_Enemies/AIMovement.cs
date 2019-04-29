@@ -117,6 +117,7 @@ public class AIMovement : MonoBehaviour {
         }
         else {
             if (_enemy.position.y <= MinPos || _enemy.position.y >= MaxPos) {
+                Debug.Log("Swap!");
                 return true;
             }
         }

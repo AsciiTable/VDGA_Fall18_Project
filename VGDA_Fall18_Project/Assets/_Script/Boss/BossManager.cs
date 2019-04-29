@@ -50,8 +50,7 @@ public class BossManager : MonoBehaviour
         player_xyz = player.GetComponent<Transform>();
         player_rb2d = player.GetComponent<Rigidbody2D>();
         player_script = player.GetComponent<Player>();
-
-        if(bossPhase == 1)
+        if (bossPhase == 1)
         {
             StartCoroutine(StagePhase1());
         }
@@ -76,7 +75,7 @@ public class BossManager : MonoBehaviour
 
     IEnumerator StagePhase1()
     {
-        boss.bossImmunity = player_script.restrained = true;
+        boss.bossImmunity = player_script.restrained = boss.opening = true;
         Debug.Log("Play Opening Scene");
         yield return new WaitForSeconds(3);
         Debug.Log("Phase 1");
@@ -94,11 +93,11 @@ public class BossManager : MonoBehaviour
     }
     IEnumerator StagePhase2()
     {
-        boss.bossImmunity = player_script.restrained = true;
+        boss.bossImmunity = player_script.restrained = boss.opening = true;
         Debug.Log("Play Opening Scene");
         yield return new WaitForSeconds(3);
         Debug.Log("Phase 2");
-        boss.bossImmunity = player_script.restrained = false;
+        boss.opening = boss.bossImmunity = player_script.restrained = false;
         bossStarted = true;
         StartCoroutine(Phase2());
         yield return new WaitUntil(() => boss.health == 0);
@@ -171,26 +170,26 @@ public class BossManager : MonoBehaviour
     IEnumerator Phase2()
     {
         yield return new WaitUntil(() => boss.health == 2);
-        boss.bossImmunity = pushedbacked = player_script.restrained = true;
+        boss.bossImmunity = pushedbacked = player_script.restrained = boss.opening = true;
         yield return new WaitUntil(() => player_xyz.position.x <= border);
-        boss.bossImmunity = pushedbacked = player_script.restrained = false;
+        boss.bossImmunity = pushedbacked = player_script.restrained = boss.opening = false;
         fSpikes_2.SetActive(true);
         fallingSpikes = true;
         yield return new WaitUntil(() => boss.health == 1);
         fallingSpikes = false;
-        boss.bossImmunity = player_script.restrained = true;
+        boss.bossImmunity = player_script.restrained = boss.opening = true;
         fSpikeSpeed = fSpikeSpeed * 20;
         yield return new WaitForSeconds(0.5f);
         fSpikeSpeed = fSpikeSpeed / 20;
         fSpikes_2.SetActive(false);
         pushedbacked = true;
         yield return new WaitUntil(() => player_xyz.position.x <= border);
-        boss.bossImmunity = pushedbacked = player_script.restrained = false;
+        boss.bossImmunity = pushedbacked = player_script.restrained = boss.opening = false;
         fSpikes_3.SetActive(true);
         fallingSpikes = true;
         yield return new WaitUntil(() => boss.health == 0);
         fallingSpikes = false;
-        boss.bossImmunity = player_script.restrained = true;
+        boss.bossImmunity = player_script.restrained = boss.opening = true;
         fSpikeSpeed = fSpikeSpeed * 20;
         yield return new WaitForSeconds(0.5f);
         fSpikeSpeed = fSpikeSpeed / 20;
