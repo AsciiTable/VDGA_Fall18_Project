@@ -6054,20 +6054,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114724545924056790, guid: fe5007831d3a95249b505396f72f15ec,
+    - target: {fileID: 61214847567597564, guid: fe5007831d3a95249b505396f72f15ec,
         type: 3}
-      propertyPath: Player_invulnerable
-      value: 0
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.5928571
       objectReference: {fileID: 0}
-    - target: {fileID: 114724545924056790, guid: fe5007831d3a95249b505396f72f15ec,
+    - target: {fileID: 61214847567597564, guid: fe5007831d3a95249b505396f72f15ec,
         type: 3}
-      propertyPath: Player_invulnerableEnabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114886815701935836, guid: fe5007831d3a95249b505396f72f15ec,
-        type: 3}
-      propertyPath: batActivated
-      value: 0
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.3014286
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
