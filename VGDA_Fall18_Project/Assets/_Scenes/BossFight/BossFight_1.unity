@@ -2015,15 +2015,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff0617936b6a1ec44b2c2bf239494383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossPhase: 1
-  bossStarted: 0
   bossStages:
   - BossFight_1
   - BossFight_2
   - BossFight_3
   spikeCooldown: 3
   spikesUp: 0
-  border: 2.5
   floor_1: {fileID: 1504224844}
   floor_2: {fileID: 1967810542}
   floor_3: {fileID: 560582148}
@@ -2032,6 +2029,14 @@ MonoBehaviour:
   spikes_3: {fileID: 782081895}
   cam_2: {fileID: 994754368}
   cam_3: {fileID: 1000673492}
+  fSpikeBottomBorder: -4
+  fSpikeSpeed: 0
+  fallingSpikes: 0
+  border: 2.5
+  fSpikes_2: {fileID: 0}
+  fSpikes_3: {fileID: 0}
+  bossPhase: 1
+  bossStarted: 0
 --- !u!114 &897145770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2410,7 +2415,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 994754364}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 33.7301, y: 17.849998, z: -10}
+  m_LocalPosition: {x: 33.7301, y: 4.17, z: -10}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children:
   - {fileID: 1324241343}
@@ -2486,7 +2491,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000673488}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 44.403465, y: 17.849998, z: -10}
+  m_LocalPosition: {x: 44.403465, y: 4.17, z: -10}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children:
   - {fileID: 1321241656}
@@ -5268,7 +5273,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4571715259199136, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.95
+      value: 1.39
       objectReference: {fileID: 0}
     - target: {fileID: 4571715259199136, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5296,11 +5301,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4571715259199136, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: 1.0216709
       objectReference: {fileID: 0}
     - target: {fileID: 4571715259199136, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3
+      value: 0.8516798
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571715259199136, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.026962146
       objectReference: {fileID: 0}
     - target: {fileID: 114724545924056790, guid: fe5007831d3a95249b505396f72f15ec,
         type: 3}
@@ -5316,6 +5325,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Player_winningScene
       value: Title_Demo
+      objectReference: {fileID: 0}
+    - target: {fileID: 114724545924056790, guid: fe5007831d3a95249b505396f72f15ec,
+        type: 3}
+      propertyPath: Player_invulnerable
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114886815701935836, guid: fe5007831d3a95249b505396f72f15ec,
         type: 3}
@@ -6565,7 +6579,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1795352344952865}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 44.403465, y: 17.849998, z: -10}
+  m_LocalPosition: {x: 35.52211, y: 19, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4776947260708707}
@@ -6593,7 +6607,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1799718000565443}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.056734, y: 17.849998, z: -10}
+  m_LocalPosition: {x: 23.056734, y: 4.17, z: -10}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children:
   - {fileID: 4260192796039165}
@@ -6647,7 +6661,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 40
+  orthographic size: 20
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

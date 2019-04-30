@@ -7,11 +7,13 @@ public class Weakspot_Boss : MonoBehaviour
     [SerializeField]private ShadowParker parent;
 
     private Player player;
+    private BossManager manager;
 
     void Awake()
     {
         parent = GetComponentInParent<ShadowParker>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        manager = FindObjectOfType<BossManager>().GetComponent<BossManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -21,7 +23,7 @@ public class Weakspot_Boss : MonoBehaviour
             Debug.Log("Boss Death");
             player.ResetScene();
         }
-        if (collision.gameObject.tag == "Bat" && !parent.bossImmunity)
+        if (collision.gameObject.tag == "Bat" && !parent.bossImmunity && parent.opening == true)
         {
             parent.health -= 1;
         }

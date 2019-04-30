@@ -795,6 +795,80 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &295245393
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 295245394}
+  - component: {fileID: 295245396}
+  - component: {fileID: 295245395}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &295245394
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295245393}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1127958310}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -358, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &295245395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295245393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &295245396
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295245393}
+  m_CullTransparentMesh: 0
 --- !u!1 &314959833
 GameObject:
   m_ObjectHideFlags: 0
@@ -1631,13 +1705,14 @@ MonoBehaviour:
   Player: {fileID: 1206368920}
   InteractDistance: 5
   dialogue:
-    name: Ascii Table
+    Speaker: 0
     sentences:
     - Hello. My name is Jessica. I need this sentence to be much loooooooooooooooonger
       to test some stuff.
     - I actually have no idea what I'm doing, but all of this is really cool.
     - But there's a lot that I understand because I learned about classes, arrays,
       and queues last semester!
+    expressions: 000000000c00000004000000
   isTriggered: 0
 --- !u!61 &624408560
 BoxCollider2D:
@@ -1661,7 +1736,7 @@ BoxCollider2D:
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_AutoTiling: 1
   serializedVersion: 2
   m_Size: {x: 6.7453756, y: 15.27}
   m_EdgeRadius: 0
@@ -1934,7 +2009,7 @@ MonoBehaviour:
   Player: {fileID: 1206368920}
   InteractDistance: 5
   dialogue:
-    name: Ascii Table
+    Speaker: 0
     sentences:
     - ASODAOSHFASUODJNVOENFOJDBASUDBUOASNFJOUBASDNSANDOOAJSNDAOJSNDONDSONOJADINWJIAndi
     - Hello. My name is Jessica. I need this sentence to be much loooooooooooooooonger
@@ -1942,6 +2017,7 @@ MonoBehaviour:
     - I actually have no idea what I'm doing, but all of this is really cool.
     - But there's a lot that I understand because I learned about classes, arrays,
       and queues last semester!
+    expressions: 00000000000000000000000000000000
   isTriggered: 0
 --- !u!61 &1052201137
 BoxCollider2D:
@@ -2061,6 +2137,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 295245394}
   - {fileID: 1754119606}
   - {fileID: 1546007296}
   - {fileID: 1528280143}
@@ -2069,7 +2146,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3, y: 129}
+  m_AnchoredPosition: {x: 63, y: 140}
   m_SizeDelta: {x: 596.7, y: 102.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1127958311
@@ -2175,6 +2252,26 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1206368919}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1206368921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206368920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bf2fe4c2fde38349a6772055be00f98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1206368920}
+  InteractCheckpoint: 0
+  InteractCheckpointBuffer: 5
+  dialogue:
+    Speaker: 0
+    sentences: []
+    expressions: 
+  isTriggered: 0
 --- !u!1 &1240837924
 GameObject:
   m_ObjectHideFlags: 0
@@ -2575,7 +2672,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.973335
+      value: 18.978712
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2599,7 +2696,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.973335
+      value: 18.978712
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3070,7 +3167,7 @@ RectTransform:
   m_Children:
   - {fileID: 1663078104}
   m_Father: {fileID: 1127958310}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3197,7 +3294,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1127958310}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3753,7 +3850,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1127958310}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3912,6 +4009,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 1754119607}
   dialogueText: {fileID: 1546007297}
+  expression: {fileID: 295245395}
   animator: {fileID: 1127958313}
 --- !u!4 &1884474605
 Transform:
@@ -4374,8 +4472,9 @@ MonoBehaviour:
   InteractCheckpoint: 0
   InteractCheckpointBuffer: 5
   dialogue:
-    name: 
+    Speaker: 0
     sentences: []
+    expressions: 
   isTriggered: 0
 --- !u!4 &2056697194 stripped
 Transform:
