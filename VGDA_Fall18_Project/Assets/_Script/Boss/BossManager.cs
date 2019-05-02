@@ -11,9 +11,8 @@ public class BossManager : MonoBehaviour
     private Transform player_xyz;
     private Rigidbody2D player_rb2d;
     private Player player_script;
+    private Boss_Charge charge;
 
-    [SerializeField] private string[] bossStages = {"BossFight_1", "BossFight_2" , "BossFight_3" };
-    [Space(10)]
     [Header("Phase 1")]
     [SerializeField] private int spikeCooldown;
     [HideInInspector] public bool spikesUp = false;
@@ -31,7 +30,14 @@ public class BossManager : MonoBehaviour
     public float fSpikeSpeed;
     public bool fallingSpikes = false;
     [Space(10)]
+    [Header("Phase 3")]
+    [SerializeField][Tooltip("Charges While Invincible (Not in part 1)")]
+    private int[] numberCharges = new int[2];
+    public bool deathReady = false;
+    [HideInInspector]public bool hit = false;
+    [Space(10)]
     [Header("All Phases")]
+    [SerializeField] private string[] bossStages = { "BossFight_1", "BossFight_2", "BossFight_3" };
     [SerializeField][Tooltip("Edge of StageLeft")]
     private float border;
     [SerializeField] private GameObject fSpikes_2;
@@ -50,6 +56,7 @@ public class BossManager : MonoBehaviour
         player_xyz = player.GetComponent<Transform>();
         player_rb2d = player.GetComponent<Rigidbody2D>();
         player_script = player.GetComponent<Player>();
+        charge = boss.GetComponent<Boss_Charge>();
         if (bossPhase == 1)
         {
             StartCoroutine(StagePhase1());
@@ -117,7 +124,7 @@ public class BossManager : MonoBehaviour
         Debug.Log("Phase 3");
         boss.bossImmunity = player_script.restrained = false;
         bossStarted = true;
-
+        StartCoroutine(Phase3());
 
         yield return new WaitUntil(() => boss.health == 0);
 
@@ -125,7 +132,6 @@ public class BossManager : MonoBehaviour
         boss.bossImmunity = player_script.restrained = true;
         bossStarted = false;
         Debug.Log("Phase 3");
-        sceneLoader.LoadScene(bossStages[2].ToString());
     }
     //When Boss gets hit during Phase 1
     IEnumerator Phase1()
@@ -198,5 +204,57 @@ public class BossManager : MonoBehaviour
         yield return new WaitUntil(() => player_xyz.position.x <= border);
         pushedbacked = false;
 
+    }
+
+    IEnumerator Phase3()
+    {
+        while(boss.health == 3)
+        {
+            boss.bossImmunity = false;
+            charge.readyRegCharge = true;
+            StartCoroutine(charge.regCharge());
+            yield return new WaitUntil(() => !charge.readyRegCharge || boss.health != 3);
+            boss.bossImmunity = true;
+        }
+        boss.bossImmunity = hit = true;
+        yield return new WaitUntil(() => !charge.readyRegCharge);
+        hit = false;
+        yield return new WaitForSeconds(2);
+        deathReady = true;
+
+        while (boss.health == 2)
+        {
+            for (int i = 0; i < numberCharges[0]; i++)
+            {
+                charge.readyCharge = true;
+                StartCoroutine(charge.charge());
+                yield return new WaitUntil(() => !charge.readyCharge);
+            }
+            boss.bossImmunity = false;
+            charge.readyRegCharge = true;
+            StartCoroutine(charge.regCharge());
+            yield return new WaitUntil(() => !charge.readyRegCharge || boss.health != 2);
+            boss.bossImmunity = true;
+        }
+        boss.bossImmunity = hit = true;
+        yield return new WaitUntil(() => !charge.readyRegCharge);
+        hit = false;
+        yield return new WaitForSeconds(2);
+
+        while (boss.health == 1)
+        {
+            for (int i = 0; i < numberCharges[1]; i++)
+            {
+                charge.readyCharge = true;
+                StartCoroutine(charge.charge());
+                yield return new WaitUntil(() => !charge.readyCharge);
+            }
+            boss.bossImmunity = false;
+            charge.readyRegCharge = true;
+            StartCoroutine(charge.regCharge());
+            yield return new WaitUntil(() => !charge.readyRegCharge || boss.health != 1);
+            boss.bossImmunity = true;
+        }
+        boss.bossImmunity = hit = true;
     }
 }

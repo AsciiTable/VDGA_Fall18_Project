@@ -4,22 +4,25 @@ using UnityEngine;
 
 public class ShadowParker : MonoBehaviour
 {
-
+    [Header("Phase 2")]
+    [SerializeField] private GameObject platform;
+    [Space(10)][Header("Phase 3")]
+    [SerializeField] private GameObject deathZone;
+    [Space(10)][Header("General")]
     public int health = 3;
-    [HideInInspector]
-    public bool bossImmunity = true;
+    [HideInInspector] public bool bossImmunity = true;
     [HideInInspector] public bool opening;
 
     private Player Player_script;
     private Transform xyz;
     [SerializeField]private BossManager manager;
-
-    [SerializeField]private GameObject platform;
+    
     private Transform platXyz;
     private AIMovement platAI;
     private SpriteRenderer platSprite;
     private BoxCollider2D platCollider;
     private Boss_Shoot shooter;
+    private Boss_Charge charger;
 
     void Awake()
     {
@@ -27,6 +30,7 @@ public class ShadowParker : MonoBehaviour
         Player_script = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         manager = (BossManager)GameObject.FindObjectOfType(typeof(BossManager));
         shooter = GetComponent<Boss_Shoot>();
+        charger = GetComponent<Boss_Charge>();
 
         if (platform != null)
         {
@@ -50,6 +54,10 @@ public class ShadowParker : MonoBehaviour
             platSprite.enabled = (opening) ? true : false;
             platCollider.enabled = (opening) ? true : false;
         }
+
+        if (manager.bossPhase == 3)
+            deathZone.SetActive(charger.charging && health != 3);
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
