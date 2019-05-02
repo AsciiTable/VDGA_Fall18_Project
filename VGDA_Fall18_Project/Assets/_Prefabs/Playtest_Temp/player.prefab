@@ -300,8 +300,8 @@ MonoBehaviour:
   Player_inside: 0
   Player_gravity: 2
   SuicidePoint: -15
-  Player_winningScene: Level 1.2_Demo
-  Player_invulnerableEnabled: 0
+  Player_winningScene: Title_Demo
+  Player_invulnerableEnabled: 1
   restrained: 0
 --- !u!1 &1408589611621642
 GameObject:
