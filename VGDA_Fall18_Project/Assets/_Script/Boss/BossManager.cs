@@ -34,6 +34,7 @@ public class BossManager : MonoBehaviour
     private int[] numberCharges = new int[2];
     public bool deathReady = false;
     [HideInInspector]public bool hit = false;
+    [SerializeField] private string winScreen;
     [Space(10)]
     [Header("All Phases")]
     [SerializeField] private string[] bossStages = { "BossFight_1", "BossFight_2", "BossFight_3" };
@@ -132,10 +133,12 @@ public class BossManager : MonoBehaviour
 
         yield return new WaitUntil(() => boss.health == 0);
 
-        Debug.Log("Transistion to Phase 3");
+        Debug.Log("Transistion to Next Scene");
         boss.bossImmunity = player_script.restrained = true;
         bossStarted = false;
-        Debug.Log("Phase 3");
+        Debug.Log("Win");
+        yield return new WaitForSeconds(3);
+        sceneLoader.LoadScene(winScreen);
     }
     //When Boss gets hit during Phase 1
     IEnumerator Phase1()

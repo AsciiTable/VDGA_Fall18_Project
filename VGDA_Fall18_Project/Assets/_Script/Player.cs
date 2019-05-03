@@ -57,9 +57,7 @@ public class Player : MonoBehaviour {
     {
         isCheck = GameObject.FindGameObjectWithTag("Undying").GetComponent<IsCheckpoint>();
         if (isCheck.checkpoint == true)
-        {
-            Player_xyz.position = new Vector3(isCheck.pointX,isCheck.pointY, 0f);
-        }
+            Player_xyz.position = new Vector3(isCheck.pointX, isCheck.pointY, 0f);
     }
 
     void Awake()

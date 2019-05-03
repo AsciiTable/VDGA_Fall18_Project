@@ -1553,6 +1553,7 @@ MonoBehaviour:
   numberCharges: 0300000005000000
   deathReady: 0
   hit: 0
+  winScreen: Title_Demo
   bossStages:
   - BossFight_1
   - BossFight_2
