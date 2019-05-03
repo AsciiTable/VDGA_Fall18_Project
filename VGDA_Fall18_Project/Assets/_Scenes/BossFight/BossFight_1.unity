@@ -15323,6 +15323,31 @@ PrefabInstance:
       propertyPath: batActivated
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 212726617747720416, guid: fe5007831d3a95249b505396f72f15ec,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61214847567597564, guid: fe5007831d3a95249b505396f72f15ec,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.2700005
+      objectReference: {fileID: 0}
+    - target: {fileID: 61214847567597564, guid: fe5007831d3a95249b505396f72f15ec,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.601561
+      objectReference: {fileID: 0}
+    - target: {fileID: 61214847567597564, guid: fe5007831d3a95249b505396f72f15ec,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 3.7419999
+      objectReference: {fileID: 0}
+    - target: {fileID: 61214847567597564, guid: fe5007831d3a95249b505396f72f15ec,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.414
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
 --- !u!4 &1840755707 stripped
