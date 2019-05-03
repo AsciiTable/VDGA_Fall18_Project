@@ -5,11 +5,11 @@ using UnityEngine;
 public class Enemy_Standing : MonoBehaviour
 {
     //Components from Other Objects
-    private Player Player_script;
+    [SerializeField]private Player Player_script;
 
     private void Awake()
     {
-        Player_script = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        Player_script = FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 
     private void OnTriggerStay2D(Collider2D col)
