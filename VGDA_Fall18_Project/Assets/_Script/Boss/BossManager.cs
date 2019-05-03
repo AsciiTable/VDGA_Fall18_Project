@@ -181,7 +181,7 @@ public class BossManager : MonoBehaviour
         boss.bossImmunity = player_script.restrained = boss.opening = true;
         fSpikeSpeed = fSpikeSpeed * 20;
         yield return new WaitForSeconds(0.5f);
-        fSpikeSpeed = fSpikeSpeed / 20;
+        fSpikeSpeed = fSpikeSpeed / 10;
         fSpikes_2.SetActive(false);
         pushedbacked = true;
         yield return new WaitUntil(() => player_xyz.position.x <= border);
