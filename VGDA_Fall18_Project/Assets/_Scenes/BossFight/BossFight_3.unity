@@ -1554,6 +1554,7 @@ MonoBehaviour:
   fallingSpikes: 0
   numberCharges: 0300000005000000
   deathReady: 0
+  hit: 0
   bossStages:
   - BossFight_1
   - BossFight_2
@@ -2071,81 +2072,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3340764343725380279, guid: 65c5537afb5508e4cb51ed6f7717fc92,
-        type: 3}
-      propertyPath: warning.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3340764343725380279, guid: 65c5537afb5508e4cb51ed6f7717fc92,
-        type: 3}
-      propertyPath: charging.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3340764343725380279, guid: 65c5537afb5508e4cb51ed6f7717fc92,
-        type: 3}
-      propertyPath: invulnerable.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3340764343725380279, guid: 65c5537afb5508e4cb51ed6f7717fc92,
-        type: 3}
-      propertyPath: invulnerableWarning.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3340764343725380279, guid: 65c5537afb5508e4cb51ed6f7717fc92,
-        type: 3}
-      propertyPath: invulnerableCharge.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3340764343725380279, guid: 65c5537afb5508e4cb51ed6f7717fc92,
-        type: 3}
-      propertyPath: warning.r
-      value: 0.59607846
-      objectReference: {fileID: 0}
-    - target: {fileID: 3340764343725380279, guid: 65c5537afb5508e4cb51ed6f7717fc92,
-        type: 3}
-      propertyPath: warning.g
-      value: 0.5952604
-      objectReference: {fileID: 0}
-    - target: {fileID: 3340764343725380279, guid: 65c5537afb5508e4cb51ed6f7717fc92,
-        type: 3}
-      propertyPath: charging.g
-      value: 0.04403402
-      objectReference: {fileID: 0}
-    - target: {fileID: 3340764343725380279, guid: 65c5537afb5508e4cb51ed6f7717fc92,
-        type: 3}
-      propertyPath: invulnerableWarning.g
-      value: 0.989607
-      objectReference: {fileID: 0}
-    - target: {fileID: 3340764343725380279, guid: 65c5537afb5508e4cb51ed6f7717fc92,
-        type: 3}
-      propertyPath: invulnerableWarning.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3340764343725380279, guid: 65c5537afb5508e4cb51ed6f7717fc92,
-        type: 3}
-      propertyPath: invulnerableCharge.g
-      value: 0.21484122
-      objectReference: {fileID: 0}
-    - target: {fileID: 3340764343725380279, guid: 65c5537afb5508e4cb51ed6f7717fc92,
-        type: 3}
-      propertyPath: invulnerableCharge.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3108934716709862030, guid: 65c5537afb5508e4cb51ed6f7717fc92,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4915677966728439839, guid: 65c5537afb5508e4cb51ed6f7717fc92,
-        type: 3}
-      propertyPath: m_Layer
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4915677966728439839, guid: 65c5537afb5508e4cb51ed6f7717fc92,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1110459058621516, guid: 65c5537afb5508e4cb51ed6f7717fc92, type: 3}
       propertyPath: m_Name
       value: shadowParker
@@ -2210,6 +2136,11 @@ PrefabInstance:
       propertyPath: deathZone
       value: 
       objectReference: {fileID: 1321964555}
+    - target: {fileID: 3432608561424368898, guid: 65c5537afb5508e4cb51ed6f7717fc92,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6918631842510473790, guid: 65c5537afb5508e4cb51ed6f7717fc92,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2220,10 +2151,85 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 3108934716709862030, guid: 65c5537afb5508e4cb51ed6f7717fc92,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915677966728439839, guid: 65c5537afb5508e4cb51ed6f7717fc92,
+        type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915677966728439839, guid: 65c5537afb5508e4cb51ed6f7717fc92,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2570956896760290804, guid: 65c5537afb5508e4cb51ed6f7717fc92,
         type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340764343725380279, guid: 65c5537afb5508e4cb51ed6f7717fc92,
+        type: 3}
+      propertyPath: warning.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340764343725380279, guid: 65c5537afb5508e4cb51ed6f7717fc92,
+        type: 3}
+      propertyPath: charging.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340764343725380279, guid: 65c5537afb5508e4cb51ed6f7717fc92,
+        type: 3}
+      propertyPath: invulnerable.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340764343725380279, guid: 65c5537afb5508e4cb51ed6f7717fc92,
+        type: 3}
+      propertyPath: invulnerableWarning.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340764343725380279, guid: 65c5537afb5508e4cb51ed6f7717fc92,
+        type: 3}
+      propertyPath: invulnerableCharge.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340764343725380279, guid: 65c5537afb5508e4cb51ed6f7717fc92,
+        type: 3}
+      propertyPath: warning.r
+      value: 0.59607846
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340764343725380279, guid: 65c5537afb5508e4cb51ed6f7717fc92,
+        type: 3}
+      propertyPath: warning.g
+      value: 0.5952604
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340764343725380279, guid: 65c5537afb5508e4cb51ed6f7717fc92,
+        type: 3}
+      propertyPath: charging.g
+      value: 0.04403402
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340764343725380279, guid: 65c5537afb5508e4cb51ed6f7717fc92,
+        type: 3}
+      propertyPath: invulnerableWarning.g
+      value: 0.989607
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340764343725380279, guid: 65c5537afb5508e4cb51ed6f7717fc92,
+        type: 3}
+      propertyPath: invulnerableWarning.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340764343725380279, guid: 65c5537afb5508e4cb51ed6f7717fc92,
+        type: 3}
+      propertyPath: invulnerableCharge.g
+      value: 0.21484122
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340764343725380279, guid: 65c5537afb5508e4cb51ed6f7717fc92,
+        type: 3}
+      propertyPath: invulnerableCharge.b
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65c5537afb5508e4cb51ed6f7717fc92, type: 3}
