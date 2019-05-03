@@ -21,6 +21,7 @@ public class Boss_Charge : MonoBehaviour
     private float chargeDistance; //left border - right border (static)
     private float chargeSpeed; //Speed calcuations before changing transform
     [HideInInspector] public int chargeDirection = -1; //Direction (-1 looks left, 1 looks right)
+    [HideInInspector] public int weakDirection = -1;
     [HideInInspector] public bool readyCharge = false;
     [HideInInspector] public bool charging = false; //check if there's any charging
     [HideInInspector] public bool readyRegCharge = false;
@@ -103,6 +104,8 @@ public class Boss_Charge : MonoBehaviour
         //Charge until hits border
         if (chargeDirection == 1)
         {
+            yield return new WaitUntil(() => xyz.position.x >= rightBorder - 1f);
+            weakDirection = -weakDirection;
             yield return new WaitUntil(() => xyz.position.x >= rightBorder-0.01f);
             charging = false;
             //Stick Enemy to border
@@ -110,6 +113,8 @@ public class Boss_Charge : MonoBehaviour
         } //Right
         else if (chargeDirection == -1)
         {
+            yield return new WaitUntil(() => xyz.position.x <= leftBorder + 1f);
+            weakDirection = -weakDirection;
             yield return new WaitUntil(() => xyz.position.x <= leftBorder +0.01f);
             charging = false;
             //Stick Enemy to border
@@ -132,13 +137,17 @@ public class Boss_Charge : MonoBehaviour
         //Charge until hits border
         if (chargeDirection == 1)
         {
-            yield return new WaitUntil(() => xyz.position.x >= rightBorder + 0.01f);
+            yield return new WaitUntil(() => xyz.position.x >= rightBorder-1f);
+            weakDirection = -weakDirection;
+            yield return new WaitUntil(() => xyz.position.x >= rightBorder - 0.01f);
             regCharging = false;
             //Stick Enemy to border
             xyz.position = new Vector3(rightBorder, xyz.position.y, xyz.position.z);
         } //Right
         else if (chargeDirection == -1)
         {
+            yield return new WaitUntil(() => xyz.position.x <= leftBorder + 1f);
+            weakDirection = -weakDirection;
             yield return new WaitUntil(() => xyz.position.x <= leftBorder + 0.01f);
             regCharging = false;
             //Stick Enemy to border
