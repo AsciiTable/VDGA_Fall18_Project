@@ -14,8 +14,7 @@ public class BossManager : MonoBehaviour
     private Boss_Charge charge;
 
     [Header("Phase 1")]
-    [SerializeField] private int spikeCooldown;
-    [HideInInspector] public bool spikesUp = false;
+    
     [SerializeField] private GameObject floor_1;
     [SerializeField] private GameObject floor_2;
     [SerializeField] private GameObject floor_3;
@@ -95,7 +94,6 @@ public class BossManager : MonoBehaviour
         boss.bossImmunity = player_script.restrained = false;
         bossStarted = true;
         StartCoroutine(Phase1());
-        StartCoroutine(Spikes());
         yield return new WaitUntil(() => boss.health == 0);
         yield return new WaitUntil(() => player_xyz.position.x <= border);
         Debug.Log("Transistion to Phase 2");
@@ -168,15 +166,6 @@ public class BossManager : MonoBehaviour
         boss.bossImmunity = pushedbacked = player_script.restrained = false;
 
 
-    }
-
-    IEnumerator Spikes()
-    {
-        while (bossPhase == 1 && bossStarted)
-        {
-            spikesUp = !spikesUp;
-            yield return new WaitForSeconds(spikeCooldown);
-        }
     }
 
     IEnumerator Phase2()
