@@ -39,6 +39,7 @@ public class Player : MonoBehaviour {
     private Transform Player_xyz;
     private SpriteRenderer Player_sprite;
     private Animator Player_animation;
+    [SerializeField] private bool bossStage = false;
 
     //private IsCheckpoint isCheck;
 
@@ -52,13 +53,6 @@ public class Player : MonoBehaviour {
     //Boss Fight
     [HideInInspector]
     public bool restrained = false;
-
-    private void Start()
-    {
-        isCheck = GameObject.FindGameObjectWithTag("Undying").GetComponent<IsCheckpoint>();
-        if (isCheck.checkpoint == true)
-            Player_xyz.position = new Vector3(isCheck.pointX, isCheck.pointY, 0f);
-    }
 
     void Awake()
     {
@@ -75,6 +69,10 @@ public class Player : MonoBehaviour {
 
         groundCheck1_transform = transform.Find("groundCheck_1");
         groundCheck2_transform = transform.Find("groundCheck_2");
+
+        isCheck = GameObject.FindGameObjectWithTag("Undying").GetComponent<IsCheckpoint>();
+        if (isCheck.checkpoint == true && !bossStage)
+            Player_xyz.position = new Vector3(isCheck.pointX, isCheck.pointY, 0f);
     }
 
     void FixedUpdate()

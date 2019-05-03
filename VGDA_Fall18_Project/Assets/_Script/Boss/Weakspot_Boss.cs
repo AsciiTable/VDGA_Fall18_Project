@@ -8,6 +8,8 @@ public class Weakspot_Boss : MonoBehaviour
     private Transform xyz;
 
     private Player player;
+    private SpriteRenderer bossSprite;
+    private SpriteRenderer playerSprite;
     private BossManager manager;
     private Boss_Charge charge;
 
@@ -16,8 +18,10 @@ public class Weakspot_Boss : MonoBehaviour
         parent = GetComponentInParent<ShadowParker>();
         xyz = GetComponent<Transform>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        manager = FindObjectOfType<BossManager>().GetComponent<BossManager>();
-        charge = (Boss_Charge)FindObjectOfType(typeof(Boss_Charge));
+        bossSprite = FindObjectOfType<ShadowParker>().GetComponent<SpriteRenderer>();
+        playerSprite = player.GetComponent<SpriteRenderer>();
+        manager = FindObjectOfType<BossManager>();
+        charge = FindObjectOfType<Boss_Charge>();
     }
 
     private void Update()
@@ -42,7 +46,8 @@ public class Weakspot_Boss : MonoBehaviour
         }
         if (collision.gameObject.tag == "Bat" && !parent.bossImmunity && parent.opening == true)
         {
-            parent.health -= 1;
+            if(manager.bossPhase != 3 || bossSprite.flipX == playerSprite.flipX)
+                parent.health -= 1;
         }
     }
 }
