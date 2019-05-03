@@ -24,11 +24,11 @@ public class Weakspot_Boss : MonoBehaviour
     {
         if(charge.chargeDirection == -1 && manager.bossPhase == 3)
         {
-            xyz.localPosition = new Vector3(0.45f, 0, 0);
+            xyz.localPosition = new Vector3(0.2f, 0, 0);
         }
         else if (charge.chargeDirection == 1 && manager.bossPhase == 3)
         {
-            xyz.localPosition = new Vector3(-0.45f, 0, 0);
+            xyz.localPosition = new Vector3(-0.2f, 0, 0);
         }
     }
 

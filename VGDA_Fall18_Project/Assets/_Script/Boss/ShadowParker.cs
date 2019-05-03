@@ -44,7 +44,7 @@ public class ShadowParker : MonoBehaviour
     {
         if(manager.bossPhase == 2)
         {
-            xyz.position = new Vector3(platXyz.position.x + 6f, platXyz.position.y + 2.5f, platXyz.position.z);
+            xyz.position = new Vector3(platXyz.position.x + 6f, platXyz.position.y + 4.5f, platXyz.position.z);
             if(manager.bossStarted && !bossImmunity)
                 shooter.enabled = true;
         }

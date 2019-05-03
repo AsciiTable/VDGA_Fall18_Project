@@ -31,6 +31,7 @@ public class Boss_Charge : MonoBehaviour
     private Transform xyz;
     private Rigidbody2D rb2d;
     private SpriteRenderer sprite;
+    private Animator animator;
     //Components from Other Objects
     private Player Player_script;
     private ShadowParker boss;
@@ -40,6 +41,7 @@ public class Boss_Charge : MonoBehaviour
         xyz = GetComponent<Transform>();
         rb2d = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
         Player_script = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         boss = FindObjectOfType<ShadowParker>().GetComponent<ShadowParker>();
 
@@ -54,6 +56,9 @@ public class Boss_Charge : MonoBehaviour
         //Move when charging is true
         if (charging && readyCharge)
         {
+            //Animation
+            animator.SetBool("Charging", true);
+
             //Set charge speed & direction
             chargeSpeed = chargeDirection * maxSpeed[index] * Time.deltaTime;
             //Decrease speed if past slow border
@@ -70,6 +75,9 @@ public class Boss_Charge : MonoBehaviour
         }
         else if (regCharging && readyRegCharge)
         {
+            //Animation
+            animator.SetBool("Charging", true);
+
             //Set charge speed & direction
             chargeSpeed = chargeDirection * (maxSpeed[0]+(5*index)) * Time.deltaTime;
             //Decrease speed if past slow border
@@ -85,8 +93,10 @@ public class Boss_Charge : MonoBehaviour
         }
         else
         {
+            animator.SetBool("Charging", false);
             chargeSpeed = 0;
         }
+
 
         rb2d.transform.Translate(chargeSpeed, 0, 0);
 
@@ -106,6 +116,7 @@ public class Boss_Charge : MonoBehaviour
         {
             yield return new WaitUntil(() => xyz.position.x >= rightBorder - 1f);
             weakDirection = -weakDirection;
+            sprite.flipX = !sprite.flipX;
             yield return new WaitUntil(() => xyz.position.x >= rightBorder-0.01f);
             charging = false;
             //Stick Enemy to border
@@ -115,6 +126,7 @@ public class Boss_Charge : MonoBehaviour
         {
             yield return new WaitUntil(() => xyz.position.x <= leftBorder + 1f);
             weakDirection = -weakDirection;
+            sprite.flipX = !sprite.flipX;
             yield return new WaitUntil(() => xyz.position.x <= leftBorder +0.01f);
             charging = false;
             //Stick Enemy to border
@@ -139,6 +151,7 @@ public class Boss_Charge : MonoBehaviour
         {
             yield return new WaitUntil(() => xyz.position.x >= rightBorder-1f);
             weakDirection = -weakDirection;
+            sprite.flipX = !sprite.flipX;
             yield return new WaitUntil(() => xyz.position.x >= rightBorder - 0.01f);
             regCharging = false;
             //Stick Enemy to border
@@ -148,6 +161,7 @@ public class Boss_Charge : MonoBehaviour
         {
             yield return new WaitUntil(() => xyz.position.x <= leftBorder + 1f);
             weakDirection = -weakDirection;
+            sprite.flipX = !sprite.flipX;
             yield return new WaitUntil(() => xyz.position.x <= leftBorder + 0.01f);
             regCharging = false;
             //Stick Enemy to border
