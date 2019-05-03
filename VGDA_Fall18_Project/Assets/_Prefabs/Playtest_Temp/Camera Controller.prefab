@@ -173,7 +173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4714277413806376}
   - component: {fileID: 114457138946037744}
-  - component: {fileID: 1651545556}
+  - component: {fileID: 6577772678450953822}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -222,7 +222,7 @@ MonoBehaviour:
     FarClipPlane: 5000
     Dutch: 0
   m_ComponentOwner: {fileID: 4260192529188696}
---- !u!114 &1651545556
+--- !u!114 &6577772678450953822
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

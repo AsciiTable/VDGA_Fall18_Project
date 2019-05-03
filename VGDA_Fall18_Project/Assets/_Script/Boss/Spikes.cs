@@ -8,12 +8,17 @@ public class Spikes : MonoBehaviour
     private bool permanent = true;
     [SerializeField] [Tooltip("Flips when spikes pop up if not permanent")]
     private bool inverted;
-
+    [SerializeField][Tooltip("Changes code so spikes re-pop up after wave cooldown")]
+    private bool wave = false;
+    [SerializeField][Tooltip("Cooldown before spike flips")]
+    private int spikeCooldown = 3;
+    [SerializeField][Tooltip("Time before wave resets if wave is true (bigger than spikeCooldown)")]
+    private int totalCooldown = 3;
+    private bool spikesUp = false;
     private bool activated = false;
 
     private SpriteRenderer sprite;
     private PolygonCollider2D col;
-
     private Player Player_script;
     private BossManager manager;
 
@@ -23,11 +28,13 @@ public class Spikes : MonoBehaviour
         col = GetComponent<PolygonCollider2D>();
         Player_script = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         manager = (BossManager)GameObject.FindObjectOfType(typeof(BossManager));
+
+        StartCoroutine(SpikesUp());
     }
     private void Update()
     {
         //Activate if permanent or if spikes are up (or down if inverted)
-        activated = (permanent || (manager.spikesUp && !inverted) || (!manager.spikesUp && inverted)) ? true : false;
+        activated = (permanent || (spikesUp && !inverted) || (!spikesUp && inverted)) ? true : false;
 
         //Hide spikes if not activated
         if (!activated)
@@ -40,6 +47,18 @@ public class Spikes : MonoBehaviour
             sprite.enabled = true;
             col.enabled = true;
         }
+    }
+
+    IEnumerator SpikesUp()
+    {
+        spikesUp = !spikesUp;
+        yield return new WaitForSeconds(spikeCooldown);
+        if (wave)
+        {
+            spikesUp = !spikesUp;
+            yield return new WaitForSeconds(totalCooldown - spikeCooldown);
+        }
+        StartCoroutine(SpikesUp());
     }
 
     private void OnTriggerStay2D(Collider2D col)

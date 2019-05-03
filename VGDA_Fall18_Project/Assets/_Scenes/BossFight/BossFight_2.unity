@@ -966,7 +966,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingY: 41
-  delay: 14
+  delay: 7
 --- !u!61 &270247077
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1252,7 +1252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingY: 41
-  delay: 8
+  delay: 4
 --- !u!61 &339696524
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1920,7 +1920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingY: 41
-  delay: 12
+  delay: 6
 --- !u!61 &491789260
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2239,7 +2239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingY: 41
-  delay: 4
+  delay: 2
 --- !u!61 &556226718
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2510,7 +2510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingY: 41
-  delay: 7
+  delay: 3.5
 --- !u!61 &595307407
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2962,15 +2962,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 35.52211
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalRotation.z
@@ -3024,7 +3024,7 @@ PrefabInstance:
     - target: {fileID: 20453020796198110, guid: 800b402317da2064caf766557e3860d1,
         type: 3}
       propertyPath: orthographic size
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 20453020796198110, guid: 800b402317da2064caf766557e3860d1,
         type: 3}
@@ -3106,7 +3106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingY: 41
-  delay: 16
+  delay: 8
 --- !u!61 &839752309
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3255,12 +3255,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff0617936b6a1ec44b2c2bf239494383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossStages:
-  - BossFight_1
-  - BossFight_2
-  - BossFight_3
-  spikeCooldown: 3
-  spikesUp: 0
   floor_1: {fileID: 0}
   floor_2: {fileID: 0}
   floor_3: {fileID: 0}
@@ -3272,6 +3266,13 @@ MonoBehaviour:
   fSpikeBottomBorder: -4
   fSpikeSpeed: 1
   fallingSpikes: 0
+  numberCharges: 0000000000000000
+  deathReady: 0
+  hit: 0
+  bossStages:
+  - BossFight_1
+  - BossFight_2
+  - BossFight_3
   border: 2
   fSpikes_2: {fileID: 1152235697}
   fSpikes_3: {fileID: 1112882175}
@@ -3924,7 +3925,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingY: 41
-  delay: 2
+  delay: 1
 --- !u!61 &1214048190
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4067,7 +4068,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingY: 41
-  delay: 9
+  delay: 4.5
 --- !u!61 &1222931850
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4276,7 +4277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingY: 41
-  delay: 11
+  delay: 5.5
 --- !u!61 &1269381266
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4419,7 +4420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingY: 41
-  delay: 5
+  delay: 2.5
 --- !u!61 &1275176692
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5320,7 +5321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingY: 41
-  delay: 10
+  delay: 5
 --- !u!61 &1525870569
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5840,6 +5841,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.030753497
       objectReference: {fileID: 0}
+    - target: {fileID: 114886815701935836, guid: fe5007831d3a95249b505396f72f15ec,
+        type: 3}
+      propertyPath: batActivated
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
 --- !u!4 &1840755707 stripped
@@ -5902,7 +5908,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingY: 41
-  delay: 13
+  delay: 6.5
 --- !u!61 &1852050697
 BoxCollider2D:
   m_ObjectHideFlags: 0

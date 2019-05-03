@@ -44,9 +44,5 @@ public class Weakspot_Boss : MonoBehaviour
         {
             parent.health -= 1;
         }
-        if (collision.gameObject.tag == "Bat" && !parent.bossImmunity)
-        {
-            parent.health -= 1;
-        }
     }
 }
