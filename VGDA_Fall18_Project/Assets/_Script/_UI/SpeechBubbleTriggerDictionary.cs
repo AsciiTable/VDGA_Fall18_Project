@@ -17,6 +17,7 @@ public class SpeechBubbleTriggerDictionary : MonoBehaviour
 
     void Start()
     {
+        anim.SetBool("isOpen", false);
         len = speechDict.checkpoints.Length;
         for (int i = 0; i < len; i++) {
             diction.Add(speechDict.checkpoints[i], speechDict.sentences[i]);
