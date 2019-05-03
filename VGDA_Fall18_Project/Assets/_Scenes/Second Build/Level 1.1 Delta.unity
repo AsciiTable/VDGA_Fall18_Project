@@ -2949,21 +2949,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -10
       objectReference: {fileID: 0}
-    - target: {fileID: 114449594754875866, guid: 800b402317da2064caf766557e3860d1,
-        type: 3}
-      propertyPath: m_ScreenX
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114449594754875866, guid: 800b402317da2064caf766557e3860d1,
-        type: 3}
-      propertyPath: m_ScreenY
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114449594754875866, guid: 800b402317da2064caf766557e3860d1,
-        type: 3}
-      propertyPath: m_CameraDistance
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 20453020796198110, guid: 800b402317da2064caf766557e3860d1,
         type: 3}
       propertyPath: orthographic size
@@ -2984,15 +2969,30 @@ PrefabInstance:
       propertyPath: m_BackGroundColor.b
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1799718807424102, guid: 800b402317da2064caf766557e3860d1, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: 114655070297583570, guid: 800b402317da2064caf766557e3860d1,
         type: 3}
       propertyPath: playerTrans
       value: 
       objectReference: {fileID: 1411095418}
+    - target: {fileID: 1799718807424102, guid: 800b402317da2064caf766557e3860d1, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 114449594754875866, guid: 800b402317da2064caf766557e3860d1,
+        type: 3}
+      propertyPath: m_ScreenX
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114449594754875866, guid: 800b402317da2064caf766557e3860d1,
+        type: 3}
+      propertyPath: m_ScreenY
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114449594754875866, guid: 800b402317da2064caf766557e3860d1,
+        type: 3}
+      propertyPath: m_CameraDistance
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 800b402317da2064caf766557e3860d1, type: 3}
 --- !u!1 &773838708
@@ -6370,7 +6370,7 @@ PrefabInstance:
     - target: {fileID: 114724545924056790, guid: fe5007831d3a95249b505396f72f15ec,
         type: 3}
       propertyPath: Player_winningScene
-      value: Level 1.2_Demo
+      value: Level 1.2 Delta
       objectReference: {fileID: 0}
     - target: {fileID: 114724545924056790, guid: fe5007831d3a95249b505396f72f15ec,
         type: 3}
