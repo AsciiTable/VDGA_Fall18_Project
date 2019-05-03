@@ -137,8 +137,10 @@ public class BossManager : MonoBehaviour
     IEnumerator Phase1()
     {
         spikes_1.SetActive(true);
+        floor_1.SetActive(true);
         yield return new WaitUntil(() => boss.health == 2);
         spikes_1.SetActive(false);
+        floor_1.SetActive(false);
         boss.bossImmunity = pushedbacked = player_script.restrained = true;
         yield return new WaitUntil(() => player_xyz.position.x <= border);
         boss.bossImmunity = pushedbacked = player_script.restrained = false;
