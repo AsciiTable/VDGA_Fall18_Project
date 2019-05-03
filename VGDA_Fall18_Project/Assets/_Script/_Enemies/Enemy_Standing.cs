@@ -9,7 +9,7 @@ public class Enemy_Standing : MonoBehaviour
 
     private void Awake()
     {
-        Player_script = FindGameObjectWithTag("Player").GetComponent<Player>();
+        Player_script = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 
     private void OnTriggerStay2D(Collider2D col)
