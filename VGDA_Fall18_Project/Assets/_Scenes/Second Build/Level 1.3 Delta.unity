@@ -556,9 +556,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 81990967}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemies
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1314,9 +1314,9 @@ GameObject:
   - component: {fileID: 239996536}
   - component: {fileID: 239996538}
   - component: {fileID: 239996537}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: sewer_walking_0
-  m_TagString: Untagged
+  m_TagString: Platforms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3187,7 +3187,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 760419630}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Parker
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -3224,7 +3224,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 790500082}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wave 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5013,7 +5013,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1199209464}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wave 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6387,7 +6387,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1538038924}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wave 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6908,7 +6908,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1623812857}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wave 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7753,7 +7753,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1880732589}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wave 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8357,7 +8357,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1927310157}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wave 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
