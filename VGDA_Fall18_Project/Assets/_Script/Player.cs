@@ -47,6 +47,7 @@ public class Player : MonoBehaviour {
 
     private Transform Environment_transform;
     private Image InvulnerableCooldown_Sprite;
+    private IsCheckpoint isCheck;
 
     //Boss Fight
     [HideInInspector]
@@ -54,10 +55,11 @@ public class Player : MonoBehaviour {
 
     private void Start()
     {
-        /**if (isCheck.checkpoint == true)
+        isCheck = GameObject.FindGameObjectWithTag("Undying").GetComponent<IsCheckpoint>();
+        if (isCheck.checkpoint == true)
         {
             Player_xyz.position = new Vector3(isCheck.pointX,isCheck.pointY, 0f);
-        }**/
+        }
     }
 
     void Awake()
@@ -233,7 +235,6 @@ public class Player : MonoBehaviour {
     //Resets the scene to the beginning
     public void ResetScene()
     {
-        Debug.Log("Some Death");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -241,6 +242,7 @@ public class Player : MonoBehaviour {
     {
         if(collision.gameObject.tag == "Win")
         {
+            isCheck.checkpoint = false;
             SceneManager.LoadScene(Player_winningScene);
         }
     }

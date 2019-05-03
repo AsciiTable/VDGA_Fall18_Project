@@ -11,9 +11,9 @@ public class CheckpointSet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        isCheck = GameObject.FindGameObjectWithTag("Undying").GetComponent<IsCheckpoint>();
         sprite = GetComponent<SpriteRenderer>();
-        player = GameObject.Find("Player").GetComponent<Player>();
-        isCheck = (IsCheckpoint)FindObjectOfType(typeof(IsCheckpoint));
+        player = GameObject.Find("player").GetComponent<Player>();
     }
 
     // Update is called once per frame
