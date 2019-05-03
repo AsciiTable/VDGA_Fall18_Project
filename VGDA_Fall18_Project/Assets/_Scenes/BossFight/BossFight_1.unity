@@ -2015,10 +2015,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff0617936b6a1ec44b2c2bf239494383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossStages:
-  - BossFight_1
-  - BossFight_2
-  - BossFight_3
   spikeCooldown: 3
   spikesUp: 0
   floor_1: {fileID: 1504224844}
@@ -2032,6 +2028,13 @@ MonoBehaviour:
   fSpikeBottomBorder: -4
   fSpikeSpeed: 0
   fallingSpikes: 0
+  numberCharges: 0000000000000000
+  deathReady: 0
+  hit: 0
+  bossStages:
+  - BossFight_1
+  - BossFight_2
+  - BossFight_3
   border: 2.5
   fSpikes_2: {fileID: 0}
   fSpikes_3: {fileID: 0}
@@ -3884,6 +3887,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4823415063140218, guid: 65c5537afb5508e4cb51ed6f7717fc92, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432608561424368898, guid: 65c5537afb5508e4cb51ed6f7717fc92,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6559,7 +6567,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1795352344952865}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 35.52211, y: 19, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4776947260708707}
@@ -6641,7 +6649,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 20
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
