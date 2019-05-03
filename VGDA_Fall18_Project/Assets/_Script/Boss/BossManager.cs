@@ -82,6 +82,12 @@ public class BossManager : MonoBehaviour
 
     IEnumerator StagePhase1()
     {
+        floor_1.SetActive(true);
+        floor_2.SetActive(false);
+        floor_3.SetActive(false);
+        spikes_1.SetActive(false);
+        spikes_2.SetActive(false);
+        spikes_3.SetActive(false);
         boss.bossImmunity = player_script.restrained = boss.opening = true;
         Debug.Log("Play Opening Scene");
         yield return new WaitForSeconds(3);
@@ -137,10 +143,8 @@ public class BossManager : MonoBehaviour
     IEnumerator Phase1()
     {
         spikes_1.SetActive(true);
-        floor_1.SetActive(true);
         yield return new WaitUntil(() => boss.health == 2);
         spikes_1.SetActive(false);
-        floor_1.SetActive(false);
         boss.bossImmunity = pushedbacked = player_script.restrained = true;
         yield return new WaitUntil(() => player_xyz.position.x <= border);
         boss.bossImmunity = pushedbacked = player_script.restrained = false;
