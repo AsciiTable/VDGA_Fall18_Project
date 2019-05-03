@@ -90,7 +90,7 @@ public class BossManager : MonoBehaviour
         spikes_3.SetActive(false);
         boss.bossImmunity = player_script.restrained = boss.opening = true;
         Debug.Log("Play Opening Scene");
-        yield return new WaitForSeconds(3);
+        //yield return new WaitForSeconds(3);
         Debug.Log("Phase 1");
         boss.bossImmunity = player_script.restrained = false;
         bossStarted = true;
@@ -106,9 +106,9 @@ public class BossManager : MonoBehaviour
     }
     IEnumerator StagePhase2()
     {
-        boss.bossImmunity = player_script.restrained = boss.opening = true;
+        boss.bossImmunity = player_script.restrained = true;
         Debug.Log("Play Opening Scene");
-        yield return new WaitForSeconds(3);
+        //yield return new WaitForSeconds(3);
         Debug.Log("Phase 2");
         boss.opening = boss.bossImmunity = player_script.restrained = false;
         bossStarted = true;
@@ -123,9 +123,9 @@ public class BossManager : MonoBehaviour
     }
     IEnumerator StagePhase3()
     {
-        boss.bossImmunity = player_script.restrained = true;
+        boss.bossImmunity = player_script.restrained = boss.opening = true;
         Debug.Log("Play Opening Scene");
-        yield return new WaitForSeconds(3);
+       // yield return new WaitForSeconds(3);
 
         Debug.Log("Phase 3");
         boss.bossImmunity = player_script.restrained = false;
@@ -149,7 +149,7 @@ public class BossManager : MonoBehaviour
         yield return new WaitUntil(() => player_xyz.position.x <= border);
         boss.bossImmunity = pushedbacked = player_script.restrained = false;
         spikes_2.SetActive(true);
-        floor_2.SetActive(true);
+        floor_2.SetActive(true);    
         floor_1.SetActive(false);
         cam_2.Priority = 2;
         yield return new WaitUntil(() => boss.health == 1);
