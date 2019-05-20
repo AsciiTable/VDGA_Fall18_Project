@@ -64,7 +64,6 @@ public class Player : MonoBehaviour {
         if(Player_invulnerableEnabled)
         {
             InvulnerableCooldown_Sprite = GameObject.FindGameObjectWithTag("InvulnerableSprite").GetComponent<Image>();
-            //isCheck = GameObject.Find("UndyingScriptHolder").GetComponent<IsCheckpoint>();
         }
 
         groundCheck1_transform = transform.Find("groundCheck_1");
