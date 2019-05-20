@@ -11481,19 +11481,19 @@ PrefabInstance:
       objectReference: {fileID: 634778021}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 563.3058
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 129.2
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 156.70578
+      value: 563.3058
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11502,13 +11502,18 @@ PrefabInstance:
     - target: {fileID: 20453020796198110, guid: 800b402317da2064caf766557e3860d1,
         type: 3}
       propertyPath: orthographic size
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 114655070297583570, guid: 800b402317da2064caf766557e3860d1,
         type: 3}
       propertyPath: playerTrans
       value: 
       objectReference: {fileID: 634778021}
+    - target: {fileID: 6577772678450953822, guid: 800b402317da2064caf766557e3860d1,
+        type: 3}
+      propertyPath: m_BoundingShape2D
+      value: 
+      objectReference: {fileID: 2139419093}
     - target: {fileID: 1651545556, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_BoundingShape2D
       value: 
@@ -19997,10 +20002,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -65, y: 170}
-      - {x: 401.5, y: 170}
-      - {x: 401.5, y: -1}
-      - {x: -65, y: -1}
+    - - {x: 0, y: 170}
+      - {x: 880, y: 170}
+      - {x: 880, y: -1}
+      - {x: 0, y: -1}
 --- !u!4 &2139419094
 Transform:
   m_ObjectHideFlags: 0
