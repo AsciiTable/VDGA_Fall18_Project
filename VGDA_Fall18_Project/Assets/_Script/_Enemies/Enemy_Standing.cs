@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy_Standing : MonoBehaviour
 {
     //Components from Other Objects
-    [SerializeField]private Player Player_script;
+    private Player Player_script;
 
     private void Awake()
     {

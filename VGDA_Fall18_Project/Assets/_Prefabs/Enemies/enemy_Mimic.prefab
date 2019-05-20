@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 4823415063140218}
   - component: {fileID: 212528526096111090}
   - component: {fileID: 61430157142322710}
-  - component: {fileID: 114496091476839032}
+  - component: {fileID: 6229926656314349116}
   - component: {fileID: 95228378633179020}
   m_Layer: 9
-  m_Name: enemy_Standing
+  m_Name: enemy_Mimic
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 5012640751312f04287395febb30c08f, type: 3}
+  m_Sprite: {fileID: 21300024, guid: a1a1bd8a36679264887868ade4b3bb29, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -95,20 +95,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.007015705, y: -0.019056797}
+  m_Offset: {x: -0.02, y: 0.24}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.85263157, y: 0.75368416}
+    pivot: {x: 0.5186625, y: 0.17998244}
+    oldSize: {x: 0.85733336, y: 0.7593333}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.75963306, y: 0.51803017}
+  m_Size: {x: 0.82, y: 0.7}
   m_EdgeRadius: 0
---- !u!114 &114496091476839032
+--- !u!114 &6229926656314349116
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,7 +117,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1110459058621516}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be2ec6e63b0bc854b88bbbb022e7d245, type: 3}
+  m_Script: {fileID: 11500000, guid: c9fda7932fee6af4fad77bc44be70128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!95 &95228378633179020
@@ -130,7 +130,7 @@ Animator:
   m_GameObject: {fileID: 1110459058621516}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: dd64aeb558538e34cbc475ef040dde54, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7993bda3f48eea14f837b81f0c3ef436, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
