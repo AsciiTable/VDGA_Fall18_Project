@@ -7,9 +7,10 @@ using UnityEngine.SceneManagement;
 public class Sunlight_Controller : MonoBehaviour {
 
     [Header("Editable")]
-    [SerializeField] private int timeMax;
+    [SerializeField] private bool activated = true;
+    [SerializeField] private int timeMax = 20;
+    [SerializeField] private int timeCollect = 8;
     [SerializeField] private bool inSun;
-    [SerializeField] private Collider2D shade;
 
     private int timeLeft;
     private Text Timer_text;
@@ -20,19 +21,11 @@ public class Sunlight_Controller : MonoBehaviour {
         timeLeft = timeMax;
 
         StartCoroutine(Sun());
-        StartCoroutine(Shade());
     }
 
     private void Update()
     {
         Timer_text.text = timeLeft.ToString();
-
-        if (shade != null)
-        {
-            inSun = (shade.tag == "Shade") ? false : true;
-        }
-        else
-            inSun = true;
     }
 
     IEnumerator Sun()
@@ -47,32 +40,29 @@ public class Sunlight_Controller : MonoBehaviour {
                 Debug.Log("TIMESUP");
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
-            yield return new WaitUntil(() => inSun);
-        }
-    }
-    IEnumerator Shade()
-    {
-        while (true)
-        {
-            
-            yield return new WaitUntil(() => !inSun);
-            timeLeft += (!inSun && timeLeft <= (timeMax - 1)) ? 1 : 0;
-            yield return new WaitForSeconds(0.1f);
-            timeLeft += (!inSun && timeLeft < (timeMax - 5)) ? 1 : 0;
-            yield return new WaitForSeconds(0.1f);
-            timeLeft += (!inSun && timeLeft < (timeMax - 5)) ? 1 : 0;
-            yield return new WaitForSeconds(0.1f);
         }
     }
 
     private void OnTriggerStay2D(Collider2D col)
     {
-        shade = col;
+        if (col.tag == "Sunlight")
+            inSun = true;
     }
     private void OnTriggerExit2D(Collider2D col)
     {
-        if(shade.tag == "Shade")
-            shade = null;
+        if(col.tag == "Sunlight")
+            inSun = false;
+    }
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.tag == "Collectable")
+        {
+            if (timeLeft + timeCollect > timeMax)
+                timeLeft = timeMax;
+            else
+                timeLeft += timeCollect;
+            Destroy(col.gameObject);
+        }
     }
 
 }

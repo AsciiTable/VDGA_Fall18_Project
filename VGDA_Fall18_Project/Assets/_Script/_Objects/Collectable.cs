@@ -11,13 +11,8 @@ public class Collectable : MonoBehaviour {
 	void Start () {
         if (Timer_Activated)
         {
-            GameObject gameObject_ScriptHolder = GameObject.Find("ScriptHolder");
-            Timer_Script = gameObject_ScriptHolder.GetComponent<Timer_Controller>();
+            Timer_Script = (Timer_Controller)GameObject.FindObjectOfType(typeof(Timer_Controller));
         }
-	}
-	
-	void Update () {
-		
 	}
 
     private void OnTriggerEnter2D(Collider2D col)
