@@ -17,6 +17,7 @@ TagManager:
   - Undying
   - NPC
   - Projectile
+  - Shade
   layers:
   - Default
   - TransparentFX
@@ -35,8 +36,8 @@ TagManager:
   - CameraCol
   - Boss
   - Weakspot
-  - 
-  - 
+  - SunDetector
+  - Shade
   - 
   - 
   - 
