@@ -88,10 +88,10 @@ TextureImporter:
       name: window3_0
       rect:
         serializedVersion: 2
-        x: 40
-        y: 76
-        width: 331
-        height: 482
+        x: 16
+        y: 61
+        width: 373
+        height: 497
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -99,7 +99,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c347e55a523dde9418db84bab044d215
+      spriteID: 4b1c0d87af069e347a48b1eed1cdfc1e
       vertices: []
       indices: 
       edges: []
@@ -107,7 +107,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: d60884ada872ac646ba6a696cb3effc8
+    spriteID: a7f456986826d6a468074c23ba4dc7b5
     vertices: []
     indices: 
     edges: []
