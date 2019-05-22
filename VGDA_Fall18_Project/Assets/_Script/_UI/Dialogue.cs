@@ -7,13 +7,7 @@ using UnityEngine;
 public class Dialogue
 {
     //Name of the speaker
-    public enum Name {
-        KnightBoy = 0,
-        Parker = 1,
-        ShadowParker = 2
-    }
-
-    public Name Speaker = Name.KnightBoy;
+    public string[] names;
 
     [TextArea(3, 10)]
     //Array of sentences

@@ -1,8 +1,10 @@
 fileFormatVersion: 2
-guid: a92b0396c7974f941a36cb189cdac98a
+guid: 9d72f491ce1c4954380ee8acc4709a4a
 TextureImporter:
   fileIDToRecycleName:
-    21300000: non_creepy_treeLayer2_thin_0
+    21300000: d_park_hurt_spriteSheet_0
+    21300002: d_park_hurt_spriteSheet_1
+    21300004: d_park_hurt_spriteSheet_2
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -85,13 +87,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: non_creepy_treeLayer2_thin_0
+      name: d_park_hurt_spriteSheet_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 32
-        width: 762
-        height: 1200
+        x: 174
+        y: 86
+        width: 378
+        height: 1330
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -99,7 +101,47 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74f0f2a79cbc29844968d67cf31cb052
+      spriteID: c66143d6b29e60a4aaece6d4d553d3fe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d_park_hurt_spriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 75
+        width: 592
+        height: 1348
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fde2853ba4d89894ea08f710bf158c39
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d_park_hurt_spriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 1924
+        y: 86
+        width: 481
+        height: 1222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 293739d6f77d00f499b31a72ca1407a9
       vertices: []
       indices: 
       edges: []
@@ -107,7 +149,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 2fe0f4927a45cee438e320b7e17489de
+    spriteID: 57f4b6d0acabffd4c8a73b9feb945ab6
     vertices: []
     indices: 
     edges: []

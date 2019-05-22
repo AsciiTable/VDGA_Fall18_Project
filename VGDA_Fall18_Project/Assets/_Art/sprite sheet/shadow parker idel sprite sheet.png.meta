@@ -7,7 +7,6 @@ TextureImporter:
     21300004: shadow parker idel sprite sheet_2
     21300006: shadow parker idel sprite sheet_3
     21300008: shadow parker idel sprite sheet_4
-    21300010: shadow parker idel sprite sheet_5
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -94,9 +93,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 372
-        y: 143
-        width: 352
-        height: 1343
+        y: 136
+        width: 314
+        height: 1350
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -104,7 +103,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b42a080e476f2c489773f301323b7ab
+      spriteID: e04ad5e2096aaf949a2e8cde7598b025
       vertices: []
       indices: 
       edges: []
@@ -113,10 +112,10 @@ TextureImporter:
       name: shadow parker idel sprite sheet_1
       rect:
         serializedVersion: 2
-        x: 1568
-        y: 152
-        width: 351
-        height: 1339
+        x: 989
+        y: 1443
+        width: 12
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,7 +123,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbf8d6d173451f04caa8abb65338d49c
+      spriteID: fce3e7c574907784db551e7129664b3e
       vertices: []
       indices: 
       edges: []
@@ -133,10 +132,10 @@ TextureImporter:
       name: shadow parker idel sprite sheet_2
       rect:
         serializedVersion: 2
-        x: 1783
-        y: 150
-        width: 7
-        height: 6
+        x: 1568
+        y: 154
+        width: 317
+        height: 1337
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,7 +143,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fd269c56b11f2646b43055803a611e7
+      spriteID: 73ac8e5f8f561844c98807d77fe35173
       vertices: []
       indices: 
       edges: []
@@ -154,9 +153,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2771
-        y: 150
-        width: 351
-        height: 1333
+        y: 154
+        width: 314
+        height: 1329
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,7 +163,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f3228571fdab794cb086515a2d66b49
+      spriteID: 715b56eb300b2fc4381fd24dbc92dea4
       vertices: []
       indices: 
       edges: []
@@ -173,10 +172,10 @@ TextureImporter:
       name: shadow parker idel sprite sheet_4
       rect:
         serializedVersion: 2
-        x: 2984
-        y: 149
-        width: 7
-        height: 5
+        x: 1049
+        y: 1187
+        width: 5
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,27 +183,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 045f92bd7af2cc64a887995d8d5eb1a0
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: shadow parker idel sprite sheet_5
-      rect:
-        serializedVersion: 2
-        x: 584
-        y: 141
-        width: 9
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0e2272b214abccc499cebc665531cef7
+      spriteID: ef903feeafbada54f88122bd180d58a0
       vertices: []
       indices: 
       edges: []
@@ -212,7 +191,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: c7054569ac8149c408f2779b9c6fd108
+    spriteID: fcb81bf47be8f10479cb30b588a66410
     vertices: []
     indices: 
     edges: []

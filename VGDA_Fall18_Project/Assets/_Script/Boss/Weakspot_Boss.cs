@@ -47,7 +47,10 @@ public class Weakspot_Boss : MonoBehaviour
         if (collision.gameObject.tag == "Bat" && !parent.bossImmunity && parent.opening == true)
         {
             if(manager.bossPhase != 3 || bossSprite.flipX == playerSprite.flipX)
+            {
                 parent.health -= 1;
+                parent.bossImmunity = true;
+            }
         }
     }
 }
