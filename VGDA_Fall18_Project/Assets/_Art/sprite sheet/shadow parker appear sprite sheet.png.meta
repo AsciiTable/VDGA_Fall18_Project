@@ -1,0 +1,1233 @@
+fileFormatVersion: 2
+guid: 42ff0ffdf9711fe4c98068decaa6f70f
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: shadow parker appear sprite sheet_0
+    21300002: shadow parker appear sprite sheet_1
+    21300004: shadow parker appear sprite sheet_2
+    21300006: shadow parker appear sprite sheet_3
+    21300008: shadow parker appear sprite sheet_4
+    21300010: shadow parker appear sprite sheet_5
+    21300012: shadow parker appear sprite sheet_6
+    21300014: shadow parker appear sprite sheet_7
+    21300016: shadow parker appear sprite sheet_8
+    21300018: shadow parker appear sprite sheet_9
+    21300020: shadow parker appear sprite sheet_10
+    21300022: shadow parker appear sprite sheet_11
+    21300024: shadow parker appear sprite sheet_12
+    21300026: shadow parker appear sprite sheet_13
+    21300028: shadow parker appear sprite sheet_14
+    21300030: shadow parker appear sprite sheet_15
+    21300032: shadow parker appear sprite sheet_16
+    21300034: shadow parker appear sprite sheet_17
+    21300036: shadow parker appear sprite sheet_18
+    21300038: shadow parker appear sprite sheet_19
+    21300040: shadow parker appear sprite sheet_20
+    21300042: shadow parker appear sprite sheet_21
+    21300044: shadow parker appear sprite sheet_22
+    21300046: shadow parker appear sprite sheet_23
+    21300048: shadow parker appear sprite sheet_24
+    21300050: shadow parker appear sprite sheet_25
+    21300052: shadow parker appear sprite sheet_26
+    21300054: shadow parker appear sprite sheet_27
+    21300056: shadow parker appear sprite sheet_28
+    21300058: shadow parker appear sprite sheet_29
+    21300060: shadow parker appear sprite sheet_30
+    21300062: shadow parker appear sprite sheet_31
+    21300064: shadow parker appear sprite sheet_32
+    21300066: shadow parker appear sprite sheet_33
+    21300068: shadow parker appear sprite sheet_34
+    21300070: shadow parker appear sprite sheet_35
+    21300072: shadow parker appear sprite sheet_36
+    21300074: shadow parker appear sprite sheet_37
+    21300076: shadow parker appear sprite sheet_38
+    21300078: shadow parker appear sprite sheet_39
+    21300080: shadow parker appear sprite sheet_40
+    21300082: shadow parker appear sprite sheet_41
+    21300084: shadow parker appear sprite sheet_42
+    21300086: shadow parker appear sprite sheet_43
+    21300088: shadow parker appear sprite sheet_44
+    21300090: shadow parker appear sprite sheet_45
+    21300092: shadow parker appear sprite sheet_46
+    21300094: shadow parker appear sprite sheet_47
+    21300096: shadow parker appear sprite sheet_48
+    21300098: shadow parker appear sprite sheet_49
+    21300100: shadow parker appear sprite sheet_50
+    21300102: shadow parker appear sprite sheet_51
+    21300104: shadow parker appear sprite sheet_52
+    21300106: shadow parker appear sprite sheet_53
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_0
+      rect:
+        serializedVersion: 2
+        x: 3389
+        y: 337
+        width: 46
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 917349a1c0be4fe4e8855660cad8f000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_1
+      rect:
+        serializedVersion: 2
+        x: 3979
+        y: 329
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77d4e0ec5ca4be245bb444c441ffef61
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_2
+      rect:
+        serializedVersion: 2
+        x: 9068
+        y: 387
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7f6f7e132e45054f84fc9b9ba03af7a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_3
+      rect:
+        serializedVersion: 2
+        x: 9515
+        y: 74
+        width: 434
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8215af37d096b1449b45ca92335b1f36
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_4
+      rect:
+        serializedVersion: 2
+        x: 10143
+        y: 58
+        width: 435
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c788fbdc34b38654da28f211a9a1c8fe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_5
+      rect:
+        serializedVersion: 2
+        x: 10750
+        y: 54
+        width: 441
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1e8327c8d449b243937440115ccd2da
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_6
+      rect:
+        serializedVersion: 2
+        x: 11440
+        y: 58
+        width: 357
+        height: 743
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88f0152dc5c2574449acc9985c0d6b2b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_7
+      rect:
+        serializedVersion: 2
+        x: 12077
+        y: 59
+        width: 300
+        height: 897
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d983de076cb6a3f4b9005182513c8ee3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_8
+      rect:
+        serializedVersion: 2
+        x: 12744
+        y: 66
+        width: 225
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f68a3db46d4503946b96a1c88530420d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_9
+      rect:
+        serializedVersion: 2
+        x: 13404
+        y: 60
+        width: 209
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eea6b222e6094f44b926cb31072e0172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_10
+      rect:
+        serializedVersion: 2
+        x: 14041
+        y: 58
+        width: 208
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa87d7ebf8d9e86408defe57f226909c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_11
+      rect:
+        serializedVersion: 2
+        x: 14662
+        y: 74
+        width: 201
+        height: 882
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe9d6c8cf5e02b94cb56c7ec8c6a5103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_12
+      rect:
+        serializedVersion: 2
+        x: 15283
+        y: 58
+        width: 202
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de7a3eea50d481345874e564b1a4565b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_13
+      rect:
+        serializedVersion: 2
+        x: 2784
+        y: 331
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d459835cd6802f47a5cab8f8f9696ef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_14
+      rect:
+        serializedVersion: 2
+        x: 3513
+        y: 314
+        width: 47
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92871dfd63e08c14ab2e9cabd43f30eb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_15
+      rect:
+        serializedVersion: 2
+        x: 3956
+        y: 74
+        width: 217
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bf75c2c3d2687a48bba0f73ebd2cbbc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_16
+      rect:
+        serializedVersion: 2
+        x: 4173
+        y: 298
+        width: 54
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b81e072d39aa2e7438763b7d80a75de6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_17
+      rect:
+        serializedVersion: 2
+        x: 8886
+        y: 66
+        width: 434
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2154baaea3c8d42418ee78d0464c7b51
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_18
+      rect:
+        serializedVersion: 2
+        x: 9169
+        y: 364
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78595427894359746bf751c9ca3d5fad
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_19
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 267
+        width: 77
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bc832cef2deb8f47b163d64fc3e0073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_20
+      rect:
+        serializedVersion: 2
+        x: 2628
+        y: 314
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b90aa99a13e8a7e42a927f4c99765a2a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_21
+      rect:
+        serializedVersion: 2
+        x: 2669
+        y: 275
+        width: 71
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4df902dc493f3a74d88e7eeb209e74b1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_22
+      rect:
+        serializedVersion: 2
+        x: 3925
+        y: 329
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5232cf4b55ebd2c4489c5e208c5478c7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_23
+      rect:
+        serializedVersion: 2
+        x: 4654
+        y: 285
+        width: 39
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6c0b1b2226735b4da73aadab646ef77
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_24
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 112
+        width: 279
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e36d7f0087e6a44297c1de602fe1684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_25
+      rect:
+        serializedVersion: 2
+        x: 2061
+        y: 244
+        width: 62
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87f08765c832b9149acd703bd8137374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_26
+      rect:
+        serializedVersion: 2
+        x: 2329
+        y: 252
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1416cbb97678e6a498126a508e9dd502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_27
+      rect:
+        serializedVersion: 2
+        x: 2644
+        y: 260
+        width: 30
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58993b3d7e7e07f419cf09b29f9c0142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_28
+      rect:
+        serializedVersion: 2
+        x: 2877
+        y: 267
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e22df031c0b9b1b458b3d94a66df3e18
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_29
+      rect:
+        serializedVersion: 2
+        x: 2916
+        y: 252
+        width: 53
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 117872c8b6fbff04bb061745a4c60fbd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_30
+      rect:
+        serializedVersion: 2
+        x: 3319
+        y: 275
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90a54bd76be77f74f9561454d46d4ad1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_31
+      rect:
+        serializedVersion: 2
+        x: 3335
+        y: 74
+        width: 294
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac081904bb0847d458eaeb2d961866f4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_32
+      rect:
+        serializedVersion: 2
+        x: 3622
+        y: 253
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcac94469a50c994594e8c5308cd9ad6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_33
+      rect:
+        serializedVersion: 2
+        x: 4716
+        y: 229
+        width: 39
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16fb6ad0ee824c54d870ac7a66c1d98a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_34
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 138
+        width: 138
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c52512c6bcfe7546872286184a4d9b1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_35
+      rect:
+        serializedVersion: 2
+        x: 2046
+        y: 81
+        width: 333
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b7dc1854f699a1418be37060ca2ddc5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_36
+      rect:
+        serializedVersion: 2
+        x: 2232
+        y: 206
+        width: 31
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc5657e042e7f9940b4986df1216ecd2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_37
+      rect:
+        serializedVersion: 2
+        x: 2620
+        y: 74
+        width: 396
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16334cafb25d7d5499f39cb3d27a738d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_38
+      rect:
+        serializedVersion: 2
+        x: 4569
+        y: 66
+        width: 279
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 449918302935cca4c91a79f1e88247ab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_39
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 198
+        width: 39
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd9cd668a29e30b4ebb5be5052e6ec7e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_40
+      rect:
+        serializedVersion: 2
+        x: 5213
+        y: 66
+        width: 202
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae4b3f4f6bf9c8c4e8c78ed3968a52b2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_41
+      rect:
+        serializedVersion: 2
+        x: 5392
+        y: 221
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b39224e2c5de0804eadc00b5aabbb6d5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_42
+      rect:
+        serializedVersion: 2
+        x: 8258
+        y: 66
+        width: 440
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14895d6c4cc081040ac787ff15bcc70b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_43
+      rect:
+        serializedVersion: 2
+        x: 2589
+        y: 159
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5057064d4bb0734fa92efc67945a9cd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_44
+      rect:
+        serializedVersion: 2
+        x: 5353
+        y: 136
+        width: 70
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c37b7cce1b325474d8ad67769aa4fa43
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_45
+      rect:
+        serializedVersion: 2
+        x: 5866
+        y: 66
+        width: 201
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7145eb097fbe25540b09c01954ae695b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_46
+      rect:
+        serializedVersion: 2
+        x: 6556
+        y: 182
+        width: 47
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 935817a2c8794524bb52510726dfb04d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_47
+      rect:
+        serializedVersion: 2
+        x: 15481
+        y: 175
+        width: 31
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d4c11ade603d1b4fbb607e7db23531a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_48
+      rect:
+        serializedVersion: 2
+        x: 6510
+        y: 136
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8926fc1252e5c92409a6940a08f83d55
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_49
+      rect:
+        serializedVersion: 2
+        x: 6572
+        y: 151
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e683a1d1e5b194f4e91c9e53488038cf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_50
+      rect:
+        serializedVersion: 2
+        x: 7652
+        y: 74
+        width: 348
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 042784e04e5485947abf60727828405e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_51
+      rect:
+        serializedVersion: 2
+        x: 6479
+        y: 66
+        width: 185
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfaa970a7b1f25f4d96e6b4e15c02b90
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_52
+      rect:
+        serializedVersion: 2
+        x: 6642
+        y: 105
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 812f3611e5313ee4d9d64709585464d6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow parker appear sprite sheet_53
+      rect:
+        serializedVersion: 2
+        x: 7084
+        y: 66
+        width: 233
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cef07b1402178e4486d5a95f58fa2a1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 517ba2426f080b74cb1607d5159f7f5f
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
