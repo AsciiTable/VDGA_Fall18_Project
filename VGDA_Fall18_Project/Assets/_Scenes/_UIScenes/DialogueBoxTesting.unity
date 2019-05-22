@@ -1937,7 +1937,10 @@ MonoBehaviour:
   Player: {fileID: 1251861058}
   InteractDistance: 5
   dialogue:
-    Speaker: 0
+    names:
+    - Ascii
+    - Ascii
+    - Ascii
     sentences:
     - Hello. My name is Jessica. I need this sentence to be much loooooooooooooooonger
       to test some stuff.
@@ -2332,7 +2335,7 @@ RectTransform:
   m_GameObject: {fileID: 899276179}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.55808866, y: 0.55808866, z: 0.55808866}
+  m_LocalScale: {x: 0.04180409, y: 0.04180409, z: 0.04180409}
   m_Children:
   - {fileID: 1460391081}
   m_Father: {fileID: 725361427}
@@ -2340,8 +2343,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 200.7, y: -39.9}
-  m_SizeDelta: {x: 74.54, y: 20.24}
+  m_AnchoredPosition: {x: 216.7, y: -41.6}
+  m_SizeDelta: {x: 683, y: 388}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &899276181
 MonoBehaviour:
@@ -2416,8 +2419,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: f04667f377dca904ea549cac95bc86e7, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2547,7 +2550,7 @@ MonoBehaviour:
   Player: {fileID: 1251861058}
   InteractDistance: 5
   dialogue:
-    Speaker: 0
+    names: []
     sentences:
     - ASODAOSHFASUODJNVOENFOJDBASUDBUOASNFJOUBASDNSANDOOAJSNDAOJSNDONDSONOJADINWJIAndi
     - Hello. My name is Jessica. I need this sentence to be much loooooooooooooooonger
@@ -2750,15 +2753,15 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 2097736473}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4571715259199136, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.61
+      value: 4.83
       objectReference: {fileID: 0}
     - target: {fileID: 4571715259199136, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.82
+      value: 4.54
       objectReference: {fileID: 0}
     - target: {fileID: 4571715259199136, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2782,19 +2785,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4571715259199136, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4571715259199136, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.3019102
+      value: 3.9057305
       objectReference: {fileID: 0}
     - target: {fileID: 4571715259199136, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.3019102
+      value: 3.9057305
       objectReference: {fileID: 0}
     - target: {fileID: 4571715259199136, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.02643105
+      value: 0.00874022
       objectReference: {fileID: 0}
     - target: {fileID: 114724545924056790, guid: fe5007831d3a95249b505396f72f15ec,
         type: 3}
@@ -2833,6 +2836,52 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 212726617747720416, guid: fe5007831d3a95249b505396f72f15ec,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.6631579
+      objectReference: {fileID: 0}
+    - target: {fileID: 212726617747720416, guid: fe5007831d3a95249b505396f72f15ec,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.816842
+      objectReference: {fileID: 0}
+    - target: {fileID: 212726617747720416, guid: fe5007831d3a95249b505396f72f15ec,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212726617747720416, guid: fe5007831d3a95249b505396f72f15ec,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300006, guid: 32fc44ed551235e4388e0640cc2471d3,
+        type: 3}
+    - target: {fileID: 61214847567597564, guid: fe5007831d3a95249b505396f72f15ec,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 3.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 61214847567597564, guid: fe5007831d3a95249b505396f72f15ec,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 13.380001
+      objectReference: {fileID: 0}
+    - target: {fileID: 61214847567597564, guid: fe5007831d3a95249b505396f72f15ec,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 3.4800003
+      objectReference: {fileID: 0}
+    - target: {fileID: 61214847567597564, guid: fe5007831d3a95249b505396f72f15ec,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 13.420001
+      objectReference: {fileID: 0}
+    - target: {fileID: 114886815701935836, guid: fe5007831d3a95249b505396f72f15ec,
+        type: 3}
+      propertyPath: batActivated
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
 --- !u!4 &1251861057 stripped
@@ -2863,7 +2912,7 @@ MonoBehaviour:
   InteractCheckpoint: 5
   InteractCheckpointBuffer: 5
   dialogue:
-    Speaker: 0
+    names: []
     sentences:
     - Hi does this work?
     - I hope it works.
@@ -3194,7 +3243,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.058573
+      value: 13.999865
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3218,7 +3267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.058573
+      value: 13.999865
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3529,7 +3578,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1460391081
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4242,10 +4291,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08d9fc0faee6b4b45bbd069708462426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 0}
-  dialogueText: {fileID: 0}
+  nameText: {fileID: 494597745}
+  dialogueText: {fileID: 251666100}
   expression: {fileID: 295245395}
-  animator: {fileID: 0}
+  animator: {fileID: 725361428}
 --- !u!4 &1884474605
 Transform:
   m_ObjectHideFlags: 0
@@ -4708,7 +4757,7 @@ MonoBehaviour:
   InteractCheckpoint: 0
   InteractCheckpointBuffer: 5
   dialogue:
-    Speaker: 0
+    names: []
     sentences: []
     expressions: 
   isTriggered: 0
@@ -4807,34 +4856,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2087717143}
   m_CullTransparentMesh: 0
---- !u!1 &2097736472
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2097736473}
-  m_Layer: 8
-  m_Name: Parker
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2097736473
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2097736472}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 10, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 0.33068}
-  m_Children:
-  - {fileID: 1251861057}
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
