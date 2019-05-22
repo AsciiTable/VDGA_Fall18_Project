@@ -52,7 +52,6 @@ public class Boss_Charge : MonoBehaviour
     private void Update()
     {
         int index = 3 - boss.health;
-        Debug.Log("Index: " + index);
         //Move when charging is true
         if (charging && readyCharge)
         {
@@ -97,8 +96,11 @@ public class Boss_Charge : MonoBehaviour
             chargeSpeed = 0;
         }
 
-
-        rb2d.transform.Translate(chargeSpeed, 0, 0);
+        //Prevent infinity error
+        if(chargeSpeed != 0)
+            Debug.Log(chargeSpeed);
+        if(chargeSpeed != Mathf.Infinity && chargeSpeed != Mathf.NegativeInfinity)
+            rb2d.transform.Translate(chargeSpeed, 0, 0);
 
     }
 
