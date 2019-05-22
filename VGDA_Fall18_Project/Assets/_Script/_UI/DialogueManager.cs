@@ -12,6 +12,7 @@ public class DialogueManager : MonoBehaviour
     public Queue<Dialogue.Expression> expressionImage;
     public Image expression;
 
+    private Queue<string> names;
     private Queue<string> sentences;
 
     public Animator animator;
@@ -29,23 +30,13 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue) {
         //showDialogue.SetActive(true);
+        foreach (string name in dialogue.names)
+        {
+            sentences.Enqueue(name);                                             // Lines each up to be in a queue
+        }
         animator.SetBool("IsOpen", true);
-        string name = "";
-        if (dialogue.Speaker == Dialogue.Name.KnightBoy)
-        {
-            nameText.text = "Knight Boy";
-        }
-        else if (dialogue.Speaker == Dialogue.Name.Parker)
-        {
-            nameText.text = "Parker";
-        }
-        else if (dialogue.Speaker == Dialogue.Name.ShadowParker) {
-            nameText.text = "Shadow Parker";
-        }
-        else
-        {
-            nameText.text = "NPC";
-        }
+        //string name = "";
+        //nameText.text = "Shadow Parker";
         sentences.Clear();
         foreach (Dialogue.Expression express in dialogue.expressions)
         {
@@ -69,11 +60,12 @@ public class DialogueManager : MonoBehaviour
             EndDialogue();
             return;
         }
-
+        string name = names.Dequeue();
         string sentence =  sentences.Dequeue();                                     // Starts using up each sentence in the queue
         Dialogue.Expression express = expressionImage.Dequeue();
 
-        SetExpression(dialogue, express);
+        expression = SetExpression(dialogue, express);
+        nameText.text = name;
 
         //If you would like the text to appear immediately, use:
         //dialogueText.text = sentence;
@@ -113,38 +105,31 @@ public class DialogueManager : MonoBehaviour
     }
 
     public Image SetExpression(Dialogue dialogue, Dialogue.Expression express) {
-        if (dialogue.Speaker == Dialogue.Name.KnightBoy)
+        switch (express)
         {
-            switch (express) {
-                case Dialogue.Expression.Annoyed:
-                    //Sprite ANNOYED = 
-                    expressionSprite.name = "annoyed.png";
-                    expression.sprite.name = expressionSprite.name;
-                    break;
-                case Dialogue.Expression.Happy:
-                    break;
-                case Dialogue.Expression.Haughty:
-                    break;
-                case Dialogue.Expression.Moved:
-                    break;
-                case Dialogue.Expression.Pity:
-                    break;
-                case Dialogue.Expression.Sad:
-                    break;
-                case Dialogue.Expression.Smug:
-                    break;
-                case Dialogue.Expression.Standard:
-                    break;
-                case Dialogue.Expression.Tsundere:
-                    break;
-                default:
-                    break;
-            }
-        }
-        else if (dialogue.Speaker == Dialogue.Name.Parker)
-        {
-        }
-        else if (dialogue.Speaker == Dialogue.Name.ShadowParker) {
+            case Dialogue.Expression.Annoyed:
+                //Sprite ANNOYED = 
+                expressionSprite.name = "annoyed.png";
+                expression.sprite.name = expressionSprite.name;
+                break;
+            case Dialogue.Expression.Happy:
+                break;
+            case Dialogue.Expression.Haughty:
+                break;
+            case Dialogue.Expression.Moved:
+                break;
+            case Dialogue.Expression.Pity:
+                break;
+            case Dialogue.Expression.Sad:
+                break;
+            case Dialogue.Expression.Smug:
+                break;
+            case Dialogue.Expression.Standard:
+                break;
+            case Dialogue.Expression.Tsundere:
+                break;
+            default:
+                break;
         }
         return expression;
     }
