@@ -1837,8 +1837,9 @@ MonoBehaviour:
   NPC: {fileID: 624408556}
   Player: {fileID: 1251861058}
   InteractDistance: 5
+  CheckPoint: 0
   dialogue:
-    FreezePlayerMovement: 0
+    FreezePlayerMovement: 1
     DialogueIsCheckpoint: 0
     names:
     - Ascii
@@ -2376,6 +2377,7 @@ MonoBehaviour:
   NPC: {fileID: 1052201135}
   Player: {fileID: 1251861058}
   InteractDistance: 5
+  CheckPoint: 0
   dialogue:
     FreezePlayerMovement: 0
     DialogueIsCheckpoint: 0
@@ -4005,6 +4007,7 @@ MonoBehaviour:
   nameText: {fileID: 494597745}
   dialogueText: {fileID: 251666100}
   expression: {fileID: 295245395}
+  player: {fileID: 1251861058}
   animator: {fileID: 725361428}
 --- !u!4 &1884474605
 Transform:

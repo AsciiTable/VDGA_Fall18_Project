@@ -8,10 +8,13 @@ public class DialogueManager : MonoBehaviour
     //UI Objects to update the text on the screen
     public Text nameText;
     public Text dialogueText;
-
-    private Queue<Sprite> expressionImage;
     public Image expression;
 
+    //Player Movment Freezing
+    public GameObject player;
+
+    //Queues
+    private Queue<Sprite> expressionImage;
     private Queue<string> names;
     private Queue<string> sentences;
 
@@ -28,6 +31,9 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void StartDialogue(Dialogue dialogue) {
+        if (dialogue.FreezePlayerMovement) {
+            player.GetComponent<Player>().enabled = false;
+        }
         //showDialogue.SetActive(true);
 
         animator.SetBool("IsOpen", true);
@@ -103,5 +109,6 @@ public class DialogueManager : MonoBehaviour
         FindObjectOfType<DialogueTrigger>().isTriggered = false;                    // sets trigger to false so the player can talk to the NPC again
         FindObjectOfType<DialogueTriggerPlayer>().isTriggered = false;
         animator.SetBool("IsOpen", false);
+        player.GetComponent<Player>().enabled = true;
     }
 }
