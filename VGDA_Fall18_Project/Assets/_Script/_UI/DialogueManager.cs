@@ -67,6 +67,7 @@ public class DialogueManager : MonoBehaviour
         if (sentences.Count == 0)
         {
             EndDialogue();
+            player.GetComponent<Player>().enabled = true;
             return;
         }
         string name = names.Dequeue();
@@ -107,9 +108,10 @@ public class DialogueManager : MonoBehaviour
      * is set to false and the dialogue box is closed.
      */
     public void EndDialogue() {
-        FindObjectOfType<DialogueTrigger>().isTriggered = false;                    // sets trigger to false so the player can talk to the NPC again
-        FindObjectOfType<DialogueTriggerPlayer>().isTriggered = false;
+        if (!FindObjectOfType<DialogueTrigger>().dialogue.DialogueIsCheckpoint) {
+            FindObjectOfType<DialogueTrigger>().isTriggered = false;                    // sets trigger to false so the player can talk to the NPC again if it is not a checkpoint
+            FindObjectOfType<DialogueTriggerPlayer>().isTriggered = false;
+        }
         animator.SetBool("IsOpen", false);
-        player.GetComponent<Player>().enabled = true;
     }
 }

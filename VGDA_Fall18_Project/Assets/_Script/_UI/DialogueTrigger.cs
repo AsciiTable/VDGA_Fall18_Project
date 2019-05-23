@@ -16,10 +16,11 @@ public class DialogueTrigger : MonoBehaviour
     {
         float npcPosition = NPC.transform.position.x;
         float playerPosition = Player.transform.position.x;
-        float distanceBetween = Mathf.Abs(npcPosition - playerPosition);
+        
         if (dialogue.DialogueIsCheckpoint)
         {
-            if (playerPosition >= CheckPoint)
+            float distanceBetween = Mathf.Abs(CheckPoint - playerPosition);
+            if (distanceBetween < InteractDistance)
             {// works if and only if player is close enough
                 if (!isTriggered)
                 {
@@ -29,6 +30,7 @@ public class DialogueTrigger : MonoBehaviour
             }
         }
         else {
+            float distanceBetween = Mathf.Abs(npcPosition - playerPosition);
             if (Input.GetButtonDown("InteractNPC") && (distanceBetween < InteractDistance))
             {// works if and only if player intends to talk to npc and they're close enough
                 if (!isTriggered)
