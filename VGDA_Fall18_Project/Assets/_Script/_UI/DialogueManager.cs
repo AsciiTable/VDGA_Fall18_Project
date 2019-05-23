@@ -9,7 +9,7 @@ public class DialogueManager : MonoBehaviour
     public Text nameText;
     public Text dialogueText;
 
-    public Queue<Dialogue.Expression> expressionImage;
+    private Queue<Sprite> expressionImage;
     public Image expression;
 
     private Queue<string> names;
@@ -18,27 +18,29 @@ public class DialogueManager : MonoBehaviour
     public Animator animator;
     private bool inCoro;
 
-    private Sprite expressionSprite;
-
     // Start is called before the first frame update
     void Start()
     {
-        expressionImage = new Queue<Dialogue.Expression>();
+        expressionImage = new Queue<Sprite>();
         sentences = new Queue<string>();
+        names = new Queue<string>();
         inCoro = false;
     }
 
     public void StartDialogue(Dialogue dialogue) {
         //showDialogue.SetActive(true);
-        foreach (string name in dialogue.names)
-        {
-            sentences.Enqueue(name);                                             // Lines each up to be in a queue
-        }
+
         animator.SetBool("IsOpen", true);
         //string name = "";
         //nameText.text = "Shadow Parker";
         sentences.Clear();
-        foreach (Dialogue.Expression express in dialogue.expressions)
+        names.Clear();
+        expressionImage.Clear();
+        foreach (string name in dialogue.names)
+        {
+            names.Enqueue(name);                                             // Lines each up to be in a queue
+        }
+        foreach (Sprite express in dialogue.expressions)
         {
             expressionImage.Enqueue(express);
         }
@@ -47,13 +49,13 @@ public class DialogueManager : MonoBehaviour
             sentences.Enqueue(sentence);                                             // Lines each up to be in a queue
         }
 
-        DisplayNextSentence(dialogue);
+        DisplayNextSentence();
     }
 
     /**
      * Displays the next sentence of the dialogue
      */
-    public void DisplayNextSentence(Dialogue dialogue) {
+    public void DisplayNextSentence() {
 
         if (sentences.Count == 0)
         {
@@ -62,9 +64,8 @@ public class DialogueManager : MonoBehaviour
         }
         string name = names.Dequeue();
         string sentence =  sentences.Dequeue();                                     // Starts using up each sentence in the queue
-        Dialogue.Expression express = expressionImage.Dequeue();
-
-        expression = SetExpression(dialogue, express);
+        Sprite express = expressionImage.Dequeue();
+        expression.sprite = express;
         nameText.text = name;
 
         //If you would like the text to appear immediately, use:
@@ -102,35 +103,5 @@ public class DialogueManager : MonoBehaviour
         FindObjectOfType<DialogueTrigger>().isTriggered = false;                    // sets trigger to false so the player can talk to the NPC again
         FindObjectOfType<DialogueTriggerPlayer>().isTriggered = false;
         animator.SetBool("IsOpen", false);
-    }
-
-    public Image SetExpression(Dialogue dialogue, Dialogue.Expression express) {
-        switch (express)
-        {
-            case Dialogue.Expression.Annoyed:
-                //Sprite ANNOYED = 
-                expressionSprite.name = "annoyed.png";
-                expression.sprite.name = expressionSprite.name;
-                break;
-            case Dialogue.Expression.Happy:
-                break;
-            case Dialogue.Expression.Haughty:
-                break;
-            case Dialogue.Expression.Moved:
-                break;
-            case Dialogue.Expression.Pity:
-                break;
-            case Dialogue.Expression.Sad:
-                break;
-            case Dialogue.Expression.Smug:
-                break;
-            case Dialogue.Expression.Standard:
-                break;
-            case Dialogue.Expression.Tsundere:
-                break;
-            default:
-                break;
-        }
-        return expression;
     }
 }

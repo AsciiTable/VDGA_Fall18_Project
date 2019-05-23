@@ -1850,7 +1850,10 @@ MonoBehaviour:
     - I actually have no idea what I'm doing, but all of this is really cool.
     - But there's a lot that I understand because I learned about classes, arrays,
       and queues last semester!
-    expressions: 000000000c00000004000000
+    expressions:
+    - {fileID: 21300000, guid: 3abca45be188fe64d8cf3ed17b8a510d, type: 3}
+    - {fileID: 21300000, guid: 196a9ef01c6efc54ca03067376c5bc59, type: 3}
+    - {fileID: 21300000, guid: 7f9e93bdd9f9d304f9dcb76323b6025f, type: 3}
   isTriggered: 0
 --- !u!61 &624408560
 BoxCollider2D:
@@ -2210,7 +2213,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1884474604}
         m_MethodName: DisplayNextSentence
         m_Mode: 1
         m_Arguments:
@@ -2376,7 +2379,11 @@ MonoBehaviour:
   dialogue:
     FreezePlayerMovement: 0
     DialogueIsCheckpoint: 0
-    names: []
+    names:
+    - Ascii
+    - Ascii
+    - Ascii
+    - Parker
     sentences:
     - ASODAOSHFASUODJNVOENFOJDBASUDBUOASNFJOUBASDNSANDOOAJSNDAOJSNDONDSONOJADINWJIAndi
     - Hello. My name is Jessica. I need this sentence to be much loooooooooooooooonger
@@ -2384,7 +2391,11 @@ MonoBehaviour:
     - I actually have no idea what I'm doing, but all of this is really cool.
     - But there's a lot that I understand because I learned about classes, arrays,
       and queues last semester!
-    expressions: 00000000000000000000000000000000
+    expressions:
+    - {fileID: 21300000, guid: 9fa13f3ff35f36542afd8d8bbfd1c90d, type: 3}
+    - {fileID: 21300000, guid: 0cdecaf3144813043986b86216b5a1e4, type: 3}
+    - {fileID: 21300000, guid: 9fa13f3ff35f36542afd8d8bbfd1c90d, type: 3}
+    - {fileID: 21300000, guid: 812e8f7d82b059f4d8b833729f518b86, type: 3}
   isTriggered: 0
 --- !u!61 &1052201137
 BoxCollider2D:
@@ -2943,7 +2954,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.999865
+      value: 13.970785
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2967,7 +2978,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.999865
+      value: 13.970785
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4461,5 +4472,5 @@ MonoBehaviour:
     DialogueIsCheckpoint: 0
     names: []
     sentences: []
-    expressions: 
+    expressions: []
   isTriggered: 0

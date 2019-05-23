@@ -15,26 +15,32 @@ public class Dialogue
     //Array of sentences
     public string[] sentences;
 
-    public enum Expression {
-        Annoyed,
-        Happy, 
-        Haughty,
-        Knightly,
-        Moved,
-        Afraid,
-        Angry,
-        Confused,
-        Guilty,
-        Recoil,
-        Relief,
-        Sad,
-        Standard,
-        Pity,
-        Creepy,
-        Insane,
-        Taunt,
-        Smug,
-        Tsundere
-    }
-    public Expression[] expressions;
+    /**public enum Expression {
+        knightAnnoyed,
+        knightHappy, 
+        knightHaughty,
+        knightKnightly,
+        knightMoved,
+        knightPuppyEyes,
+        knightSad,
+        knightSmugPity,
+        knightStandard,
+        knightTsundere,
+        parkerAfraid,
+        parkerAngry,
+        parkerConfused,
+        parkerGuilty,
+        parkerHappy,
+        parkerRecoil,
+        parkerRelief,
+        parkerSad,
+        parkerStandard,
+        shadowConfused,
+        shadowCreepy,
+        shadowInsane,
+        shadowRecoil,
+        shadowStandard,
+        shadowTaunt
+    }**/
+    public Sprite[] expressions;
 }
