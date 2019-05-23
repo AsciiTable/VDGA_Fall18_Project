@@ -79,10 +79,10 @@ public class LoadCutscene : MonoBehaviour {
         {
             NextButton();
         }
-        if (Input.GetButtonDown("PrevCutscene"))
+        /*if (Input.GetButtonDown("PrevCutscene"))
         {
             PrevButton();
-        }
+        }*/
 
         Cutscene_image.sprite = Cutscene_Sprite[Cutscene_Num];
 
