@@ -6,49 +6,73 @@ using UnityEngine.UI;
 
 public class LoadCutscene : MonoBehaviour {
 
-    public Image Cutscene_image;
+    private Image Cutscene_image;
 
-    public Image NextButton_image;
-    public Image PrevButton_image;
-    public Image StartGame_image;
+    [Header("Buttons")]
+    [SerializeField] private Image NextButton_image;
+    [SerializeField] private Image PrevButton_image;
+    [SerializeField] private Image StartGame_image;
+    private Text NextButton_text;
+    private Text PrevButton_text;
+    private Text StartGame_text;
 
-    public Text NextButton_text;
-    public Text PrevButton_text;
-    public Text StartGame_text;
-        
-    public Sprite[] Cutscene_Sprite;
+    [Space(10)][Header("Scenes")]
+    [SerializeField] private Sprite[] Cutscene_Sprite;
+    private int Cutscene_Num = 0;
+    private int Cutscene_Num_Max;
+    private bool finCutscene = false;
 
-    public int Cutscene_Num = 0;
-    public int Cutscene_Num_Max = 5;
+    [Space(10)][Header("Transitioning")]
+    [SerializeField] private Image Transition_image;
+    [SerializeField] private float transitionSpeed = 1f;
+    [SerializeField] private bool playingScene = false;
 
-    private bool played = false;
-
-    // Use this for initialization
     void Awake () {
+        Cutscene_image = GetComponent<Image>();
+        NextButton_text = NextButton_image.gameObject.GetComponentInChildren<Text>();
+        PrevButton_text = PrevButton_image.gameObject.GetComponentInChildren<Text>();
+        StartGame_text = StartGame_image.gameObject.GetComponentInChildren<Text>();
 
-        Cutscene_Num = 0;
         Cutscene_Num_Max = Cutscene_Sprite.Length-1;
-	}
+        Transition_image.color = new Color(1f, 1f, 1f, 0f);
+    }
 
-//Go to Next Cutscene
+    //Go to Next Cutscene
     public void NextButton()
     {
-        if (Cutscene_Num < Cutscene_Num_Max)
+        if (Cutscene_Num < Cutscene_Num_Max && !playingScene)
         {
-            Cutscene_Num++;
+            playingScene = true;
+            StartCoroutine(changeScene(1));
         }
     }
 
-//Go to Previous Cutscene
+    //Go to Previous Cutscene
     public void PrevButton()
     {
-        if (Cutscene_Num > 0)
+        if (Cutscene_Num > 0 && !playingScene)
         {
-            Cutscene_Num--;
+            playingScene = true;
+            StartCoroutine(changeScene(-1));
         }
     }
 
-    // Update is called once per frame
+    IEnumerator changeScene(int changeNum)
+    {
+        yield return new WaitUntil(()=> playingScene);
+        Transition_image.sprite = Cutscene_image.sprite;
+        Cutscene_Num += changeNum;
+        Transition_image.color = new Color(1f,1f,1f,1f);
+        for(float i = 0; i < transitionSpeed; i+= 0.01f)
+        {
+            yield return new WaitForSeconds(0.01f);
+            Debug.Log(Transition_image.color.a);
+            Transition_image.color = new Color(1f, 1f, 1f, Transition_image.color.a - (1 / (transitionSpeed * 100)));
+        }
+        playingScene = false;
+    }
+
+
     void Update () {
 
         if (Input.GetButtonDown("NextCutscene"))
@@ -68,10 +92,10 @@ public class LoadCutscene : MonoBehaviour {
             NextButton_image.enabled = false;
             NextButton_text.enabled = false;
 
-            if (!played)
+            if (!finCutscene)
             {
                 Audio.PlaySound("bgm_cutscene_soundtelling");
-                played = true;
+                finCutscene = true;
             }
 
             StartGame_image.enabled = true;
