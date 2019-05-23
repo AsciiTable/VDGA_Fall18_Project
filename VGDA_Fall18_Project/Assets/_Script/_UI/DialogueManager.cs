@@ -32,6 +32,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue) {
         if (dialogue.FreezePlayerMovement) {
+            player.GetComponent<Animator>().SetBool("PlayerMove", false);
             player.GetComponent<Player>().enabled = false;
         }
         //showDialogue.SetActive(true);

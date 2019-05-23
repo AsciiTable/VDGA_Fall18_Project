@@ -1837,10 +1837,10 @@ MonoBehaviour:
   NPC: {fileID: 624408556}
   Player: {fileID: 1251861058}
   InteractDistance: 5
-  CheckPoint: 0
+  CheckPoint: 20
   dialogue:
     FreezePlayerMovement: 1
-    DialogueIsCheckpoint: 0
+    DialogueIsCheckpoint: 1
     names:
     - Ascii
     - Ascii
