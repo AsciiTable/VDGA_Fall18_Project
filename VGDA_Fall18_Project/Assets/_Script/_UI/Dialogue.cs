@@ -6,6 +6,8 @@ using UnityEngine;
 [System.Serializable]
 public class Dialogue
 {
+    public bool FreezePlayerMovement;
+    public bool DialogueIsCheckpoint;
     //Name of the speaker
     public string[] names;
 
