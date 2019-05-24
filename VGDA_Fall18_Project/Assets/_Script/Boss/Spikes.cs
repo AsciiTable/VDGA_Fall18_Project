@@ -18,14 +18,16 @@ public class Spikes : MonoBehaviour
     private bool activated = false;
 
     private SpriteRenderer sprite;
-    private PolygonCollider2D col;
+    private PolygonCollider2D polyCol;
+    private BoxCollider2D boxCol;
     private Player Player_script;
     private BossManager manager;
 
     private void Awake()
     {
         sprite = GetComponent<SpriteRenderer>();
-        col = GetComponent<PolygonCollider2D>();
+        polyCol = GetComponent<PolygonCollider2D>();
+        boxCol = GetComponent<BoxCollider2D>();
         Player_script = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         manager = (BossManager)GameObject.FindObjectOfType(typeof(BossManager));
 
@@ -38,15 +40,9 @@ public class Spikes : MonoBehaviour
 
         //Hide spikes if not activated
         if (!activated)
-        {
-            sprite.enabled = false;
-            col.enabled = false;
-        }
+            polyCol.enabled = boxCol.enabled = sprite.enabled = false;
         else
-        {
-            sprite.enabled = true;
-            col.enabled = true;
-        }
+            polyCol.enabled = boxCol.enabled = sprite.enabled = true;
     }
 
     IEnumerator SpikesUp()

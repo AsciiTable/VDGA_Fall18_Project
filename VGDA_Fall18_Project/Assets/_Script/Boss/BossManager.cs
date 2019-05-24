@@ -7,6 +7,7 @@ public class BossManager : MonoBehaviour
 {
     private SceneLoader sceneLoader;
     private ShadowParker boss;
+    private Animator bossAnim;
     private GameObject player;
     private Transform player_xyz;
     private Rigidbody2D player_rb2d;
@@ -52,6 +53,7 @@ public class BossManager : MonoBehaviour
     {
         sceneLoader = GetComponent<SceneLoader>();
         boss = (ShadowParker)GameObject.FindObjectOfType(typeof(ShadowParker));
+        bossAnim = boss.gameObject.GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
         player_xyz = player.GetComponent<Transform>();
         player_rb2d = player.GetComponent<Rigidbody2D>();
@@ -124,13 +126,14 @@ public class BossManager : MonoBehaviour
     {
         boss.bossImmunity = player_script.restrained = boss.opening = true;
         Debug.Log("Play Opening Scene");
-       // yield return new WaitForSeconds(3);
+        bossAnim.SetTrigger("Start");
+        yield return new WaitForSeconds(1.5f);
 
         Debug.Log("Phase 3");
         boss.bossImmunity = player_script.restrained = false;
         bossStarted = true;
         StartCoroutine(Phase3());
-
+        
         yield return new WaitUntil(() => boss.health == 0);
 
         Debug.Log("Transistion to Next Scene");
@@ -148,7 +151,12 @@ public class BossManager : MonoBehaviour
         spikes_1.SetActive(true);
         yield return new WaitUntil(() => boss.health == 2);
         spikes_1.SetActive(false);
-        boss.bossImmunity = pushedbacked = player_script.restrained = true;
+        boss.bossImmunity = player_script.restrained = true;
+        bossAnim.SetTrigger("Hurt");
+        yield return new WaitForSeconds(0.2f);
+        bossAnim.SetTrigger("Push");
+        yield return new WaitForSeconds(0.2f);
+        pushedbacked = true;
         yield return new WaitUntil(() => player_xyz.position.x <= border);
         boss.bossImmunity = pushedbacked = player_script.restrained = false;
         spikes_2.SetActive(true);
@@ -157,7 +165,12 @@ public class BossManager : MonoBehaviour
         cam_2.Priority = 2;
         yield return new WaitUntil(() => boss.health == 1);
         spikes_2.SetActive(false);
-        boss.bossImmunity = pushedbacked = player_script.restrained = true;
+        boss.bossImmunity = player_script.restrained = true;
+        bossAnim.SetTrigger("Hurt");
+        yield return new WaitForSeconds(0.2f);
+        bossAnim.SetTrigger("Push");
+        yield return new WaitForSeconds(0.2f);
+        pushedbacked = true;
         yield return new WaitUntil(() => player_xyz.position.x <= border);
         boss.bossImmunity = pushedbacked = player_script.restrained = false;
         spikes_3.SetActive(true);
@@ -166,7 +179,12 @@ public class BossManager : MonoBehaviour
         cam_3.Priority = 3;
         yield return new WaitUntil(() => boss.health == 0);
         spikes_3.SetActive(false);
-        boss.bossImmunity = pushedbacked = player_script.restrained = true;
+        boss.bossImmunity = player_script.restrained = true;
+        bossAnim.SetTrigger("Hurt");
+        yield return new WaitForSeconds(0.2f);
+        bossAnim.SetTrigger("Push");
+        yield return new WaitForSeconds(0.2f);
+        pushedbacked = true;
         yield return new WaitUntil(() => player_xyz.position.x <= border);
         boss.bossImmunity = pushedbacked = player_script.restrained = false;
 
@@ -176,7 +194,12 @@ public class BossManager : MonoBehaviour
     IEnumerator Phase2()
     {
         yield return new WaitUntil(() => boss.health == 2);
-        boss.bossImmunity = pushedbacked = player_script.restrained = boss.opening = true;
+        boss.bossImmunity = player_script.restrained = boss.opening = true;
+        bossAnim.SetTrigger("Hurt");
+        yield return new WaitForSeconds(0.2f);
+        bossAnim.SetTrigger("Push");
+        yield return new WaitForSeconds(0.2f);
+        pushedbacked = true;
         yield return new WaitUntil(() => player_xyz.position.x <= border);
         boss.bossImmunity = pushedbacked = player_script.restrained = boss.opening = false;
         fSpikes_2.SetActive(true);
@@ -184,10 +207,13 @@ public class BossManager : MonoBehaviour
         yield return new WaitUntil(() => boss.health == 1);
         fallingSpikes = false;
         boss.bossImmunity = player_script.restrained = boss.opening = true;
+        bossAnim.SetTrigger("Hurt");
         fSpikeSpeed = fSpikeSpeed * 20;
         yield return new WaitForSeconds(0.5f);
         fSpikeSpeed = fSpikeSpeed / 10;
         fSpikes_2.SetActive(false);
+        bossAnim.SetTrigger("Push");
+        yield return new WaitForSeconds(0.2f);
         pushedbacked = true;
         yield return new WaitUntil(() => player_xyz.position.x <= border);
         boss.bossImmunity = pushedbacked = player_script.restrained = boss.opening = false;
@@ -196,10 +222,13 @@ public class BossManager : MonoBehaviour
         yield return new WaitUntil(() => boss.health == 0);
         fallingSpikes = false;
         boss.bossImmunity = player_script.restrained = boss.opening = true;
+        bossAnim.SetTrigger("Hurt");
         fSpikeSpeed = fSpikeSpeed * 20;
         yield return new WaitForSeconds(0.5f);
         fSpikeSpeed = fSpikeSpeed / 20;
         fSpikes_3.SetActive(false);
+        bossAnim.SetTrigger("Push");
+        yield return new WaitForSeconds(0.2f);
         pushedbacked = true;
         yield return new WaitUntil(() => player_xyz.position.x <= border);
         pushedbacked = false;
