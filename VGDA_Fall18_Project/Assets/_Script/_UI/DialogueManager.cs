@@ -12,6 +12,7 @@ public class DialogueManager : MonoBehaviour
 
     //Player Movment Freezing
     public GameObject player;
+    public GameObject winner;
 
     //Queues
     private Queue<Sprite> expressionImage;
@@ -68,6 +69,7 @@ public class DialogueManager : MonoBehaviour
         {
             EndDialogue();
             player.GetComponent<Player>().enabled = true;
+            winner.active = true;
             return;
         }
         string name = names.Dequeue();
