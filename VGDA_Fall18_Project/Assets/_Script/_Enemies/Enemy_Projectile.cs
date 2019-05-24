@@ -14,6 +14,8 @@ public class Enemy_Projectile : MonoBehaviour
     //Components
     private Rigidbody2D Projectile_rb2d;
     private Transform Projectile_xyz;
+    private CircleCollider2D hitbox;
+    private Animator anim;
     //Components from other scripts
     private Player Player_script;
     private SpriteRenderer Player_sprite;
@@ -24,6 +26,8 @@ public class Enemy_Projectile : MonoBehaviour
         Player_sprite = GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>();
         Projectile_rb2d = GetComponent<Rigidbody2D>();
         Projectile_xyz = GetComponent<Transform>();
+        hitbox = GetComponent<CircleCollider2D>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -34,9 +38,20 @@ public class Enemy_Projectile : MonoBehaviour
         //Destroy projectile when it's out of range
         if(Projectile_xyz.position.x < (startX - distanceMax) || Projectile_xyz.position.x > (startX + distanceMax))
         {
-            Destroy(gameObject);
+            StartCoroutine(Explode(false));
             Debug.Log("Destroy");
         }
+    }
+
+    public IEnumerator Explode(bool player)
+    {
+        hitbox.enabled = false;
+        speed = 0;
+        anim.SetTrigger("Explode");
+        yield return new WaitForSeconds(1f);
+        Destroy(gameObject);
+        if(player)
+            Player_script.ResetScene();
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -44,8 +59,8 @@ public class Enemy_Projectile : MonoBehaviour
         //Kill player on hit
         if(col.gameObject.tag == "Player")
         {
+            StartCoroutine(Explode(true));
             Debug.Log("Projectile Death");
-            Player_script.ResetScene();
         }
         //Reflect projectile back if bat hits it
         if(col.gameObject.tag == "Bat")
