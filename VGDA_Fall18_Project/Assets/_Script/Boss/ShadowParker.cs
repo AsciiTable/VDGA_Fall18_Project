@@ -15,6 +15,7 @@ public class ShadowParker : MonoBehaviour
 
     private Player Player_script;
     private Transform xyz;
+    private SpriteRenderer sprite;
     [SerializeField]private BossManager manager;
     
     private Transform platXyz;
@@ -31,6 +32,7 @@ public class ShadowParker : MonoBehaviour
         manager = (BossManager)GameObject.FindObjectOfType(typeof(BossManager));
         shooter = GetComponent<Boss_Shoot>();
         charger = GetComponent<Boss_Charge>();
+        sprite = GetComponent<SpriteRenderer>();
 
         if (platform != null)
         {
@@ -56,7 +58,15 @@ public class ShadowParker : MonoBehaviour
         }
 
         if (manager.bossPhase == 3)
+        {
             deathZone.SetActive(charger.charging && health != 3);
+            if (health == 3 || health == 0)
+                sprite.color = new Color(0.2819859f, 0f, 0.4339623f);
+            else if(health == 2)
+                sprite.color = new Color(0.153957f, 0f, 0.2358491f);
+            else if(health == 1)
+                sprite.color = new Color(0f, 0f, 0f);
+        }
 
     }
 

@@ -1389,15 +1389,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 24.460205
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 5.64
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalRotation.z
@@ -1426,7 +1426,7 @@ PrefabInstance:
     - target: {fileID: 20453020796198110, guid: 800b402317da2064caf766557e3860d1,
         type: 3}
       propertyPath: orthographic size
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 20453020796198110, guid: 800b402317da2064caf766557e3860d1,
         type: 3}
@@ -2149,12 +2149,12 @@ PrefabInstance:
     - target: {fileID: 61430157142322710, guid: 65c5537afb5508e4cb51ed6f7717fc92,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.704
+      value: 0.66105264
       objectReference: {fileID: 0}
     - target: {fileID: 61430157142322710, guid: 65c5537afb5508e4cb51ed6f7717fc92,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.686
+      value: 2.8421052
       objectReference: {fileID: 0}
     - target: {fileID: 61430157142322710, guid: 65c5537afb5508e4cb51ed6f7717fc92,
         type: 3}
@@ -2183,6 +2183,11 @@ PrefabInstance:
         type: 3}
       propertyPath: slowDistance.Array.data[0]
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432608561424368898, guid: 65c5537afb5508e4cb51ed6f7717fc92,
+        type: 3}
+      propertyPath: maxSpeed.Array.data[0]
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6918631842510473790, guid: 65c5537afb5508e4cb51ed6f7717fc92,
         type: 3}

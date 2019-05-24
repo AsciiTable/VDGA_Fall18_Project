@@ -78,7 +78,7 @@ public class Boss_Charge : MonoBehaviour
             animator.SetBool("Charging", true);
 
             //Set charge speed & direction
-            chargeSpeed = chargeDirection * (maxSpeed[0]+(5*index)) * Time.deltaTime;
+            chargeSpeed = chargeDirection * (maxSpeed[0]+(10*index)) * Time.deltaTime;
             //Decrease speed if past slow border
             if (chargeDirection == 1 && xyz.position.x > (rightBorder - slowDistance[0]))
             {
@@ -98,7 +98,6 @@ public class Boss_Charge : MonoBehaviour
 
         //Prevent infinity error
         if(chargeSpeed != 0)
-            Debug.Log(chargeSpeed);
         if(chargeSpeed != Mathf.Infinity && chargeSpeed != Mathf.NegativeInfinity)
             rb2d.transform.Translate(chargeSpeed, 0, 0);
 
@@ -140,14 +139,12 @@ public class Boss_Charge : MonoBehaviour
     public IEnumerator regCharge()
     {
         //play animation for tell
-        Debug.Log("Charge Tell");
         yield return new WaitForSeconds(chargeStartupTime[0]);
         tellCharge = true;
         yield return new WaitForSeconds(0.3f);
         tellCharge = false;
         //Enemy Starts charging
         regCharging = true;
-        Debug.Log("CHARGE");
         //Charge until hits border
         if (chargeDirection == 1)
         {
