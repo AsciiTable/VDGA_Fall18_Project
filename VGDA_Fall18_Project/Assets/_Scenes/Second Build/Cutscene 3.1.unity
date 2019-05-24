@@ -410,20 +410,18 @@ MonoBehaviour:
     - Parker
     - Voice
     sentences:
-    - Figured it out yet, dumbass?
-    - If you were more helpful, maybe I would've by now.
-    - This town, so cold, so distant. A temporary home for a temporary resident.
-    - Are you going to continue talking in bullshit riddles? Or are you going to help
-      me?
-    - So how did it feel? Leaving everything behind? Didn't pan out the way you'd
-      hope, did it?
-    - Just spit it out already. Or leave me be.
-    - Is your entire existance defined only by a single person? Does he really matter
-      if you've forgotten him so easily?
-    - '[You hear a snap and a projection of Will shows up.]'
-    - Will!
-    - So you finally remember the little prince. But are you really going to be his
-      hero today, "big bro"? Pffft.. Hahaha..!
+    - Rain patters down on the darkened streets. Parker walks alone, tattered, soaked.
+    - In the distance, a child plays in the rain.
+    - His mother yells at him to come inside. He complains.
+    - 'The mother shuttles the boy in, holding an umbrella over him.
+
+      Their house bright and warm.'
+    - Parker looks back atthe darkened city. Then to the empty lot before him at the
+      end of the cul de sac. A forest waiting beyond it.
+    - '"Will..."'
+    - Parker trudges through the soaked streets. Through the mud.
+    - As he enters the forest, the rain stops. The sun's rays poking throuhg the melancholy
+      sky.
     expressions:
     - {fileID: 21300000, guid: 11cfa9cbd449f3542ae808d81f140cdd, type: 3}
     - {fileID: 21300000, guid: 812e8f7d82b059f4d8b833729f518b86, type: 3}
