@@ -704,6 +704,7 @@ GameObject:
   - component: {fileID: 606076896}
   - component: {fileID: 606076895}
   - component: {fileID: 606076894}
+  - component: {fileID: 606076898}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -792,6 +793,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &606076898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606076893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c56331636bba88e4a90826721497a70f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 8079721}
+  menuScene: Title_Demo
 --- !u!1 &614126762
 GameObject:
   m_ObjectHideFlags: 0
@@ -1097,7 +1112,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 606076898}
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -1218,7 +1233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.1660843
+      value: 1.1827297
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1242,7 +1257,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.1660843
+      value: 1.1827297
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1251,35 +1266,6 @@ PrefabInstance:
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.z
       value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 20453020796198110, guid: 800b402317da2064caf766557e3860d1,
-        type: 3}
-      propertyPath: orthographic size
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 20453020796198110, guid: 800b402317da2064caf766557e3860d1,
-        type: 3}
-      propertyPath: m_BackGroundColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 20453020796198110, guid: 800b402317da2064caf766557e3860d1,
-        type: 3}
-      propertyPath: m_BackGroundColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 20453020796198110, guid: 800b402317da2064caf766557e3860d1,
-        type: 3}
-      propertyPath: m_BackGroundColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114655070297583570, guid: 800b402317da2064caf766557e3860d1,
-        type: 3}
-      propertyPath: playerTrans
-      value: 
-      objectReference: {fileID: 555747065}
-    - target: {fileID: 1799718807424102, guid: 800b402317da2064caf766557e3860d1, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 114449594754875866, guid: 800b402317da2064caf766557e3860d1,
         type: 3}
@@ -1306,6 +1292,35 @@ PrefabInstance:
       propertyPath: m_BiasY
       value: -0.000000085149495
       objectReference: {fileID: 0}
+    - target: {fileID: 20453020796198110, guid: 800b402317da2064caf766557e3860d1,
+        type: 3}
+      propertyPath: orthographic size
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 20453020796198110, guid: 800b402317da2064caf766557e3860d1,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20453020796198110, guid: 800b402317da2064caf766557e3860d1,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20453020796198110, guid: 800b402317da2064caf766557e3860d1,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799718807424102, guid: 800b402317da2064caf766557e3860d1, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 114655070297583570, guid: 800b402317da2064caf766557e3860d1,
+        type: 3}
+      propertyPath: playerTrans
+      value: 
+      objectReference: {fileID: 555747065}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 800b402317da2064caf766557e3860d1, type: 3}
 --- !u!1 &684860352 stripped
@@ -1593,6 +1608,7 @@ MonoBehaviour:
   dialogueText: {fileID: 1557440789}
   expression: {fileID: 1463854984}
   player: {fileID: 555747064}
+  winner: {fileID: 0}
   animator: {fileID: 1592436151}
 --- !u!4 &785764874
 Transform:
@@ -1784,7 +1800,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 606076898}
         m_MethodName: LoadMenu
         m_Mode: 1
         m_Arguments:
@@ -2536,7 +2552,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 606076898}
         m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
