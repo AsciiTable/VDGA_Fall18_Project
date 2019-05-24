@@ -10,7 +10,12 @@ public class Audio : MonoBehaviour
 	public static AudioClip JumpSFX;
 	public static AudioClip FootstepsSFX;
 	public static AudioClip SoundTellingSFX;
-	static AudioSource MusicSource;
+    public static AudioClip BloodSplatSFX;
+    public static AudioClip ChipEatingSFX;
+    public static AudioClip LeavesStepSFX;
+    public static AudioClip TireScreechSFX;
+    public static AudioClip AmbulanceSFX;
+    static AudioSource MusicSource;
 	
 
 	// Use this for initialization
@@ -21,12 +26,13 @@ public class Audio : MonoBehaviour
 		BatSwingSFX = Resources.Load<AudioClip>("WHOOSH_Short_03_mono");
 		JumpSFX = Resources.Load<AudioClip>("8BIT_RETRO_Jump_Glide_Up_Muffled_mono");
 		SoundTellingSFX = Resources.Load<AudioClip>("bgm_cutscene_soundtelling");
-		MusicSource = GetComponent<AudioSource>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+        BloodSplatSFX = Resources.Load<AudioClip>("blood_splat");
+        ChipEatingSFX = Resources.Load<AudioClip>("chip_eating");
+        LeavesStepSFX = Resources.Load<AudioClip>("leaves_rustle_step");
+        TireScreechSFX = Resources.Load<AudioClip>("tire_squeal");
+        AmbulanceSFX = Resources.Load<AudioClip>("ambulance");
+        MusicSource = GetComponent<AudioSource>();
 	}
 	
 	public static void PlaySound(string clip)
@@ -52,8 +58,24 @@ public class Audio : MonoBehaviour
 			case "bgm_cutscene_soundtelling":
 				MusicSource.PlayOneShot(SoundTellingSFX);
 				break;
-			
-			default:
+
+            case "blood_splat":
+                MusicSource.PlayOneShot(BloodSplatSFX);
+                break;
+            case "chip_eating":
+                MusicSource.PlayOneShot(ChipEatingSFX);
+                break;
+            case "leaves_rustle_step":
+                MusicSource.PlayOneShot(LeavesStepSFX);
+                break;
+            case "tire_squeal":
+                MusicSource.PlayOneShot(TireScreechSFX);
+                break;
+            case "ambulance":
+                MusicSource.PlayOneShot(AmbulanceSFX);
+                break;
+
+            default:
 				break;
 		}
 	}

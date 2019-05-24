@@ -27,6 +27,8 @@ public class LoadCutscene : MonoBehaviour {
     [SerializeField] private float transitionSpeed = 1f;
     [SerializeField] private bool playingScene = false;
 
+    private int counter = 0;
+
     void Awake () {
         Cutscene_image = GetComponent<Image>();
         NextButton_text = NextButton_image.gameObject.GetComponentInChildren<Text>();
@@ -45,6 +47,29 @@ public class LoadCutscene : MonoBehaviour {
             playingScene = true;
             StartCoroutine(changeScene(1));
         }
+        switch (counter)
+        {
+            case 0:
+                Audio.PlaySound("chip_eating");
+                break;
+            case 2:
+                Audio.PlaySound("leaves_rustle_step");
+                break;
+            case 4:
+                break;
+            case 6:
+                Audio.PlaySound("tire_squeal");
+                break;
+            case 7:
+                Audio.PlaySound("blood_splat");
+                break;
+            case 8:
+                Audio.PlaySound("ambulance");
+                break;
+            default:
+                break;
+        }
+        counter++;
     }
 
     //Go to Previous Cutscene
@@ -94,7 +119,7 @@ public class LoadCutscene : MonoBehaviour {
 
             if (!finCutscene)
             {
-                Audio.PlaySound("bgm_cutscene_soundtelling");
+                //Audio.PlaySound("bgm_cutscene_soundtelling");
                 finCutscene = true;
             }
 
