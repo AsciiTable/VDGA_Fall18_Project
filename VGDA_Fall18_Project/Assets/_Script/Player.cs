@@ -41,8 +41,6 @@ public class Player : MonoBehaviour {
     private Animator Player_animation;
     [SerializeField] private bool checkpointedLevel = false;
 
-    //private IsCheckpoint isCheck;
-
     private Transform groundCheck1_transform;
     private Transform groundCheck2_transform;
 
@@ -240,7 +238,9 @@ public class Player : MonoBehaviour {
     {
         if(collision.gameObject.tag == "Win")
         {
-            isCheck.checkpoint = false;
+            if (isCheck != null) {
+                isCheck.checkpoint = false;
+            }
             SceneManager.LoadScene(Player_winningScene);
         }
     }

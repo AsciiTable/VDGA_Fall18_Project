@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 150911250}
   - component: {fileID: 150911249}
   - component: {fileID: 150911248}
-  - component: {fileID: 150911246}
   - component: {fileID: 150911245}
   m_Layer: 9
   m_Name: enemy_Shoot
@@ -71,7 +70,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 6903de71fd3fb2a428ee55aa186f4232, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e4bc00cbd7d80e24da2b6e2783df2b3d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,34 +98,15 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.58, y: 0.55}
+    oldSize: {x: 1.93, y: 2.25}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 0.75, y: 1.5}
   m_EdgeRadius: 0
---- !u!95 &150911246
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 150911244}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: dd64aeb558538e34cbc475ef040dde54, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &150911245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,6 +123,6 @@ MonoBehaviour:
   stunTime: 10
   projectileSpeed: 3
   projDistanceMAX: 20
-  projChangePosition: {x: 2, y: 0.7, z: 0}
+  projChangePosition: {x: 5.5, y: 3, z: 0}
   projectile: {fileID: 4905858082085069631, guid: c1e50b9db60ef12458fd3763600e752a,
     type: 3}
