@@ -620,6 +620,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 4634becaf0970e942802c3ff393b848e, type: 3}
   - {fileID: 21300000, guid: 2f51cfe2e74668a4491ec1ba7c3a0be2, type: 3}
   - {fileID: 21300000, guid: 3d1177271fcdc6248ad32b4dfc65bcb2, type: 3}
+  - {fileID: 21300000, guid: bd56530a2c91b734dbf8dde1d9a95ea9, type: 3}
   - {fileID: 21300000, guid: 0530643ca308d4e44916ec811a0b7e2a, type: 3}
   - {fileID: 21300000, guid: 9cbb6ece20abd344db668aa2d9fc1fce, type: 3}
   Transition_image: {fileID: 1122711847}
