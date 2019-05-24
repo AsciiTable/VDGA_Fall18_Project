@@ -1840,7 +1840,7 @@ MonoBehaviour:
   CheckPoint: 20
   dialogue:
     FreezePlayerMovement: 1
-    DialogueIsCheckpoint: 1
+    DialogueIsCheckpoint: 0
     names:
     - Ascii
     - Ascii
