@@ -280,7 +280,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level 1.1 Delta
+          m_StringArgument: Cutscene 2
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 185059384}
@@ -1076,7 +1076,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 270.12, y: -645.91}
+  m_AnchoredPosition: {x: 299, y: -662}
   m_SizeDelta: {x: 217.65, y: 117.4}
   m_Pivot: {x: 0.50000024, y: -3.6203034}
 --- !u!114 &1370492457

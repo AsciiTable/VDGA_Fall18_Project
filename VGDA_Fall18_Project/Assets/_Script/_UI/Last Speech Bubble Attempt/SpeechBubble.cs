@@ -12,6 +12,18 @@ public class SpeechBubble : MonoBehaviour
     {
         StartCoroutine(SpeechBubbleOffTime());
     }
+    void Update()
+    {
+        
+        /**if (FindObjectOfType<DialogueTrigger>().isTriggered == true)
+        {
+            //StopAllCoroutines();
+            //animator.SetBool("isOpen", false);
+        }
+        else {
+            //StartCoroutine(SpeechBubbleOffTime());
+        }**/
+    }
 
     /**
      * Waits for (7) seconds before the speech box appears again
