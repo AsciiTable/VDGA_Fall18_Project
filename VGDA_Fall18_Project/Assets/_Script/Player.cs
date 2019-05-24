@@ -58,7 +58,8 @@ public class Player : MonoBehaviour {
         Player_xyz = GetComponent<Transform>();
         Player_sprite = GetComponent<SpriteRenderer>();
         Player_animation = GetComponent<Animator>();
-        InvulnerableCooldown_Sprite = GameObject.FindGameObjectWithTag("InvulnerableSprite").GetComponent<Image>();
+        if(GameObject.FindGameObjectWithTag("InvulnerableSprite") != null)
+            InvulnerableCooldown_Sprite = GameObject.FindGameObjectWithTag("InvulnerableSprite").GetComponent<Image>();
 
         groundCheck1_transform = transform.Find("groundCheck_1");
         groundCheck2_transform = transform.Find("groundCheck_2");
@@ -221,7 +222,7 @@ public class Player : MonoBehaviour {
                 Player_sprite.color = new Color(1f, 1f, 1f, 1f);
             }
         }
-        else
+        else if (InvulnerableCooldown_Sprite != null)
         {
             InvulnerableCooldown_Sprite.color = new Color(1f, 1f, 1f, 0f);
             InvulnerableCooldown_Sprite.enabled = false;
