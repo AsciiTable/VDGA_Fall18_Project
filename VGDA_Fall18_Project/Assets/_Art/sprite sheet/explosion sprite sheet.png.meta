@@ -72,7 +72,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 450
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -107,6 +107,17 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -114,18 +125,18 @@ TextureImporter:
       name: explosion sprite sheet_0
       rect:
         serializedVersion: 2
-        x: 1358
+        x: 1356
         y: 218
         width: 731
         height: 764
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.4204155, y: 0.5571103}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebee46330557f2f43a11d6498fef0150
+      spriteID: bf1032711f09e7948b3e07a711cd1873
       vertices: []
       indices: 
       edges: []
@@ -138,14 +149,14 @@ TextureImporter:
         y: 201
         width: 754
         height: 802
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.477496, y: 0.44559577}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12ea0770329cfaa4a8549684cc8413e2
+      spriteID: 6f86e90580c0ae342832c0a5a45657a6
       vertices: []
       indices: 
       edges: []
@@ -154,98 +165,18 @@ TextureImporter:
       name: explosion sprite sheet_2
       rect:
         serializedVersion: 2
-        x: 3342
+        x: 3274
         y: 130
-        width: 647
+        width: 715
         height: 792
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5203415, y: 0.48163623}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a46629c20d889cf4f9867d5cc9bdb7e2
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: explosion sprite sheet_3
-      rect:
-        serializedVersion: 2
-        x: 4671
-        y: 905
-        width: 27
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 669bbfc958153ac4d8f1a05093247686
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: explosion sprite sheet_4
-      rect:
-        serializedVersion: 2
-        x: 4703
-        y: 912
-        width: 113
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c4bef82404fe0854490f82783c8b7588
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: explosion sprite sheet_5
-      rect:
-        serializedVersion: 2
-        x: 4864
-        y: 743
-        width: 158
-        height: 175
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8abd7a708a15fc44ead4f3289100e370
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: explosion sprite sheet_6
-      rect:
-        serializedVersion: 2
-        x: 6497
-        y: 868
-        width: 54
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a7be9715fcd495d44a135397ac3a323d
+      spriteID: 1cc364bf6cdfe224e9202e19c5d1ce78
       vertices: []
       indices: 
       edges: []
@@ -259,93 +190,13 @@ TextureImporter:
         width: 535
         height: 476
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a2bd67fa065da741889364d948b26f8
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: explosion sprite sheet_8
-      rect:
-        serializedVersion: 2
-        x: 4582
-        y: 457
-        width: 342
-        height: 411
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 421fa660ac362cb41ad672c1287a5e15
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: explosion sprite sheet_9
-      rect:
-        serializedVersion: 2
-        x: 5660
-        y: 767
-        width: 126
-        height: 101
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8a78e58a16764004190b3e35503ca4a2
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: explosion sprite sheet_10
-      rect:
-        serializedVersion: 2
-        x: 6293
-        y: 747
-        width: 59
-        height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9fad097753077ea41aebcfa35fa85662
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: explosion sprite sheet_11
-      rect:
-        serializedVersion: 2
-        x: 6374
-        y: 809
-        width: 41
-        height: 56
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 89ecfc04773725d42bec13dbe6486e82
+      spriteID: c0a21522ce4085b488e77a16a416fbd9
       vertices: []
       indices: 
       edges: []
@@ -359,293 +210,73 @@ TextureImporter:
         width: 311
         height: 299
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 819f7587279dda2418401fed9a29ed44
+      spriteID: 09754224de77a914098e3ee3d3eddd0c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: explosion sprite sheet_13
+      name: explosion sprite sheet_3
       rect:
         serializedVersion: 2
-        x: 4420
-        y: 265
-        width: 261
-        height: 530
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4430
+        y: 253
+        width: 604
+        height: 695
+      alignment: 9
+      pivot: {x: 0.49598703, y: 0.41280526}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6980727d7da1f14ead09fe02dc8ed1c
+      spriteID: 9464f674968b12241a4c497f0c078a77
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: explosion sprite sheet_14
+      name: explosion sprite sheet_4
       rect:
         serializedVersion: 2
-        x: 4944
-        y: 652
-        width: 87
-        height: 91
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5278
+        y: 337
+        width: 512
+        height: 531
+      alignment: 9
+      pivot: {x: 0.4763279, y: 0.4223951}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3365c5da0bba46f479d977cd92a58e5d
+      spriteID: e1366d4bc28739f43af91c87b46914e3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: explosion sprite sheet_15
+      name: explosion sprite sheet_5
       rect:
         serializedVersion: 2
-        x: 5281
-        y: 522
-        width: 164
-        height: 209
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6284
+        y: 616
+        width: 274
+        height: 306
+      alignment: 9
+      pivot: {x: 0.49115393, y: 0.27819505}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6813996343a8a274685a8d4e2ec17dbd
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: explosion sprite sheet_16
-      rect:
-        serializedVersion: 2
-        x: 5497
-        y: 629
-        width: 236
-        height: 165
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 04f2d210b3f794646a602114b1d96724
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: explosion sprite sheet_17
-      rect:
-        serializedVersion: 2
-        x: 6521
-        y: 632
-        width: 30
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f4fb2b7ce5d15e549b43639d4ab7e423
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: explosion sprite sheet_18
-      rect:
-        serializedVersion: 2
-        x: 2997
-        y: 579
-        width: 27
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e60e6deb27e79c5438a352b523644a70
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: explosion sprite sheet_19
-      rect:
-        serializedVersion: 2
-        x: 3287
-        y: 511
-        width: 43
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0bea6bd0634bfe84c84468f2a54ec33f
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: explosion sprite sheet_20
-      rect:
-        serializedVersion: 2
-        x: 5615
-        y: 457
-        width: 77
-        height: 77
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c3fd95fff7ac4044aab1afaeb2694bb9
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: explosion sprite sheet_21
-      rect:
-        serializedVersion: 2
-        x: 3287
-        y: 403
-        width: 43
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 95f13bd092d76fe4b8085591eb384cd0
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: explosion sprite sheet_22
-      rect:
-        serializedVersion: 2
-        x: 5318
-        y: 418
-        width: 87
-        height: 86
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7cbb62500399a4d438c24b3c2816f16d
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: explosion sprite sheet_23
-      rect:
-        serializedVersion: 2
-        x: 4655
-        y: 322
-        width: 43
-        height: 91
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 18b316c25a179be46b36184ee9e92a0e
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: explosion sprite sheet_24
-      rect:
-        serializedVersion: 2
-        x: 4725
-        y: 376
-        width: 61
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 50addf25c858ec84aa1464e473ecea2b
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: explosion sprite sheet_25
-      rect:
-        serializedVersion: 2
-        x: 5426
-        y: 335
-        width: 33
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5e37d5fa41684994286a9f9b4ab58de8
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: explosion sprite sheet_26
-      rect:
-        serializedVersion: 2
-        x: 4688
-        y: 251
-        width: 34
-        height: 63
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9e1e6402d20b57d438e88db0a261f54a
+      spriteID: a203dfefac63e4f45ace1d8a1990720b
       vertices: []
       indices: 
       edges: []

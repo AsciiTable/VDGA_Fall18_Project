@@ -16,6 +16,7 @@ public class Enemy_Shoot : MonoBehaviour
     //Components
     private SpriteRenderer Enemy_sprite;
     private Transform Enemy_xyz;
+    private Animator anim;
 
     //Components from Other Objects
     [SerializeField] private GameObject projectile;
@@ -30,6 +31,7 @@ public class Enemy_Shoot : MonoBehaviour
         Projectile_script = projectile.GetComponent<Enemy_Projectile>();
         Enemy_sprite = GetComponent<SpriteRenderer>();
         Enemy_xyz = GetComponent<Transform>();
+        anim = GetComponent<Animator>();
 
         //Activate IEnumerator fireShot()
         StartCoroutine(fireShot());
@@ -71,6 +73,7 @@ public class Enemy_Shoot : MonoBehaviour
             yield return new WaitForSeconds(fireDelay);
             if (!stunned)
             {
+                anim.SetTrigger("Fire");
                 Instantiate(projectile, projectilePosition, Quaternion.identity);
             }
         }
@@ -92,7 +95,7 @@ public class Enemy_Shoot : MonoBehaviour
         {
             if (other.gameObject.GetComponent<Enemy_Projectile>().playerProjectile)
             {
-                Destroy(other.gameObject);
+                StartCoroutine(other.GetComponent<Enemy_Projectile>().Explode(false));
                 StartCoroutine(enemyStunned());
             }
         }
