@@ -95,18 +95,18 @@ TextureImporter:
       name: floating monster sprite sheet_0
       rect:
         serializedVersion: 2
-        x: 203
-        y: 378
-        width: 599
-        height: 1732
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 202
+        y: 156
+        width: 735
+        height: 1961
+      alignment: 9
+      pivot: {x: 0.6, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a06362d4eab89048812141ad0ea4c53
+      spriteID: 84131811e95ddd44985b50e0eb16f483
       vertices: []
       indices: 
       edges: []
@@ -115,18 +115,18 @@ TextureImporter:
       name: floating monster sprite sheet_1
       rect:
         serializedVersion: 2
-        x: 1420
-        y: 287
-        width: 599
-        height: 1733
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1408
+        y: 164
+        width: 619
+        height: 1860
+      alignment: 9
+      pivot: {x: 0.6, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a157d1f734b934048989b24208fc2d99
+      spriteID: c1bcb351faeb61d409e14793147d9948
       vertices: []
       indices: 
       edges: []
@@ -135,18 +135,18 @@ TextureImporter:
       name: floating monster sprite sheet_2
       rect:
         serializedVersion: 2
-        x: 2603
-        y: 369
-        width: 599
-        height: 1732
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2600
+        y: 152
+        width: 653
+        height: 1949
+      alignment: 9
+      pivot: {x: 0.6, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d373e7a8514fc6648a884fd5d2260b9e
+      spriteID: b32fdb2e75af1244f90e9ea8888b4e2d
       vertices: []
       indices: 
       edges: []
@@ -155,98 +155,18 @@ TextureImporter:
       name: floating monster sprite sheet_3
       rect:
         serializedVersion: 2
-        x: 3791
-        y: 451
-        width: 599
-        height: 1734
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3782
+        y: 148
+        width: 681
+        height: 2038
+      alignment: 9
+      pivot: {x: 0.6, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8045f739892e3064c9250e75dcdba22c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: floating monster sprite sheet_4
-      rect:
-        serializedVersion: 2
-        x: 442
-        y: 162
-        width: 411
-        height: 129
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3f5484f9fde71f541bba93e70371164a
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: floating monster sprite sheet_5
-      rect:
-        serializedVersion: 2
-        x: 1643
-        y: 172
-        width: 372
-        height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ae143b8ae9b7a7241a39e951386bc204
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: floating monster sprite sheet_6
-      rect:
-        serializedVersion: 2
-        x: 2842
-        y: 153
-        width: 410
-        height: 129
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0e85f337d7a0a89488fd751dad1ca8d0
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: floating monster sprite sheet_7
-      rect:
-        serializedVersion: 2
-        x: 4004
-        y: 163
-        width: 458
-        height: 151
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ecca475126cec54418e1f63f39cc4c7e
+      spriteID: a1a9458dd976dfc4b9ed6ffa49821984
       vertices: []
       indices: 
       edges: []
