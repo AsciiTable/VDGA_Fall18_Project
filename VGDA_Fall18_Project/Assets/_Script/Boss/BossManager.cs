@@ -137,7 +137,9 @@ public class BossManager : MonoBehaviour
         boss.bossImmunity = player_script.restrained = true;
         bossStarted = false;
         Debug.Log("Win");
-        yield return new WaitForSeconds(3);
+        yield return new WaitUntil(() => !charge.charging);
+        boss.GetComponent<Animator>().SetTrigger("Death");
+        yield return new WaitForSeconds(5);
         sceneLoader.LoadScene(winScreen);
     }
     //When Boss gets hit during Phase 1
