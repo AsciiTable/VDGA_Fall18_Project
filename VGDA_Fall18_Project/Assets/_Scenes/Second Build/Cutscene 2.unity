@@ -600,7 +600,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4571715259199136, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 95
+      value: 214.9
       objectReference: {fileID: 0}
     - target: {fileID: 4571715259199136, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
       propertyPath: m_LocalPosition.y
@@ -652,7 +652,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1251861060, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
       propertyPath: speechDict.checkpoints.Array.data[0]
-      value: 20
+      value: 157
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251861060, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
+      propertyPath: speechDict.sentences.Array.data[0]
+      value: Press the up key to jump over the pothole
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251861060, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
+      propertyPath: buffer
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
@@ -4103,8 +4111,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 139194541}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 262.9, y: -3.1, z: 0}
-  m_LocalScale: {x: 25, y: 10, z: 1}
+  m_LocalPosition: {x: 269, y: -3.1, z: 0}
+  m_LocalScale: {x: 22, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 497436120}
   m_RootOrder: 1
@@ -10081,6 +10089,103 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &338172619
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 338172621}
+  - component: {fileID: 338172620}
+  m_Layer: 10
+  m_Name: Parker Dialogue 2
+  m_TagString: NPC
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &338172620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338172619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a56db864681155c4181784ec4c1507ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPC: {fileID: 338172619}
+  Player: {fileID: 27927530}
+  InteractDistance: 10
+  CheckPoint: 215
+  dialogue:
+    FreezePlayerMovement: 1
+    DialogueIsCheckpoint: 1
+    names:
+    - Parker
+    - The Voice
+    - Parker
+    - The Voice
+    - Parker
+    - Parker
+    - The Voice
+    - Parker
+    - The Voice
+    - Parker
+    - The Voice
+    - Narrator
+    - Parker
+    - Parker
+    sentences:
+    - I'm floating...and people can't see me. Yup, definitely a dream.
+    - Heh, you wish
+    - What the?!
+    - Don't you know, idiot?
+    - What the hell? (Now I'm hearing things?)
+    - K-know what?
+    - That this isn't a dream. Or a fantasy? Or a little junkie trip.
+    - Then how about you enlighten me, asshole.
+    - Don't you remember? The last pathetic little action you took before you passed
+      on?
+    - No. I...I don't remember anthing.
+    - You better remember, then. Remember who you are. Or you'll surely fade away.
+    - (The sound of laghter fills the air)
+    - Hey! I'm not done with you!
+    - Thanks for the help...not.
+    expressions:
+    - {fileID: 21300000, guid: b660113d9ca3b604793074bf2b8fc620, type: 3}
+    - {fileID: 21300000, guid: 11cfa9cbd449f3542ae808d81f140cdd, type: 3}
+    - {fileID: 21300000, guid: df3c90d5102f599448243c43297d49be, type: 3}
+    - {fileID: 21300000, guid: 11cfa9cbd449f3542ae808d81f140cdd, type: 3}
+    - {fileID: 21300000, guid: df3c90d5102f599448243c43297d49be, type: 3}
+    - {fileID: 21300000, guid: 21e5c6f0a557de048892831b876dd7e2, type: 3}
+    - {fileID: 21300000, guid: 11cfa9cbd449f3542ae808d81f140cdd, type: 3}
+    - {fileID: 21300000, guid: 21e5c6f0a557de048892831b876dd7e2, type: 3}
+    - {fileID: 21300000, guid: 11cfa9cbd449f3542ae808d81f140cdd, type: 3}
+    - {fileID: 21300000, guid: e6c2f7d16b4fa4345a2849dc39bb3a5c, type: 3}
+    - {fileID: 21300000, guid: 11cfa9cbd449f3542ae808d81f140cdd, type: 3}
+    - {fileID: 21300000, guid: 11cfa9cbd449f3542ae808d81f140cdd, type: 3}
+    - {fileID: 21300000, guid: 21e5c6f0a557de048892831b876dd7e2, type: 3}
+    - {fileID: 21300000, guid: 21e5c6f0a557de048892831b876dd7e2, type: 3}
+  isTriggered: 0
+--- !u!4 &338172621
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338172619}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.52, y: 3.95, z: 0}
+  m_LocalScale: {x: 0.7744, y: 0.7744, z: 0.7744}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &340701078
 GameObject:
   m_ObjectHideFlags: 0
@@ -10849,7 +10954,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 353089462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 249.4, y: 7.7, z: 0}
+  m_LocalPosition: {x: 295.2, y: 7.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0.4073731}
   m_Children: []
   m_Father: {fileID: 0}
@@ -12440,6 +12545,85 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &421496019
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 421496021}
+  - component: {fileID: 421496020}
+  m_Layer: 0
+  m_Name: city_ground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &421496020
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421496019}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 51365407
+  m_SortingLayer: -6
+  m_SortingOrder: -2
+  m_Sprite: {fileID: 21300000, guid: 976882464a183e04cae72f0ee56cd7b2, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 17.5, y: 17.5}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &421496021
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421496019}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 178.63, y: -7.2390466, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &427702891
 GameObject:
   m_ObjectHideFlags: 0
@@ -23849,7 +24033,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 91.3276
+      value: 211.22728
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -23873,7 +24057,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 91.32752
+      value: 211.22726
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -25799,7 +25983,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -22.8, y: 24.8}
+  m_AnchoredPosition: {x: 22.6, y: 24.8}
   m_SizeDelta: {x: 47.487, y: 33.61}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &880362418
