@@ -8,16 +8,9 @@ public class SpeechBubble : MonoBehaviour
     public int TimeOff = 7;
     public int TimeOn = 10;
 
-    private void Update()
+    private void Start()
     {
-        if (FindObjectOfType<DialogueTrigger>().isTriggered == true)
-        {
-            StopAllCoroutines();
-            animator.SetBool("isOpen", false);
-        }
-        else {
-            StartCoroutine(SpeechBubbleOffTime());
-        }
+        StartCoroutine(SpeechBubbleOffTime());
     }
 
     /**
