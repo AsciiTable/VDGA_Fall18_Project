@@ -5034,36 +5034,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: enemy_Moving
       objectReference: {fileID: 0}
-    - target: {fileID: 61978570390306584, guid: 5d3cc2f31b1d37c4db78da082bc51b1e,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.3178571
-      objectReference: {fileID: 0}
-    - target: {fileID: 61978570390306584, guid: 5d3cc2f31b1d37c4db78da082bc51b1e,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.82214284
-      objectReference: {fileID: 0}
-    - target: {fileID: 61978570390306584, guid: 5d3cc2f31b1d37c4db78da082bc51b1e,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 1.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 61978570390306584, guid: 5d3cc2f31b1d37c4db78da082bc51b1e,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 61978570390306584, guid: 5d3cc2f31b1d37c4db78da082bc51b1e,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: 0.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 61978570390306584, guid: 5d3cc2f31b1d37c4db78da082bc51b1e,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.pivot.y
-      value: 0.214596
-      objectReference: {fileID: 0}
     - target: {fileID: 4060868915178260, guid: 5d3cc2f31b1d37c4db78da082bc51b1e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 824
@@ -5095,40 +5065,6 @@ PrefabInstance:
     - target: {fileID: 4060868915178260, guid: 5d3cc2f31b1d37c4db78da082bc51b1e, type: 3}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4060868915178260, guid: 5d3cc2f31b1d37c4db78da082bc51b1e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 7.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4060868915178260, guid: 5d3cc2f31b1d37c4db78da082bc51b1e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 7.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 212842105260410156, guid: 5d3cc2f31b1d37c4db78da082bc51b1e,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300026, guid: c0627d8f686d26c4e843bfde1b24389f,
-        type: 3}
-    - target: {fileID: 212842105260410156, guid: 5d3cc2f31b1d37c4db78da082bc51b1e,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0.56
-      objectReference: {fileID: 0}
-    - target: {fileID: 212842105260410156, guid: 5d3cc2f31b1d37c4db78da082bc51b1e,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.88266665
-      objectReference: {fileID: 0}
-    - target: {fileID: 212842105260410156, guid: 5d3cc2f31b1d37c4db78da082bc51b1e,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212842105260410156, guid: 5d3cc2f31b1d37c4db78da082bc51b1e,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 0.5019608
       objectReference: {fileID: 0}
     - target: {fileID: 114318809807124466, guid: 5d3cc2f31b1d37c4db78da082bc51b1e,
         type: 3}
@@ -5163,31 +5099,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 528550780}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &528550782 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1392379619507556, guid: 5d3cc2f31b1d37c4db78da082bc51b1e,
-    type: 3}
-  m_PrefabInstance: {fileID: 528550780}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &528550783
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 528550782}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0e2c19d0f3656164e96dfd03d17dd451, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &529672439
 GameObject:
   m_ObjectHideFlags: 0
