@@ -506,6 +506,7 @@ MonoBehaviour:
     - ' '
     - Parker
     - Voice
+    - Voice
     sentences:
     - Figured it out yet, dumbass?
     - If you were more helpful, maybe I would've by now.
@@ -519,8 +520,8 @@ MonoBehaviour:
       if you've forgotten him so easily?
     - '     '
     - Will!
-    - So you finally remember the little prince. But are you really going to be his
-      hero today, "big bro"? Pffft.. Hahaha..!
+    - So you finally remember the little prince.
+    - But are you really going to be his hero today, "big bro"? Pffft.. Hahaha..!
     expressions:
     - {fileID: 21300000, guid: 11cfa9cbd449f3542ae808d81f140cdd, type: 3}
     - {fileID: 21300000, guid: 812e8f7d82b059f4d8b833729f518b86, type: 3}
@@ -531,6 +532,7 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 11cfa9cbd449f3542ae808d81f140cdd, type: 3}
     - {fileID: 21300000, guid: df3c90d5102f599448243c43297d49be, type: 3}
     - {fileID: 21300000, guid: e6c2f7d16b4fa4345a2849dc39bb3a5c, type: 3}
+    - {fileID: 21300000, guid: 11cfa9cbd449f3542ae808d81f140cdd, type: 3}
     - {fileID: 21300000, guid: 11cfa9cbd449f3542ae808d81f140cdd, type: 3}
   isTriggered: 0
 --- !u!4 &437994301
@@ -1721,11 +1723,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.1663666
+      value: 22.23182
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.84
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.z
