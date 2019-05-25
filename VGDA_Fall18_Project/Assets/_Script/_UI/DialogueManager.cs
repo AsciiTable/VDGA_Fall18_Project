@@ -30,6 +30,11 @@ public class DialogueManager : MonoBehaviour
         names = new Queue<string>();
         inCoro = false;
     }
+    private void Update()
+    {
+        if (Input.GetButtonDown("FasterInteractNPC"))
+            DisplayNextSentence();
+    }
 
     public void StartDialogue(Dialogue dialogue) {
         if (dialogue.FreezePlayerMovement) {
@@ -93,6 +98,7 @@ public class DialogueManager : MonoBehaviour
      */
     IEnumerator TypeSentence(string sentence) {
         dialogueText.text = "";
+        yield return new WaitForSeconds(0.001f);
         foreach (char letter in sentence.ToCharArray()) {
             
             dialogueText.text += letter;                                            // Add one letter onto the scrreen at a time

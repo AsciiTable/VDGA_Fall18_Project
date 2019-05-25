@@ -479,7 +479,7 @@ SpriteRenderer:
   m_SortingLayer: -1
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300006, guid: 32fc44ed551235e4388e0640cc2471d3, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.9019608}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -578,7 +578,7 @@ MonoBehaviour:
   Player_gravity: 2
   SuicidePoint: -15
   Player_winningScene: Title_Demo
-  Player_invulnerableEnabled: 0
+  invulnerableEnabled: 1
   checkpointedLevel: 0
   restrained: 0
 --- !u!114 &1251861059

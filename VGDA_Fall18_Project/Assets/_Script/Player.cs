@@ -219,7 +219,7 @@ public class Player : MonoBehaviour {
             }
             if (!Player_invulnerable)
             {
-                Player_sprite.color = new Color(1f, 1f, 1f, 1f);
+                Player_sprite.color = new Color(1f, 1f, 1f, 0.9f);
             }
         }
         else if (InvulnerableCooldown_Sprite != null)
