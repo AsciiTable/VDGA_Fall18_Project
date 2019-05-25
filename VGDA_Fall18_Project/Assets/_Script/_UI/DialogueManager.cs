@@ -13,6 +13,7 @@ public class DialogueManager : MonoBehaviour
     //Player Movment Freezing
     public GameObject player;
     public GameObject winner;
+    public GameObject willImageHolder;
 
     //Queues
     private Queue<Sprite> expressionImage;
@@ -29,6 +30,7 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
         names = new Queue<string>();
         inCoro = false;
+        
     }
     private void Update()
     {
@@ -69,7 +71,10 @@ public class DialogueManager : MonoBehaviour
      * Displays the next sentence of the dialogue
      */
     public void DisplayNextSentence() {
-
+        if (willImageHolder != null) {
+            if(willImageHolder.active)
+                willImageHolder.active  = false;
+        }
         if (sentences.Count == 0)
         {
             EndDialogue();
@@ -82,6 +87,13 @@ public class DialogueManager : MonoBehaviour
         Sprite express = expressionImage.Dequeue();
         expression.sprite = express;
         nameText.text = name;
+        if (willImageHolder != null) {
+            if (sentence.Equals("     ") && !willImageHolder.active)
+            {
+                willImageHolder.active = true;
+            }
+        }
+        
 
         //If you would like the text to appear immediately, use:
         //dialogueText.text = sentence;
