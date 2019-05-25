@@ -241,9 +241,7 @@ public class Player : MonoBehaviour {
     {
         if(collision.gameObject.tag == "Win")
         {
-            if (isCheck != null) {
-                isCheck.checkpoint = false;
-            }
+            Destroy(GameObject.FindGameObjectWithTag("Undying"));
             SceneManager.LoadScene(Player_winningScene);
         }
     }

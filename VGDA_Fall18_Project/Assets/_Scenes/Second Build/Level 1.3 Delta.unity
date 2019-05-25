@@ -3440,7 +3440,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.9999986
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3507,7 +3507,17 @@ PrefabInstance:
     - target: {fileID: 114449594754875866, guid: 800b402317da2064caf766557e3860d1,
         type: 3}
       propertyPath: m_BiasX
-      value: 0.1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114449594754875866, guid: 800b402317da2064caf766557e3860d1,
+        type: 3}
+      propertyPath: m_SoftZoneWidth
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 114449594754875866, guid: 800b402317da2064caf766557e3860d1,
+        type: 3}
+      propertyPath: m_DeadZoneWidth
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6577772678450953822, guid: 800b402317da2064caf766557e3860d1,
         type: 3}
@@ -7874,7 +7884,7 @@ PrefabInstance:
     - target: {fileID: 114724545924056790, guid: fe5007831d3a95249b505396f72f15ec,
         type: 3}
       propertyPath: Player_winningScene
-      value: Level 1.4 Delta
+      value: Cutscene 3
       objectReference: {fileID: 0}
     - target: {fileID: 3118962786128230503, guid: fe5007831d3a95249b505396f72f15ec,
         type: 3}
@@ -9271,6 +9281,11 @@ PrefabInstance:
         type: 3}
       propertyPath: MaxPos
       value: 319
+      objectReference: {fileID: 0}
+    - target: {fileID: 5434441150397131560, guid: 5d3cc2f31b1d37c4db78da082bc51b1e,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d3cc2f31b1d37c4db78da082bc51b1e, type: 3}

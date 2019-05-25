@@ -7890,7 +7890,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 93.44977
+      value: 93.454384
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7914,7 +7914,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 29.254189
+      value: 29.255112
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11716,6 +11716,31 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114724545924056790, guid: fe5007831d3a95249b505396f72f15ec,
+        type: 3}
+      propertyPath: Player_jumpForce
+      value: 66
+      objectReference: {fileID: 0}
+    - target: {fileID: 114724545924056790, guid: fe5007831d3a95249b505396f72f15ec,
+        type: 3}
+      propertyPath: Player_moveForce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114724545924056790, guid: fe5007831d3a95249b505396f72f15ec,
+        type: 3}
+      propertyPath: Player_winningScene
+      value: Cutscene 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114724545924056790, guid: fe5007831d3a95249b505396f72f15ec,
+        type: 3}
+      propertyPath: Player_invulnerableEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3118962786128230503, guid: fe5007831d3a95249b505396f72f15ec,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 61214847567597564, guid: fe5007831d3a95249b505396f72f15ec,
         type: 3}
       propertyPath: m_Size.x
@@ -11735,31 +11760,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Offset.y
       value: -0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 114724545924056790, guid: fe5007831d3a95249b505396f72f15ec,
-        type: 3}
-      propertyPath: Player_jumpForce
-      value: 66
-      objectReference: {fileID: 0}
-    - target: {fileID: 114724545924056790, guid: fe5007831d3a95249b505396f72f15ec,
-        type: 3}
-      propertyPath: Player_moveForce
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114724545924056790, guid: fe5007831d3a95249b505396f72f15ec,
-        type: 3}
-      propertyPath: Player_winningScene
-      value: Title_Demo
-      objectReference: {fileID: 0}
-    - target: {fileID: 114724545924056790, guid: fe5007831d3a95249b505396f72f15ec,
-        type: 3}
-      propertyPath: Player_invulnerableEnabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3118962786128230503, guid: fe5007831d3a95249b505396f72f15ec,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9109492191784031706, guid: fe5007831d3a95249b505396f72f15ec,
         type: 3}
