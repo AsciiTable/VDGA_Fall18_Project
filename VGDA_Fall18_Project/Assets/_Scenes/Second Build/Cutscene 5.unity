@@ -154,8 +154,8 @@ MonoBehaviour:
     - 
     - 
     - 
-    - Parker
     - 
+    - Parker
     - ' '
     - ' '
     - ' '
@@ -2119,6 +2119,7 @@ MonoBehaviour:
   expression: {fileID: 123341469}
   player: {fileID: 1647247066}
   winner: {fileID: 423532317}
+  willImageHolder: {fileID: 0}
   animator: {fileID: 1862648882}
 --- !u!4 &1211271529
 Transform:
