@@ -4274,11 +4274,6 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0.5371095
       objectReference: {fileID: 0}
-    - target: {fileID: 251999996375463194, guid: 80a6f319c74574648adfde2c9370affd,
-        type: 3}
-      propertyPath: m_SurfaceArc
-      value: 174
-      objectReference: {fileID: 0}
     - target: {fileID: 61405100394394940, guid: 80a6f319c74574648adfde2c9370affd,
         type: 3}
       propertyPath: m_Size.y
@@ -4288,6 +4283,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Offset.y
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 251999996375463194, guid: 80a6f319c74574648adfde2c9370affd,
+        type: 3}
+      propertyPath: m_SurfaceArc
+      value: 174
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80a6f319c74574648adfde2c9370affd, type: 3}
@@ -5970,11 +5970,6 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0.5371095
       objectReference: {fileID: 0}
-    - target: {fileID: 251999996375463194, guid: 80a6f319c74574648adfde2c9370affd,
-        type: 3}
-      propertyPath: m_SurfaceArc
-      value: 174
-      objectReference: {fileID: 0}
     - target: {fileID: 61405100394394940, guid: 80a6f319c74574648adfde2c9370affd,
         type: 3}
       propertyPath: m_Size.y
@@ -5984,6 +5979,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Offset.y
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 251999996375463194, guid: 80a6f319c74574648adfde2c9370affd,
+        type: 3}
+      propertyPath: m_SurfaceArc
+      value: 174
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80a6f319c74574648adfde2c9370affd, type: 3}
@@ -8218,6 +8218,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 181788836, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1251861060, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
       propertyPath: speechDict.checkpoints.Array.data[0]
