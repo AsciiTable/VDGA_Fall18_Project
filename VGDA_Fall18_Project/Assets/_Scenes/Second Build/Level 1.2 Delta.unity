@@ -5773,6 +5773,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1251861060, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
+      propertyPath: buffer
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 1215036556307964, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -5822,9 +5826,13 @@ MonoBehaviour:
   buffer: 15
   speechDict:
     checkpoints:
-    - 10
+    - 6
+    - 32
+    - 90
     sentences:
-    - Test
+    - Parker is fading away!
+    - Collect time to save Parker from his fate.
+    - Hold it together, Parker...
   anim: {fileID: 1388995236}
   speechText: {fileID: 796536512}
 --- !u!1 &639932532
@@ -11969,11 +11977,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.9999986
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.6
+      value: 2.6000001
       objectReference: {fileID: 0}
     - target: {fileID: 20453020796198110, guid: 800b402317da2064caf766557e3860d1,
         type: 3}
