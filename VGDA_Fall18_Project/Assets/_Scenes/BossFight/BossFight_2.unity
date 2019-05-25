@@ -2962,7 +2962,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 35.543175
+      value: 35.516014
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2986,7 +2986,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 24.445904
+      value: 24.429607
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4985,6 +4985,10 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1662451992, guid: 65c5537afb5508e4cb51ed6f7717fc92, type: 3}
+      propertyPath: platform
+      value: 
+      objectReference: {fileID: 1511016733}
     - target: {fileID: 6943854383200976616, guid: 65c5537afb5508e4cb51ed6f7717fc92,
         type: 3}
       propertyPath: m_Size.y
@@ -4995,10 +4999,6 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1662451992, guid: 65c5537afb5508e4cb51ed6f7717fc92, type: 3}
-      propertyPath: platform
-      value: 
-      objectReference: {fileID: 1511016733}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65c5537afb5508e4cb51ed6f7717fc92, type: 3}
 --- !u!1 &1490046489 stripped
@@ -5891,19 +5891,24 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114886815701935836, guid: fe5007831d3a95249b505396f72f15ec,
-        type: 3}
-      propertyPath: batActivated
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 114724545924056790, guid: fe5007831d3a95249b505396f72f15ec,
         type: 3}
       propertyPath: bossStage
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114724545924056790, guid: fe5007831d3a95249b505396f72f15ec,
+        type: 3}
+      propertyPath: Player_winningScene
+      value: BossFight_3
+      objectReference: {fileID: 0}
     - target: {fileID: 181788836, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114886815701935836, guid: fe5007831d3a95249b505396f72f15ec,
+        type: 3}
+      propertyPath: batActivated
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
@@ -6107,7 +6112,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 03176259638913b498ffa9ce5c67ff0c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 977e00708062e884a94b724d3f214e21, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
