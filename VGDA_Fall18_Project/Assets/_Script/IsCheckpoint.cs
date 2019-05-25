@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class IsCheckpoint : MonoBehaviour
 {
-
     public bool checkpoint = false;
     public float pointX;
     public float pointY;
@@ -20,6 +20,5 @@ public class IsCheckpoint : MonoBehaviour
         }
 
         DontDestroyOnLoad(this.gameObject);
-        
     }
 }
