@@ -71,10 +71,10 @@ public class DialogueManager : MonoBehaviour
      * Displays the next sentence of the dialogue
      */
     public void DisplayNextSentence() {
-        if (willImageHolder != null) {
+        /**if (willImageHolder != null) {
             if(willImageHolder.active)
                 willImageHolder.active  = false;
-        }
+        }**/
         if (sentences.Count == 0)
         {
             EndDialogue();
