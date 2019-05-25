@@ -10492,7 +10492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 548.2412
+      value: 548.1916
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10516,7 +10516,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 548.24115
+      value: 548.19165
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -13643,9 +13643,9 @@ Transform:
   m_Children:
   - {fileID: 974689243}
   - {fileID: 1584055204}
+  - {fileID: 1291167644}
   - {fileID: 1702555678}
   - {fileID: 1733675321}
-  - {fileID: 1291167644}
   - {fileID: 1881472388}
   - {fileID: 315329850}
   m_Father: {fileID: 0}
@@ -15015,25 +15015,12 @@ PrefabInstance:
     - target: {fileID: 114724545924056790, guid: fe5007831d3a95249b505396f72f15ec,
         type: 3}
       propertyPath: Player_winningScene
-      value: Cutscene 4
+      value: Cutscene 6
       objectReference: {fileID: 0}
     - target: {fileID: 114724545924056790, guid: fe5007831d3a95249b505396f72f15ec,
         type: 3}
       propertyPath: Player_invulnerableEnabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 181788837, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3118962786128230503, guid: fe5007831d3a95249b505396f72f15ec,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 181788836, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 61214847567597564, guid: fe5007831d3a95249b505396f72f15ec,
         type: 3}
@@ -15054,6 +15041,19 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Offset.y
       value: -0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 181788837, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3118962786128230503, guid: fe5007831d3a95249b505396f72f15ec,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 181788836, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1251861060, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
       propertyPath: m_Enabled
