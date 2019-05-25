@@ -11,11 +11,12 @@ public class Spikes : MonoBehaviour
     [SerializeField][Tooltip("Changes code so spikes re-pop up after wave cooldown")]
     private bool wave = false;
     [SerializeField][Tooltip("Cooldown before spike flips")]
-    private int spikeCooldown = 3;
+    private float spikeCooldown = 3;
     [SerializeField][Tooltip("Time before wave resets if wave is true (bigger than spikeCooldown)")]
-    private int totalCooldown = 3;
-    private bool spikesUp = false;
-    private bool activated = false;
+    private float totalCooldown = 3;
+    [Space(10)][Header("ScriptUpdated")]
+    [SerializeField]private bool spikesUp = false;
+    [SerializeField]private bool activated = false;
 
     private SpriteRenderer sprite;
     private PolygonCollider2D polyCol;
@@ -23,7 +24,7 @@ public class Spikes : MonoBehaviour
     private Player Player_script;
     private BossManager manager;
 
-    private void Awake()
+    private void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
         polyCol = GetComponent<PolygonCollider2D>();
@@ -39,10 +40,10 @@ public class Spikes : MonoBehaviour
         activated = (permanent || (spikesUp && !inverted) || (!spikesUp && inverted)) ? true : false;
 
         //Hide spikes if not activated
-        if (!activated)
-            polyCol.enabled = boxCol.enabled = sprite.enabled = false;
-        else
+        if (activated)
             polyCol.enabled = boxCol.enabled = sprite.enabled = true;
+        else
+            polyCol.enabled = boxCol.enabled = sprite.enabled = false;
     }
 
     IEnumerator SpikesUp()
