@@ -5773,6 +5773,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1251861060, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
+      propertyPath: buffer
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 1215036556307964, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -5822,9 +5826,13 @@ MonoBehaviour:
   buffer: 15
   speechDict:
     checkpoints:
-    - 10
+    - 6
+    - 32
+    - 90
     sentences:
-    - Test
+    - Parker is fading away!
+    - Collect time to save Parker from his fate.
+    - Hold it together, Parker...
   anim: {fileID: 1388995236}
   speechText: {fileID: 796536512}
 --- !u!1 &639932532
@@ -11955,22 +11963,17 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 634778021}
-    - target: {fileID: 114457138946037744, guid: 800b402317da2064caf766557e3860d1,
-        type: 3}
-      propertyPath: m_Lens.OrthographicSize
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 53.314762
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 29
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11978,12 +11981,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.6000004
+      value: 2.6000001
       objectReference: {fileID: 0}
     - target: {fileID: 20453020796198110, guid: 800b402317da2064caf766557e3860d1,
         type: 3}
       propertyPath: orthographic size
-      value: 30
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114655070297583570, guid: 800b402317da2064caf766557e3860d1,
         type: 3}
@@ -12014,21 +12017,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_BiasY
       value: -0.000000074505806
-      objectReference: {fileID: 0}
-    - target: {fileID: 114449594754875866, guid: 800b402317da2064caf766557e3860d1,
-        type: 3}
-      propertyPath: m_SoftZoneWidth
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114449594754875866, guid: 800b402317da2064caf766557e3860d1,
-        type: 3}
-      propertyPath: m_BiasX
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114449594754875866, guid: 800b402317da2064caf766557e3860d1,
-        type: 3}
-      propertyPath: m_DeadZoneWidth
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6577772678450953822, guid: 800b402317da2064caf766557e3860d1,
         type: 3}
