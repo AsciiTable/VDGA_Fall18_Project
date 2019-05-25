@@ -60,10 +60,10 @@ public class LoadCutscene : MonoBehaviour {
             case 6:
                 Audio.PlaySound("tire_squeal");
                 break;
-            case 7:
+            case 8:
                 Audio.PlaySound("blood_splat");
                 break;
-            case 8:
+            case 9:
                 Audio.PlaySound("ambulance");
                 break;
             default:
