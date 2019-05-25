@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 150911244}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.1, y: -11.3, z: 0}
-  m_LocalScale: {x: 8, y: 8, z: 10.72147}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 20, y: 20, z: 10.72147}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -120,11 +120,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcf3152191810c948896ea8000fef640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireDelay: 4
+  fireDelay: 5
   stunTime: 10
-  projectileSpeed: 3
-  projDistanceMAX: 20
-  projChangePosition: {x: 5.5, y: 3, z: 0}
+  projectileSpeed: 5
+  projDistanceMAX: 50
+  projChangePosition: {x: 10, y: 11.5, z: 0}
   projectile: {fileID: 4905858082085069631, guid: c1e50b9db60ef12458fd3763600e752a,
     type: 3}
 --- !u!95 &4048461707215698842

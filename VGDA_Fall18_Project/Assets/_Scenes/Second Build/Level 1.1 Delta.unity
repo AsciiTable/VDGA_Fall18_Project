@@ -24687,7 +24687,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.343178
+      value: 410.42126
       objectReference: {fileID: 0}
     - target: {fileID: 4228815884604204, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -24711,7 +24711,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.9913626
+      value: 410.42133
       objectReference: {fileID: 0}
     - target: {fileID: 4714277413806376, guid: 800b402317da2064caf766557e3860d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -56463,7 +56463,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4571715259199136, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.1
+      value: 415.5
       objectReference: {fileID: 0}
     - target: {fileID: 4571715259199136, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
       propertyPath: m_LocalPosition.y
@@ -56542,6 +56542,34 @@ PrefabInstance:
     - target: {fileID: 181788836, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251861060, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
+      propertyPath: speechDict.checkpoints.Array.data[0]
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251861060, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
+      propertyPath: speechDict.checkpoints.Array.data[1]
+      value: 77
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251861060, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
+      propertyPath: speechDict.checkpoints.Array.data[2]
+      value: 415
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251861060, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
+      propertyPath: buffer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251861060, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
+      propertyPath: speechDict.sentences.Array.data[0]
+      value: Press the up arrow key to jump
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251861060, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
+      propertyPath: speechDict.sentences.Array.data[1]
+      value: Press the down arrow key to fall faster
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251861060, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
+      propertyPath: speechDict.sentences.Array.data[2]
+      value: You can jump through glowing, passable platforms
       objectReference: {fileID: 0}
     - target: {fileID: 1215036556307964, guid: fe5007831d3a95249b505396f72f15ec, type: 3}
       propertyPath: m_IsActive

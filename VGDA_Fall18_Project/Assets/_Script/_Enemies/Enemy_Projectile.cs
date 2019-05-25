@@ -28,6 +28,8 @@ public class Enemy_Projectile : MonoBehaviour
         Projectile_xyz = GetComponent<Transform>();
         hitbox = GetComponent<CircleCollider2D>();
         anim = GetComponent<Animator>();
+
+        startX = Projectile_xyz.position.x;
     }
 
     void Update()
@@ -36,10 +38,11 @@ public class Enemy_Projectile : MonoBehaviour
         Projectile_rb2d.velocity = new Vector2(direction * Mathf.Abs(speed), 0f);
 
         //Destroy projectile when it's out of range
-        if(Projectile_xyz.position.x < (startX - distanceMax) || Projectile_xyz.position.x > (startX + distanceMax))
+        if(hitbox.enabled && !(Projectile_xyz.position.x > (startX - distanceMax) && Projectile_xyz.position.x < (startX + distanceMax)))
         {
+            
             StartCoroutine(Explode(false));
-            Debug.Log("Destroy");
+            Debug.Log("Out of Range");
         }
     }
 
