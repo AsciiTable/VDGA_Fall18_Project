@@ -30,7 +30,7 @@ EditorBuildSettings:
     path: Assets/_Scenes/Second Build/Level 1.4 Delta.unity
     guid: 12cccbd25c64f6547a6d8550ec7c3343
   - enabled: 1
-    path: Assets/_Scenes/Second Build/Cutscene 3.1.unity
+    path: Assets/_Scenes/_Demo/Cutscene 3.1.unity
     guid: a7dedbb6c92b8144694c80a7bbe167c9
   - enabled: 1
     path: Assets/_Scenes/Second Build/Level 2.2 Delta.unity

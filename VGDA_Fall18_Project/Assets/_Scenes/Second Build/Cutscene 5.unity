@@ -157,20 +157,25 @@ MonoBehaviour:
     - Parker
     - 
     - ' '
+    - ' '
     sentences:
     - Rain patters down on the darkened streets. Parker walks alone, tattered, soaked.
     - In the distance, a child plays in the rain.
-    - His mother yells at him to come inside. He complains.
-    - 'The mother shuttles the boy in, holding an umbrella over him.
+    - His mother yells at him to come inside. The child complains, wet but hardly
+      soaked.
+    - 'The mother shuttles the boy inside, holding an umbrella over him.
 
-      Their house bright and warm.'
-    - Parker looks back atthe darkened city. Then to the empty lot before him at the
-      end of the cul de sac. A forest waiting beyond it.
+      Their front door briefly opens.'
+    - Their house bright and warm. The air inside felt alien, like a distant reverie.
+    - Parker looks back at the darkened city. Then to the empty lot before him at
+      the end of the cul de sac. A forest waiting beyond it.
     - '"Will..."'
-    - Parker trudges through the soaked streets. Through the mud.
-    - As he enters the forest, the rain stops. The sun's rays poking throuhg the melancholy
-      sky.
+    - Parker trudges through the soaked streets. His sneakers transitions from blacktop
+      to mud, drenching his shoes. Wading through the sticky grime.
+    - As the forest looms ahead, the rain stops. The sun's rays poking through the
+      melancholy sky. A small mercy on his arduous journey.
     expressions:
+    - {fileID: 21300000, guid: 59e58e968ac3cdd4ab13ac0a63768b20, type: 3}
     - {fileID: 21300000, guid: 59e58e968ac3cdd4ab13ac0a63768b20, type: 3}
     - {fileID: 21300000, guid: 59e58e968ac3cdd4ab13ac0a63768b20, type: 3}
     - {fileID: 21300000, guid: 59e58e968ac3cdd4ab13ac0a63768b20, type: 3}
@@ -467,7 +472,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 15
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -794,7 +799,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 22
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
